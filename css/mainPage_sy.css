@@ -18,7 +18,14 @@ header {
     top: 0;
     width: 100%;
     z-index: 33;
-    min-width: 1000px;
+    /* 화면축소했을 때 한계까지 헤더 다 보이게하는 크기 */
+    /* min-width: 1100px; */
+}
+
+header .inner {
+    width: 1650px;
+    margin: 0 auto;
+    position: relative;
 }
 
 /* ======= topmenu ======= */
