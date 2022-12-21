@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 a {
     text-decoration: none;
 }
@@ -12,27 +13,33 @@ ul {
     list-style: none;
 }
 
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 33;
-    /* 화면축소했을 때 한계까지 헤더 다 보이게하는 크기 */
-    /* min-width: 1100px; */
-}
 
-header .inner {
+.inner {
     width: 1350px;
     margin: 0 auto;
     position: relative;
 }
 
-/* ======= topmenu ======= */
+main {
+    padding-top: 145px;
+}
 
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    display: block;
+    /* 화면축소했을 때 한계까지 헤더 다 보이게하는 크기 */
+    min-width: 1100px;
+}
+
+/* ======= topmenu ======= */
 header .top {
     border-bottom: 1px solid #ececec;
-    padding: 24px 0;
+    padding: 20px 0;
     background-color: #fff;
 }
 
@@ -166,4 +173,89 @@ header .bottom .inner .right ul li {
 }
 
 
+/* ======= FOOTER ======= */
+footer{
+    padding: 2vh;
+    height: 22vh;
+    background-color: rgb(194, 194, 194);
+}
 
+footer .bottom{
+    margin-top: 2vh;
+}
+
+footer .left,
+footer .right,
+footer .link_list li{
+    display: inline-block;
+}
+
+footer .left,
+footer .right{
+    height: 16vh;
+    width: 55%;
+}
+
+footer .right{
+    float: right;
+    width: 35%;
+}
+
+footer .left{
+    float: left;
+    border-right: 1px solid whitesmoke ;
+}
+
+footer .link{
+    margin-bottom: 1em;
+}
+
+footer .link_list a{
+    color: rgb(54, 53, 53);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer .info p:last-child{
+    margin-top: 50px;
+    color: rgb(231, 231, 231);
+}
+
+footer .help{
+    float: left;
+    width: 50%;
+}
+
+footer .as{
+    float: right;
+    width: 50%;
+}
+
+footer .bottom p, footer .bottom span{
+    color: rgb(54, 53, 53);
+}
+
+footer .right div p:first-child{
+    font-weight: bolder;
+}
+footer .right p:nth-child(2){
+    margin: 10px 0;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+/* 푸터 하단에 고정을 위한 코딩 */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main {
+    min-height: 100%;
+}
+
+.main .inner {
+    padding: 20px;
+    padding-bottom: 50px;
+}
