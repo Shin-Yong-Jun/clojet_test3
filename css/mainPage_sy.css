@@ -176,7 +176,7 @@ header .bottom .inner .right ul li {
 /* ======= FOOTER ======= */
 footer{
     padding: 2vh;
-    height: 22vh;
+    height: 300px;
     background-color: rgb(194, 194, 194);
 }
 
@@ -244,9 +244,17 @@ footer .right p:nth-child(2){
     font-size: 30px;
 }
 
+/* FOOTER 로고 이미지 추가 */
+
+footer img {
+    height: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
 /* 푸터 하단에 고정을 위한 코딩 */
 
-html, body {
+/* html, body {
     height: 100%;
     margin: 0;
 }
@@ -258,4 +266,4 @@ html, body {
 .main .inner {
     padding: 20px;
     padding-bottom: 50px;
-}
+} */
