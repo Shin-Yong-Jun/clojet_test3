@@ -1,40 +1,122 @@
-.item{
-    position: relative;
+.item {
+    /* position: relative; */
     margin-top: 30px;
 }
-.side_bar{
+
+/*****************************************************************************/
+/* 사이드바 */
+
+.side_bar {
     float: left;
     margin-left: 10px;
     width: 170px;
 }
 
-.side_menu>li{
+.side_menu {
+    position: fixed;
+    width: 170px;
+}
+
+.side_menu>li {
     padding: 10px 0;
+    font-weight: bolder;
     border-bottom: 1px solid rgb(236, 236, 236);
 }
-.side_menu>li>ul{
+
+.side_menu>li>ul {
     margin: 20px 0;
 }
+
 .side_menu ul>li {
-    margin-top: 10px;
+    font-weight: initial;
+    /* margin-top: 10px; */
     margin-left: 30px;
 }
-.side_menu a{
+
+.side_menu a {
     text-decoration: none;
     color: black;
 }
-.item_list{
+
+/*****************************************************************************/
+/* 헛짓거리 삭제예정 */
+
+.side_bar_color{
+    padding-left: 30px;
+}
+.side_bar_color li{
+    margin: 0 !important;
+    display: inline-block;
+}
+.side_bar_color div{
     position: relative;
-    padding-top: 10px;
-    padding-left: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+}
+.side_bar_color div div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border: 1px solid;
+}
+.side_bar_color li:nth-child(1) div div{
+    background-color: red;
+}
+.side_bar_color li:nth-child(2) div div{
+    background-color: blue;
+}
+.side_bar_color li:nth-child(3) div div{
+    background-color: black;
+}
+
+/*****************************************************************************/
+/* 상품리스트 */
+
+.item_list {
+    position: relative;
+    padding: 10px 0 50px 10px;
     margin-left: 15%;
     width: 1100px;
-    height: 1000px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
 }
-.item_list p {
-    font-size: 20px;
+
+.item_list ul {
+    position: relative;
+    padding-left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: aqua; */
 }
-.item_list ul>li{
-    width: 25%;
+
+.item_list li {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 50px;
+    vertical-align: top;
+}
+
+.item_list .item_img a {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.item_list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_list>strong{
+    font-size: 50px;
+}
+
+.item_name * {
+    color: black;
 }
