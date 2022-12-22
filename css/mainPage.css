@@ -21,7 +21,7 @@ ul {
 }
 
 main {
-    padding-top: 145px;
+    padding-top: 125px;
 }
 
 
@@ -39,7 +39,7 @@ header {
 /* ======= topmenu ======= */
 header .top {
     border-bottom: 1px solid #ececec;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #fff;
 }
 
@@ -48,7 +48,7 @@ header .top .inner_submenu {
 }
 
 header .top .inner_submenu li {
-    margin-right: 40px;
+    margin-right: 20px;
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -65,7 +65,7 @@ header .top .inner_submenu li::before {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -25px;
+    left: -13px;
     margin: auto;
 }
 
@@ -75,7 +75,7 @@ header .top .inner_submenu li:first-child:before {
 
 header .top .inner_submenu li a {
     display: block;
-    font-size: 16px;
+    font-size: 0.8rem;
     color: #797979;
     line-height: 1.1;
     position: relative;
@@ -147,7 +147,7 @@ header .bottom .inner .center>ul>li {
 
 header .bottom .inner .center>ul>li a {
     display: block;
-    font-size: 17px;
+    font-size: 1.2rem;
     color: #222;
     text-align: center;
     line-height: 80px;
@@ -162,6 +162,8 @@ header .bottom .inner .right {
 }
 
 header .bottom .inner .right ul {
+    position: relative;
+    left: 25px;
     text-align: right;
 }
 
@@ -174,8 +176,9 @@ header .bottom .inner .right ul li {
 /* =========== FOOTER ========== */
 /* ======= FOOTER Top ====== */
 .footer_top {
+    position: relative;
     width: 100%;
-    height: 100px;
+    height: 50px;
 }
 
 
@@ -183,20 +186,29 @@ header .bottom .inner .right ul li {
     position: relative;
 }
 .footer_logo img {
-    width: 150px;
+    height: 35px;
     position: absolute;
-    top: 20px;
 }
 
 
 .footer_top a { 
     text-decoration: none;
-    font-size: 11px;
     color:dimgrey;
-    padding: 0 0;
 }
 
+.footer_icon {
+    float: right;
+    margin: 10px;
+    position: relative;
+    bottom: 15px;
+    left: 20px;
+}
 
+.footer_icon ul {
+    margin-top: 5px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
 
 .footer_icon li {
     list-style: none;
@@ -204,33 +216,23 @@ header .bottom .inner .right ul li {
     margin-right: 10px;
 }
 
-
-
-.footer_icon {
-    float: right;
-    vertical-align: middle;
-    margin: 10px;
-    position: relative;
-
-}
-
-.footer_icon {
-    position: absolute;
-    right: 0;
-    top: 25px;
-}
-
 .footer_icon img {
     height: 35px;
     display: block;
-    margin-bottom: 15px;
 }
 
+/* footer 상단하단 구분선 */
+.footerline {
+    width: 100%;
+    background-color: white;
+    height: 1px;
+}
 
 /* ======= FOOTER Bottom======= */
 footer{
+    position: relative;
     padding: 2vh;
-    height: 400px;
+    height: 350px;
     background-color: rgb(194, 194, 194);
 }
 
@@ -251,13 +253,14 @@ footer{
 }
 
 .footer_bottom .right{
+    position: relative;
     float: right;
-    width: 35%;
+    width: 40%;
+    
 }
 
 .footer_bottom .left{
     float: left;
-    border-right: 1px solid whitesmoke ;
 }
 
 .footer_bottom .link{
@@ -265,28 +268,31 @@ footer{
 }
 
 .footer_bottom .link_list a{
-    color: rgb(54, 53, 53);
+    color: #222;
     font-weight: bolder;
     text-decoration: none;
 }
 
 .footer_bottom .info p:last-child{
     margin-top: 50px;
-    color: rgb(231, 231, 231);
+    color: #797979;
 }
 
 .footer_bottom .help{
+    position: absolute;
     float: left;
     width: 50%;
 }
 
 .footer_bottom .as{
+    position: relative;
+    margin-left: 35px;
     float: right;
     width: 50%;
 }
 
 .footer_bottom p, footer .bottom span{
-    color: rgb(54, 53, 53);
+    color: #222;
 }
 
 .footer_bottom .right div p:first-child{
@@ -295,7 +301,7 @@ footer{
 .footer_bottom .right p:nth-child(2){
     margin: 10px 0;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 /* FOOTER 로고 이미지 추가 */
