@@ -179,12 +179,18 @@ header .bottom .inner .right ul li {
     /* padding: 30px; */
 }
 
+/* 작업중 */
+
+.footer_logo {
+    position: relative;
+}
 .footer_logo img {
     width: 150px;
-    float: left;
-    text-align: left;
+    position: absolute;
+    top: 20px;
 }
 
+/* 작업중 */
 
 
 .footer_top a { 
@@ -208,7 +214,14 @@ header .bottom .inner .right ul li {
     float: right;
     vertical-align: middle;
     margin: 10px;
+    position: relative;
 
+}
+
+.footer_icon {
+    position: absolute;
+    right: 0;
+    top: 25px;
 }
 
 .footer_icon img {
@@ -225,8 +238,8 @@ footer{
     background-color: rgb(194, 194, 194);
 }
 
-.footer_bottom .bottom{
-    margin-top: 2vh;
+.footer_bottom {
+    margin-top: 20px;
 }
 
 .footer_bottom .left,
