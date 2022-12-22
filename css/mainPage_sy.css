@@ -171,74 +171,128 @@ header .bottom .inner .right ul li {
     vertical-align: middle;
     position: relative;
 }
+/* =========== FOOTER ========== */
+/* ======= FOOTER Top ====== */
+.footer_top {
+    width: 100%;
+    height: 100px;
+}
 
 
-/* ======= FOOTER ======= */
+.footer_logo {
+    position: relative;
+}
+.footer_logo img {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+}
+
+
+.footer_top a { 
+    text-decoration: none;
+    font-size: 11px;
+    color:dimgrey;
+    padding: 0 0;
+}
+
+
+
+.footer_icon li {
+    list-style: none;
+    display:inline-block;
+    margin-right: 10px;
+}
+
+
+
+.footer_icon {
+    float: right;
+    vertical-align: middle;
+    margin: 10px;
+    position: relative;
+
+}
+
+.footer_icon {
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.footer_icon img {
+    height: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+/* ======= FOOTER Bottom======= */
 footer{
     padding: 2vh;
-    height: 300px;
+    height: 400px;
     background-color: rgb(194, 194, 194);
 }
 
-footer .bottom{
-    margin-top: 2vh;
+.footer_bottom {
+    margin-top: 20px;
 }
 
-footer .left,
-footer .right,
-footer .link_list li{
+.footer_bottom .left,
+.footer_bottom .right,
+.footer_bottom .link_list li{
     display: inline-block;
 }
 
-footer .left,
-footer .right{
+.footer_bottom .left,
+.footer_bottom .right{
     height: 16vh;
     width: 55%;
 }
 
-footer .right{
+.footer_bottom .right{
     float: right;
     width: 35%;
 }
 
-footer .left{
+.footer_bottom .left{
     float: left;
     border-right: 1px solid whitesmoke ;
 }
 
-footer .link{
+.footer_bottom .link{
     margin-bottom: 1em;
 }
 
-footer .link_list a{
+.footer_bottom .link_list a{
     color: rgb(54, 53, 53);
     font-weight: bolder;
     text-decoration: none;
 }
 
-footer .info p:last-child{
+.footer_bottom .info p:last-child{
     margin-top: 50px;
     color: rgb(231, 231, 231);
 }
 
-footer .help{
+.footer_bottom .help{
     float: left;
     width: 50%;
 }
 
-footer .as{
+.footer_bottom .as{
     float: right;
     width: 50%;
 }
 
-footer .bottom p, footer .bottom span{
+.footer_bottom p, footer .bottom span{
     color: rgb(54, 53, 53);
 }
 
-footer .right div p:first-child{
+.footer_bottom .right div p:first-child{
     font-weight: bolder;
 }
-footer .right p:nth-child(2){
+.footer_bottom .right p:nth-child(2){
     margin: 10px 0;
     font-weight: bolder;
     font-size: 30px;
@@ -246,24 +300,3 @@ footer .right p:nth-child(2){
 
 /* FOOTER 로고 이미지 추가 */
 
-footer img {
-    height: 35px;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* 푸터 하단에 고정을 위한 코딩 */
-
-/* html, body {
-    height: 100%;
-    margin: 0;
-}
-
-.main {
-    min-height: 100%;
-}
-
-.main .inner {
-    padding: 20px;
-    padding-bottom: 50px;
-} */

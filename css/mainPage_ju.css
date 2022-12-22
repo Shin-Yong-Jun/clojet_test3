@@ -9,7 +9,7 @@
 
 /* ===========footer============= */
 
-footer {
+.footer_top {
     background-color:gainsboro;
     width: 100%;
     height: 400px;
@@ -23,7 +23,7 @@ footer {
 
 
 
-footer a { 
+.footer_top a { 
     text-decoration: none;
     font-size: 11px;
     color:dimgrey;
