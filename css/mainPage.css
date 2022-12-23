@@ -9,7 +9,7 @@ a {
     text-decoration: none;
 }
 
-ul { 
+ul {
     list-style: none;
 }
 
@@ -88,7 +88,7 @@ header .bottom {
     height: 80px;
     border-bottom: 1px solid #ececec;
     box-sizing: border-box;
-    background-color: #fff ;
+    background-color: #fff;
 }
 
 header .bottom .inner {
@@ -179,28 +179,30 @@ header .bottom .inner .right ul li {
     vertical-align: middle;
     position: relative;
 }
+
 /* =========== FOOTER ========== */
 /* ======= FOOTER Top ====== */
 .footer_top {
     position: relative;
     width: 100%;
     height: 50px;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 
 .footer_logo {
     position: relative;
 }
+
 .footer_logo img {
     height: 35px;
     position: absolute;
 }
 
 
-.footer_top a { 
+.footer_top a {
     text-decoration: none;
-    color:dimgrey;
+    color: dimgrey;
 }
 
 .footer_icon {
@@ -219,7 +221,7 @@ header .bottom .inner .right ul li {
 
 .footer_icon li {
     list-style: none;
-    display:inline-block;
+    display: inline-block;
     margin-right: 10px;
 }
 
@@ -238,10 +240,12 @@ header .bottom .inner .right ul li {
 }
 
 /* ======= FOOTER Bottom======= */
-footer{
+footer {
     position: relative;
+    vertical-align: top;
     padding: 2vh;
-    height: 370px;
+    height: 240px;
+    /* footer 배경색 */
     background-color: rgb(238, 238, 236);
 }
 
@@ -251,32 +255,32 @@ footer{
 
 .footer_bottom .left,
 .footer_bottom .right,
-.footer_bottom .link_list li{
+.footer_bottom .link_list li {
     display: inline-block;
 }
 
 .footer_bottom .left,
-.footer_bottom .right{
-    height: 16vh;
+.footer_bottom .right {
+    height: 120px;
     width: 55%;
 }
 
-.footer_bottom .right{
+.footer_bottom .right {
     position: relative;
     float: right;
     width: 40%;
-    
+
 }
 
-.footer_bottom .left{
+.footer_bottom .left {
     float: left;
 }
 
-.footer_bottom .link{
+.footer_bottom .link {
     margin-bottom: 1em;
 }
 
-.footer_bottom .link_list a{
+.footer_bottom .link_list a {
     color: rgb(109, 109, 109);
     /* === border 없는게 좋을듯 === */
     /* font-weight: bolder; */
@@ -285,48 +289,38 @@ footer{
     font-size: 15px;
 }
 
-.footer_bottom .info p:last-child{
+.footer_bottom .info p:last-child {
     margin-top: 25px;
     color: #b3b3b3;
     font-size: 14px;
 }
 
-.footer_bottom .help{
+.footer_bottom .help {
     position: absolute;
     float: left;
     width: 50%;
 }
 
-.footer_bottom .as{
+.footer_bottom .as {
     position: relative;
     margin-left: 35px;
     float: right;
     width: 50%;
 }
 
-.footer_bottom p, footer .bottom span{
+.footer_bottom p,
+footer .bottom span {
     color: rgb(109, 109, 109);
 }
 
 
-/* bolder 없는게 좋을듯 -주희- */
-.footer_bottom .right div p:first-child{
-    /* font-weight: bolder; */
-}
-
-
-
-.footer_bottom .right p:nth-child(2){
+.footer_bottom .right p:nth-child(2) {
     margin: 7px 0;
     font-weight: bolder;
     font-size: 1.0rem;
 }
 
 /* FOOTER 로고 이미지 추가 */
-
-
-
-
 
 
 /* =====조주희 추가===== */
@@ -339,17 +333,10 @@ footer .footer_logo {
     opacity: 0.6;
 }
 
-.footer_top {
-    margin-top: 30px;
-}
 
-.info { 
+.info {
     font-size: 14px;
     color: rgb(109, 109, 109);
-}
-
-.footer_top {
-    margin-top: 30px;
 }
 
 
