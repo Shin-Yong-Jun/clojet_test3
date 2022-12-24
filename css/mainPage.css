@@ -20,11 +20,6 @@ ul {
     position: relative;
 }
 
-main {
-    padding-top: 125px;
-}
-
-
 header {
     position: fixed;
     left: 0;
@@ -145,7 +140,7 @@ header .bottom .inner .center>ul {
 header .bottom .inner .center>ul>li {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 50px;
+    margin: 0 20px;
 }
 
 
@@ -179,6 +174,129 @@ header .bottom .inner .right ul li {
     vertical-align: middle;
     position: relative;
 }
+/* ======= SIDE-BADGE ======= */
+
+header .badges {
+  position: absolute;
+  top: 350%;
+  right: 12px;
+
+}
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  cursor: pointer
+}
+
+
+/* ========================== BODY_MAIN ========================== */
+/* =========== 특가 banner  ========== */
+
+main {
+    margin: 0 auto;
+    padding: 125px 0 0 0;
+    box-sizing: border-box;
+}
+
+.main_banner_box1 {
+    width: 1350px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+.empty {
+    width: auto;
+    height: 50px;
+}
+
+/* =========== 특가 products  ========== */
+.main_products {
+    text-align: center;
+}
+
+
+main h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.main_products li {
+    display: inline-block;
+    color: #797979;
+    margin: 0 20px;
+    font-weight: 700;
+}
+
+
+
+/* =========== 특가 item_list ========== */
+
+
+
+.item_list {
+    position: relative;
+    padding: 10px 0 50px 10px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.item_list ul {
+    position: relative;
+    padding-left: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: aqua; */
+}
+
+.item_list li {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 50px;
+    vertical-align: top;
+}
+
+.item_list .item_img a {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.item_list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_name a, .item_info .disCount, .item_name del, .item_info .price {
+    font-size: .9rem;
+}
+
+.item_info .item_name {
+    color: black;
+    font-size: 1.1rem;
+}
+
+.item_name a {
+    color: black;
+}
+
+.item_info .disCount {
+    color: red;
+    font-weight: 700;
+}
+
+/* =========== 계절,신상 큐레이션 banner  ========== */
+.main_banner_box2 {
+    width: 1350px;
+    height: 350p;
+    margin: 0 auto;
+}
+
+
 
 /* =========== FOOTER ========== */
 /* ======= FOOTER Top ====== */
