@@ -20,12 +20,12 @@
 .side_menu>li {
     font-size: 110%;
     padding: 10px 0;
-    font-weight: bolder;
+    font-weight: 900;
     border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .side_menu>li>ul {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .side_menu ul>li {
@@ -38,10 +38,12 @@
     text-decoration: none;
     color: black;
 }
-.side_menu a[href*="#"]{
+.center a[href*="#"] ,.side_menu a[href*="#"]{
+    color: black !important;
     font-weight: bolder;
     font-size: 110%;
 }
+
 /*****************************************************************************/
 /* 헛짓거리 삭제예정 */
 
@@ -101,6 +103,7 @@
 
 }
 .item_list>div>p{
+    padding-left: 5px;
     font-size: 20px;
     float: left;
 }
