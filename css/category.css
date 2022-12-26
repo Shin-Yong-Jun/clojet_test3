@@ -37,7 +37,10 @@
     text-decoration: none;
     color: black;
 }
-
+.side_menu a[href*="#"]{
+    font-weight: bolder;
+    font-size: 140%;
+}
 /*****************************************************************************/
 /* 헛짓거리 삭제예정 */
 
