@@ -53,15 +53,15 @@ margin: 80px auto;
 
 
 .coupon1 {
-    background-image: url(../image/coupon_1.png);
+    background-image: url(../../image/coupon_1.png);
 }
 
 .coupon2 {
-    background-image: url(../image/coupon_2.png);
+    background-image: url(../../image/coupon_2.png);
 }
 
 .coupon3 {
-        background-image: url(../image/coupon_3.png);
+        background-image: url(../../image/coupon_3.png);
     }
 
 
