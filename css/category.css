@@ -18,6 +18,7 @@
 }
 
 .side_menu>li {
+    font-size: 110%;
     padding: 10px 0;
     font-weight: bolder;
     border-bottom: 1px solid rgb(236, 236, 236);
@@ -39,7 +40,7 @@
 }
 .side_menu a[href*="#"]{
     font-weight: bolder;
-    font-size: 140%;
+    font-size: 110%;
 }
 /*****************************************************************************/
 /* 헛짓거리 삭제예정 */
