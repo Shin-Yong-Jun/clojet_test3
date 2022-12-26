@@ -1,0 +1,156 @@
+ * {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ============================ */
+
+.signup_box {
+height: 600px;
+width: 800px;
+margin: 80px auto;
+}
+
+
+.signup_top h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: black;
+    padding-top: 20px;
+}
+
+
+.signup_center {
+    width: 800px;
+    height: 250px;
+    /* background-color: rgb(243, 243, 243); */
+    border: 1px solid silver;
+    position: relative;
+    margin: auto;
+}
+
+.coupontop {
+    text-align: center;
+    padding-top: 25px;
+    /* font-weight: bold; */
+    font-size: 17px;
+    color: black;
+}
+
+.coupon {
+    background-size: 100%;
+    width: 250px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    background-repeat: no-repeat; 
+}
+
+
+.coupon1 {
+    background-image: url(../image/coupon_1.png);
+}
+
+.coupon2 {
+    background-image: url(../image/coupon_2.png);
+}
+
+.coupon3 {
+        background-image: url(../image/coupon_3.png);
+    }
+
+
+.coupontext {
+    bottom: 70px;
+    font-weight: bold;
+    color:white;
+    margin-left: 45px;
+    padding: 0 10px;
+    font-size: .85em;
+    display: inline;
+    position: relative;
+    background-color: black;
+}
+
+
+
+.t1{
+    position:relative;
+    border-bottom: 1px solid silver;
+    left: 12px;
+}
+
+.t2{
+    left: 90px;
+}
+
+
+/* ====쿠폰 하단 텍스트 변경==== */
+
+.t3 {
+    left: 200px;
+    color: black; 
+    background-color: white;
+}
+
+
+
+.btn_box {
+    margin-top: 50px;
+    position: relative;
+    width: 800px;
+    height: 100px;
+}
+
+
+
+/* ==== 카카오/일반 회원가입 버튼 =========*/
+
+.btn {
+    width: 390px;
+    height: 80px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 80px;
+    float: left;
+    /* margin: 0 15px; */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+
+.btn-left {
+    background-color:#FEE500;
+    color: #3a270f;
+    transition: .3s;
+}
+
+.btn-right {
+    background-color:black;
+    color: white;
+    float: right;
+    transition: .5s;
+}
+
+.btn img {
+    width: 33px;
+    vertical-align: middle;
+}
+
+
+
+.btn-left:hover {
+    opacity: 0.4;
+}
+
+.btn-right:hover{
+    background-color: white;
+    border: 1px solid silver;
+    color:dimgray;
+}
