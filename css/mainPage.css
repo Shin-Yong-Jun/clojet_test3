@@ -40,6 +40,8 @@ header .top {
 
 header .top .inner_submenu {
     text-align: left;
+    display: inline-block;
+    position: relative;
 }
 
 header .top .inner_submenu li {
@@ -68,12 +70,48 @@ header .top .inner_submenu li:first-child:before {
     display: none;
 }
 
-header .top .inner_submenu li a {
+header .top .inner_submenu li a,
+header .top .inner_submenu_right li a {
     display: block;
     font-size: 0.8rem;
-    color: #797979;
+    color: black;
     line-height: 1.1;
     position: relative;
+}
+
+
+header .top .inner_submenu_right {
+    display: inline-block;
+    text-align: right;
+    right: 0;
+    position: absolute;
+}
+
+
+
+header .top .inner_submenu_right li {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+
+header .top .inner_submenu_right li::before {
+    content: '';
+    display: block;
+    background-color: #797979;
+    width: 1px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -13px;
+    margin: auto;
+}
+
+header .top .inner_submenu_right li:first-child:before {
+    display: none;
 }
 
 /* ======= bottom menu-left ======= */
@@ -102,7 +140,7 @@ header .bottom .inner .left {
 
 header .bottom .material-symbols-outlined {
     font-size: 30px;
-    color: rgb(122, 122, 122);
+    color: black
 }
 
 
@@ -141,6 +179,7 @@ header .bottom .inner .center>ul>li {
     display: inline-block;
     vertical-align: middle;
     margin: 0 20px;
+    position: relative;
 }
 
 
@@ -149,10 +188,34 @@ header .bottom .inner .center>ul>li {
 header .bottom .inner .center>ul>li a {
     display: block;
     font-size: 1.2rem;
-    color: rgb(107, 107, 107);
+    color: black;
     text-align: center;
     line-height: 80px;
     position: relative;
+}
+
+/* 메인메뉴 호버 굵게*/
+header .bottom .inner .center>ul>li a:hover {
+    font-weight: 700;
+}
+
+/* 메인메뉴 사이 구분선 */
+header .bottom .inner .center>ul>li:before {
+    content: '';
+    display: block;
+    background-color: #797979;
+    width: 1px;
+    margin-top: 1px;
+    top: 50%;
+    left: -23px;
+    transform: translateY(-50%);
+    height: 15px;
+    position: absolute;
+}
+
+header .bottom .inner .center>ul>li:first-child::before {
+    content: '';
+    display: none;
 }
 
 header .bottom .inner .right {
@@ -174,20 +237,22 @@ header .bottom .inner .right ul li {
     vertical-align: middle;
     position: relative;
 }
+
 /* ======= SIDE-BADGE ======= */
 
 header .badges {
-  position: absolute;
-  top: 350%;
-  right: 12px;
+    position: absolute;
+    top: 350%;
+    right: 12px;
 
 }
+
 header .badges .badge {
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 12px;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
-  cursor: pointer
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    cursor: pointer
 }
 
 
@@ -201,10 +266,22 @@ main {
 }
 
 .main_banner_box1 {
-    width: 1350px;
+    position: relative;
+}
+
+.main_banner_box1 img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+
+
+/* .main_banner_box1 {
+    width: auto;
     height: 600px;
     margin: 0 auto;
-}
+} */
 
 
 .empty {
@@ -271,7 +348,10 @@ main h4 {
     object-fit: cover;
 }
 
-.item_name a, .item_info .disCount, .item_name del, .item_info .price {
+.item_name a,
+.item_info .disCount,
+.item_name del,
+.item_info .price {
     font-size: .9rem;
 }
 
@@ -443,12 +523,12 @@ footer .bottom span {
 
 /* =====조주희 추가===== */
 header .logo {
-    opacity: 0.6;
+    opacity: 1;
 }
 
 
 footer .footer_logo {
-    opacity: 0.6;
+    opacity: 1;
 }
 
 
