@@ -1,0 +1,116 @@
+
+.signup_con {
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+
+
+.icon_set {
+    width: 510px;
+    height: 120px;
+    /* border: 1px solid; */
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding-left: 60px;
+}
+
+main>div .material-symbols-outlined {
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+
+
+.icon_1, .icon_2, .icon_3,
+.icon_4, .icon_5 {
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    position: relative;
+}
+
+
+.icon2, .icon1, .icon4, .icon3 {
+    color: silver;
+}
+
+
+.icont {
+    margin-top: 10px;
+    position: relative;
+    left: -10px;
+    background-color: black;
+    color: white;
+}
+
+.it1, .it2 {
+    background-color: silver;
+}
+
+/* ======================== */
+
+
+
+.maintxtbox {
+    width: 510px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: -50px;
+}
+
+.maintxt {
+    margin-top: 70px;
+}
+
+.maintxt p {
+    margin-top: 10px;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+
+.completebox {
+    width: 700px;
+    height: 80px;
+    position: relative;
+    left: -150px;
+    box-sizing: border-box;
+    margin-top: 70px;
+}
+
+.ct-btn {
+display: inline-block;
+width: 300px;
+height: 60px;
+line-height: 60px;
+color: white;
+background-color: black;
+font-weight: bolder;
+border: 1px solid;
+
+}
+
+
+
+
+
+
+
+.ct-btn :hover {
+    color: black;
+    background-color: white;
+    border: 1px solid;
+}
+
+
+
+
+
