@@ -548,13 +548,6 @@ footer .footer_logo {
 /* === 상단 이미지 슬라이더 관련 코드=== */
 
 
-.main_banner_box1 img {
-    width: 1350px;
-    vertical-align: bottom;
-    height: auto;
-}
-
-
 #slideshow {
   text-align: center;
   overflow: hidden;
