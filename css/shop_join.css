@@ -236,6 +236,8 @@ main>div .material-symbols-outlined {
     margin-bottom: 30px;
 }
 
+
+
 .account_form em{
     color: red;
     font-style: normal;
@@ -258,11 +260,16 @@ main>div .material-symbols-outlined {
     padding-left: 10px;
 }
 
+.email_ent {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 .email_select {
     height: 30px;
     width: 125px;
-    padding-left: 10px;
-    margin-left: 10px;
+    /* padding-left: 4px; */
+    /* margin-left: 10px; */
     color: dimgrey;
     font-weight: bold;
 }
@@ -296,4 +303,10 @@ main>div .material-symbols-outlined {
     width: 125px;
     color: dimgrey;
     font-weight: bold;
+}
+
+
+
+.gender {
+    padding-right: 10px;
 }
