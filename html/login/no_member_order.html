@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../css/login.css"> -->
     <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/signup.css">
+    <link rel="stylesheet" href="../../css/login.css">
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
     <!-- favicon -->
     <link rel="icon" href="../../image/clojet_favicon.png" />
     <title>CLOJET</title>
+
 </head>
 
 <body>
@@ -28,37 +30,34 @@
             <div class="inner">
                 <ul class="inner_submenu">
                     <li class="home">
-                        <a href="#">
+                        <a href="../../index.html">
                             <span class="material-symbols-outlined">home
                             </span>
                         </a>
                     </li>
                     <li class="first">
-                        <a href="#">
+                        <a href="../main/main.html">
                             F/W
                         </a>
                     </li>
                     <li class="second">
-                        <a href="#">
+                        <a href="../main/main2.html">
                             S/S
                         </a>
                     </li>
                     <li class="third">
-                        <a href="#">
+                        <a href="../main/main3.html">
                             ACC
                         </a>
                     </li>
                 </ul>
-<<<<<<< HEAD
-=======
 
                 <ul class="inner_submenu_right">
                     <ul>
-                        <li><a href="../login/login.html">LOGIN</a></li>
+                        <li><a href="./login.html">LOGIN</a></li>
                         <li><a href="../signup/signup.html">SIGN-UP</a></li>
                     </ul>
                 </ul>
->>>>>>> 신용
             </div>
         </div>
 
@@ -79,16 +78,22 @@
                 <div class="center">
                     <ul>
                         <li>
-                            <a href="#">MENS</a>
+                            <a href="../category/category_New.html">NEW</a>
                         </li>
                         <li>
-                            <a href="#">LADIES</a>
+                            <a href="../category/category_Sale.html">SALE</a>
                         </li>
                         <li>
-                            <a href="#">OUTER</a>
+                            <a href="../category/category_Best.html">BEST</a>
                         </li>
                         <li>
-                            <a href="#">ACC</a>
+                            <a href="../category/category_Mens.html">MENS</a>
+                        </li>
+                        <li>
+                            <a href="../category/category_Ladies.html">LADIES</a>
+                        </li>
+                        <li>
+                            <a href="../category/category_Acc.html">ACC</a>
                         </li>
                     </ul>
                 </div>
@@ -121,35 +126,33 @@
         </div>
     </header>
 
+    <!-- Body Main -->
+    <!-- main banner1 -->
     <main>
-        <div class="signup_box">
-            <div class="signup_top">
-                <h2>SIGN UP</h2>
-            </div>
-            
-            <div class="signup_center">
-                <div class="coupon_box">
-                    <div class="coupontop"> CLOJET 공식 멤버십회원만의 <strong>특별한 혜택</strong></div>
-                    <div class="coupon coupon1"></div>
-                    <div class="coupon coupon2"></div>
-                    <div class="coupon coupon3"></div>
-                    <div class="coupon_bottom_text">
-                        <span class="coupontext t1">가입축하 마일리지 지급</span>
-                        <span class="coupontext t2">첫구매 마일리지</span>
-                        <div class="coupontext t3">신규회원 쿠폰</div>
+        
+      <div class="login_container">
+          <div class="login_contents">
+              <div class="login_top">
+                  <h2>비회원 주문조회</h2>
+              </div>
 
-                    </div>
+              <div class="findNoMember_input">
+                  <input type="text" id="findNoMemberName" name="findNoMemberName" value="" placeholder="주문자명" required="true" aria-required="true">
+                  <input type="text" id="findNoMemberNum" name="findNoMemberNum" value="" placeholder="주문번호" required="true" aria-required="true">
+                  <button type="submit" class="btn_NoMemberOrder">비회원 주문조회</button>
                 </div>
-            </div>
+                
+              <div class="findid_fail_box">
+                  <div class="signup"><a href="../signup/signup.html">회원가입</a></div>
+                  <div class="no_member"><a href="./login.html">로그인</a></div>
+              </div>
 
-            <div class="btn_box">
-                        <a href="#" class="btn btn-left"><img src="../../image/icon-kakao-talk.png" alt="카카오 아이콘">
-                        카카오 간편 가입</a>
-                    <a href="../../html/signup/adult_i.html" class="btn btn-right">쇼핑몰 회원가입</a>
-            </div>
+      </div>
 
-        </div>
-    </main>
+          </div>
+
+      </div>
+  </main>
 
     <footer>
         <div class="inner">
@@ -213,6 +216,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

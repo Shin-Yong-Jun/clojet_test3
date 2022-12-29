@@ -8,10 +8,16 @@
 
 /* ============================ */
 
-.login_box {
-height: 600px;
-width: 800px;
-margin: 80px auto;
+.login_container {
+max-width: 420px;
+margin: 40px auto;
+padding: 0 0 250px 0;
+position: relative;
+}
+
+.login_input   {
+  /* position: absolute; */
+  width: 420px;
 }
 
 
@@ -25,132 +31,291 @@ margin: 80px auto;
 
 
 .login_center {
-  width: 800px;
-  height: 250px;
-  /* background-color: rgb(243, 243, 243); */
-  border: 1px solid silver;
+  width: 100%;
   position: relative;
   margin: auto;
 }
 
-.coupontop {
+.login_input input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: black;
+  outline: none;
+}
+
+
+.login_input .btn {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* id체크관련 */
+
+.id_chk {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dedede;
+}
+
+.saveId_chk input {
+  display: none;
+}
+
+.saveId_chk input+label.check_s {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
   text-align: center;
-  padding-top: 25px;
-  /* font-weight: bold; */
-  font-size: 17px;
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0 0 0 30px;
+  font-size: 14px;
+  color: black;
+  background: url(../image/icon_check.png) no-repeat;
+  background-size: 18px;
+  cursor: pointer;
+}
+
+.saveId_chk input:checked+label.check_s {
+  background: url(../image/icon_check_on.png) no-repeat;
+  background-size: 20px;
+}
+
+.search_loginfo {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
   color: black;
 }
 
-.coupon {
-  background-size: 100%;
-  width: 250px;
-  height: 200px;
-  margin-top: 10px;
-  margin-left: 10px;
+.search_loginfo a {
+  font-size: 14px;
+  right: 0;
+  color: #7c7c7c;
+}
+
+.search_loginfo>a:first-of-type::after {
+  content: '/';
   display: inline-block;
-  background-repeat: no-repeat; 
+  margin: 0 1px 0 6px;
 }
-
-
-.coupon1 {
-  background-image: url(../image/coupon_1.png);
-}
-
-.coupon2 {
-  background-image: url(../image/coupon_2.png);
-}
-
-.coupon3 {
-      background-image: url(../image/coupon_3.png);
-  }
-
-
-.coupontext {
-  bottom: 70px;
-  font-weight: bold;
-  color:white;
-  margin-left: 45px;
-  padding: 0 10px;
-  font-size: .85em;
-  display: inline;
-  position: relative;
-  background-color: black;
-}
-
-
-
-.t1{
-  position:relative;
-  border-bottom: 1px solid silver;
-  left: 12px;
-}
-
-.t2{
-  left: 90px;
-}
-
-
-/* ====쿠폰 하단 텍스트 변경==== */
-
-.t3 {
-  left: 200px;
-  color: black; 
-  background-color: white;
-}
-
-
-
-.btn_box {
-  margin-top: 50px;
-  position: relative;
-  width: 800px;
-  height: 100px;
-}
-
-
 
 /* ==== 카카오/일반 회원가입 버튼 =========*/
 
 .btn {
-  width: 390px;
-  height: 80px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   font-weight: bold;
-  line-height: 80px;
   float: left;
-  /* margin: 0 15px; */
-  color: white;
   text-decoration: none;
   font-size: 18px;
+  margin: 10px 0;
   
 }
 
-.btn-left {
+.kakao {
   background-color:#FEE500;
   color: #3a270f;
-  transition: .3s;
 }
 
-.btn-right {
-  background-color:black;
-  color: white;
-  float: right;
-  transition: .5s;
-}
 
 .btn img {
-  width: 33px;
+  width: 20px;
   vertical-align: middle;
 }
 
+.signup_box {
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
 
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
 
-.btn-left:hover {
-  opacity: 0.4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.btn-right:hover{
-  background-color: white;
-  border: 1px solid silver;
-  color:dimgray;
+.signup_box .signup {
+  width: 100%;
+  border-right: 1px solid #dedede;
+  text-align: center;
+}
+.signup_box .no_member {
+  width: 100%;
+  text-align: center;
+}
+
+/* ==============아이디 찾기 페이지============= */
+
+.select_radio {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.select_radio label:first-of-type {
+  margin-right: 10px;
+}
+
+.select_radio input {
+  display: none;
+}
+
+.select_radio input + label.choice_s {
+  min-width: 20px;
+  padding: 0 0 0 20px;
+  background: url(../image/icon-radio.png) no-repeat 0 0;
+  background-size: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.select_radio input:checked + label.choice_s {
+  background: url(../image/icon-radio-on.png) no-repeat 0 0;
+  background-size: 15px;
+}
+
+.findId_input input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: black;
+  outline: none;
+}
+
+.findId_input .btn_findId {
+  width: 100%;
+  height: 40px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.findid_fail_box {
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  margin-top: 15px;
+
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.findid_fail_box a {
+  color: black;
+}
+
+.idfindPw {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 0;
+  background-color: #dedede;
+  color: black;
+}
+
+/* ==============비밀번호 찾기 페이지============= */
+
+.findPw_input input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: black;
+  outline: none;
+}
+
+.findPw_input .btn_findPw {
+  width: 100%;
+  height: 40px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* ==============비회원 주문페이지============= */
+
+.findNoMember_input input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  
+  padding: 0 15px;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: black;
+  outline: none;
+}
+
+.findNoMember_input .btn_NoMemberOrder {
+  width: 100%;
+  height: 40px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
