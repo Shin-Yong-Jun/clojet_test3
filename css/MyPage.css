@@ -3,30 +3,42 @@
 }
 
 .my_page{
-    width: 1500px;
+    width: 1400px;
     height: 100vh;
-    border: 1px solid;
+    /* border: 1px solid; */
     display: flex;
     /* flex-direction: column; */
     margin: 0 auto;
+    padding: 0;
 }
 
+
+
+/* =========마이페이지 좌측 메뉴========= */
+
+
 .mylistset {
-    width: 180px;
+    width: 200px;
     height: 100vh;
-    border-right: 1px solid;
+    /* border-right: 1px solid; */
     
 }
 
 
 .mylistset ul {
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 14.5px;
     margin-left: 10px;
     letter-spacing: 1px;
 }
 
+#ul_txttop {
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+    letter-spacing: 2px;
 
+}
 
 #ul_txt {
     color: black;
@@ -47,21 +59,165 @@
     margin-top: 10px;
 }
 
+.maymain li {
+    display: inline-block; 
+    padding: 10px 30px;
+}
 
-.mymain {
-    /* display: flex; */
-    /* flex-direction: column; */
+
+.list_br {
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding-bottom: 30px;
+}
+
+/* =========main========== */
+
+
+main .mymain {
+display: flex;
+width: 100%;
+justify-content: center;
+position: relative;
 
 }
 
 
-.mylist {
+.mycolboxt1 {
+    display: flex;
+    margin-top: 60px;
+    width: 700px;
+    height: 80px;
+    border: 1px solid silver;
+    /* justify-content: center; */
+    align-items: center;
+    align-content: space-around;
 }
 
-.mymain_title {
+
+.coltxt {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    height: 80px;
+    width: 200px;
+
+}
+
+.coltxt p:first-child {
+    font-size: 20px;
+}
+
+.coltxt p:last-child {
+    padding-top: 10px;
+}
+
+
+.coltxtbold {
+border-right: 1px solid silver;
+}
+
+.coltxt a {
+    font-weight: bold;
+    color: black;
+}
+
+/* ========최근주문상품========== */
+
+
+.mmain {
     width: 100%;
+    height: 700px;
+    
+}
+
+.mycolbox2_container h3 {
+    position: absolute;
+    visibility: visible;
+    left: 20%;
+    bottom: 80px;
+    background-color: black;
+    color: white;
+}
+
+/* =================== */
+
+.mcon {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50% 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    display:inline-block;
+    }
+
+.mcbox2{
+    display: inline-block;
+}
+
+.mycolbox2 {
+    font-size: 18px;
+    border: 1px solid silver;
+    width: 700px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    display: table;
+    padding-left: -20px;
+    
+}
+.mconline {
+    border-right: 1px solid silver;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 20px;
+}
+
+
+
+/* ==========배송========== */
+
+
+.mycolbox2_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 150px;
+}
+
+
+
+
+
+
+/* ==================== */
+
+
+/* .mymain-mbox{
+    position: absolute;
+    background-color:azure;
+    margin-top: 600px;
+    align-items: center;
+    left: 200px;
+    display: grid;
+    grid-template-rows: repeat(3, 300px);
+    width: 100%;
+}
+
+.mbox {
     border-bottom: 1px solid;
 }
+.mymain_middle1 {
+    display: flex;
+    flex: 1;
+}
 
+.mymain_middle2{
+    flex: 1;
+}
 
-
+.mymain_middle3 {
+    flex: 1;
+} */
