@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* 글자 호버시, li 박스가 움직임을 방지하기 위함 */
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 a {
@@ -117,15 +119,16 @@ header .top .inner_submenu_right li:first-child:before {
 
 
 header .bottom {
-    height: 80px;
     border-bottom: 1px solid #ececec;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.9);
+    height: 55px;
 }
 
 header .bottom .inner {
     margin: 0 auto;
     position: relative;
+    height: 55px;
 }
 
 header .bottom .inner .left {
@@ -135,6 +138,9 @@ header .bottom .inner .left {
     font-size: 0;
     text-align: left;
     left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .bottom .material-symbols-outlined {
@@ -144,16 +150,17 @@ header .bottom .material-symbols-outlined {
 
 
 header .bottom .inner .left>a {
-    padding-top: 22px;
     display: inline-block;
     vertical-align: middle;
 }
 
 header .bottom .inner .left .logo_contain {
     display: inline-block;
-    vertical-align: middle;
-    padding-top: 22px;
+    height: 55px;
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .bottom .inner .left .logo_contain img {
@@ -179,24 +186,29 @@ header .bottom .inner .center>ul>li {
     vertical-align: middle;
     margin: 0 20px;
     position: relative;
+    box-sizing: border-box;
 }
 
 
 
 
 header .bottom .inner .center>ul>li a {
-    display: block;
+    display: inline;
     font-size: 1.2rem;
     color: black;
     text-align: center;
-    line-height: 80px;
+    line-height: 55px;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* 메인메뉴 호버 굵게*/
-header .bottom .inner .center>ul>li a:hover {
-    font-weight: 700;
+header .bottom .inner .center>ul>li:hover {
+    font-weight: bold;
 }
+/* header .bottom .inner .center>ul>li:hover a {
+    border-bottom: 2px solid;
+} */
 
 /* 메인메뉴 사이 구분선 */
 header .bottom .inner .center>ul>li:before {
@@ -221,19 +233,23 @@ header .bottom .inner .right {
     float: right;
     position: relative;
     z-index: 2;
-    padding: 28px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
 
 header .bottom .inner .right ul {
     position: relative;
     left: 25px;
     text-align: right;
+    box-sizing: border-box;
 }
 
 header .bottom .inner .right ul li {
     margin-right: 19px;
     display: inline-block;
-    vertical-align: middle;
+    top: 2px;
     position: relative;
 }
 
@@ -555,7 +571,7 @@ footer .footer_logo {
 
 
 #slideshow {
-  text-align: center;
+    text-align: center;
   overflow-x: hidden;
   max-width: 100%;
 
