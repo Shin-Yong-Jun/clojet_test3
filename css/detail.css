@@ -21,4 +21,30 @@
     height: 100vh;
     background-color: gold;
     float: right;
+    padding: 10px;
+}
+.size{
+    display: flex;
+    border: 1px solid;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-between;
+}
+.size>div{
+    display: flex;
+    gap: 10px;
+}
+.size>div>div{
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+/* 선택됨 */
+.size>div>div:first-of-type{
+    width: 50px;
+    border: none;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
 }
