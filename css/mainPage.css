@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* 글자 호버시, li 박스가 움직임을 방지하기 위함 */
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 a {
@@ -184,24 +186,29 @@ header .bottom .inner .center>ul>li {
     vertical-align: middle;
     margin: 0 20px;
     position: relative;
+    box-sizing: border-box;
 }
 
 
 
 
 header .bottom .inner .center>ul>li a {
-    display: block;
+    display: inline;
     font-size: 1.2rem;
     color: black;
     text-align: center;
     line-height: 55px;
     position: relative;
+    box-sizing: border-box;
 }
 
 /* 메인메뉴 호버 굵게*/
-header .bottom .inner .center>ul>li a:hover {
-    font-weight: 700;
+header .bottom .inner .center>ul>li:hover {
+    font-weight: bold;
 }
+/* header .bottom .inner .center>ul>li:hover a {
+    border-bottom: 2px solid;
+} */
 
 /* 메인메뉴 사이 구분선 */
 header .bottom .inner .center>ul>li:before {
@@ -564,7 +571,7 @@ footer .footer_logo {
 
 
 #slideshow {
-  text-align: center;
+    text-align: center;
   overflow-x: hidden;
   max-width: 100%;
 
