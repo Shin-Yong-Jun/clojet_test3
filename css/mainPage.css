@@ -231,16 +231,18 @@ header .bottom .inner .right {
     align-items: center;
 }
 
+
 header .bottom .inner .right ul {
     position: relative;
     left: 25px;
     text-align: right;
+    box-sizing: border-box;
 }
 
 header .bottom .inner .right ul li {
     margin-right: 19px;
     display: inline-block;
-    vertical-align: middle;
+    top: 2px;
     position: relative;
 }
 
