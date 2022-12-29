@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../../css/login.css"> -->
     <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/signup.css">
+    <link rel="stylesheet" href="../../css/login.css">
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
     <!-- favicon -->
     <link rel="icon" href="../../image/clojet_favicon.png" />
     <title>CLOJET</title>
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
 
                 <ul class="inner_submenu_right">
                     <ul>
-                        <li><a href="../login/login.html">LOGIN</a></li>
+                        <li><a href="./login.html">LOGIN</a></li>
                         <li><a href="../signup/signup.html">SIGN-UP</a></li>
                     </ul>
                 </ul>
@@ -76,22 +78,22 @@
                 <div class="center">
                     <ul>
                         <li>
-                            <a href="../html/category/category_New.html">NEW</a>
+                            <a href="../category/category_New.html">NEW</a>
                         </li>
                         <li>
-                            <a href="../html/category/category_Sale.html">SALE</a>
+                            <a href="../category/category_Sale.html">SALE</a>
                         </li>
                         <li>
-                            <a href="../html/category/category_Best.html">BEST</a>
+                            <a href="../category/category_Best.html">BEST</a>
                         </li>
                         <li>
-                            <a href="../html/category/category_Mens.html">MENS</a>
+                            <a href="../category/category_Mens.html">MENS</a>
                         </li>
                         <li>
-                            <a href="../html.category/category_Ladies.html">LADIES</a>
+                            <a href="../category/category_Ladies.html">LADIES</a>
                         </li>
                         <li>
-                            <a href="../html/category/category_Acc.html">ACC</a>
+                            <a href="../category/category_Acc.html">ACC</a>
                         </li>
                     </ul>
                 </div>
@@ -124,36 +126,52 @@
         </div>
     </header>
 
+    <!-- Body Main -->
     <main>
-        <div class="signup_box">
-            <div class="signup_top">
-                <h2>Join</h2>
-            </div>
-            
-            <div class="signup_center">
-                <div class="coupon_box">
-                    <div class="coupontop"> CLOJET 공식 멤버십회원만의 <strong>특별한 혜택</strong></div>
-                    <div class="coupon coupon1"></div>
-                    <div class="coupon coupon2"></div>
-                    <div class="coupon coupon3"></div>
-                    <div class="coupon_bottom_text">
-                        <span class="coupontext t1">가입축하 마일리지 지급</span>
-                        <span class="coupontext t2">첫구매 마일리지</span>
-                        <div class="coupontext t3">신규회원 쿠폰</div>
-
-                    </div>
+        
+        <div class="login_container">
+            <div class="login_contents">
+                <div class="login_top">
+                    <h2>LOGIN</h2>
                 </div>
-            </div>
+                
+                <div class="login_input">
+                    <input type="text" id="loginId" name="loginId" value="" placeholder="아이디" required="true" aria-required="true">
+                    <input type="password" id="loginPwd" name="loginPwd" value="" placeholder="패스워드" required="true" aria-required="true">
+                    <button type="submit" class="btn">로그인</button>
+                </div>
 
-            <div class="btn_box">
-                        <a href="#" class="btn btn-left"><img src="../../image/icon-kakao-talk.png" alt="카카오 아이콘">
-                        카카오 간편 가입</a>
-                    <a href="../../html/signup/adult_i.html" class="btn btn-right">쇼핑몰 회원가입</a>
+
+
+                <div class="id_chk">
+                    <span class="saveId_chk">
+                        <input type="checkbox" id="saveId" name="saveId" value="y">
+                        <label for="saveId" class="check_s">아이디 저장</label>
+                    </span>
+                    <span class="search_loginfo">
+                        <a href="./find_id.html">아이디</a>
+                        <a href="./find_pw.html">비밀번호찾기</a>
+                    </span>
+                </div>
+                
+                <div class="social_login">
+                    <a href="#" class="btn kakao"><img src="../../image/icon-kakao-talk.png" alt="카카오 아이콘">
+                    카카오 간편 가입</a>
+                </div>
+
+                <div class="signup_box">
+                    <div class="signup"><a href="../signup/signup.html">회원가입</a></div>
+                    <div class="no_member"><a href="./no_member_order.html">비회원 주문조회</a></div>
+                </div>
+
+        </div>
+
             </div>
 
         </div>
     </main>
 
+    
     <footer>
         <div class="inner">
             <div class="footer_top">
@@ -216,6 +234,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
