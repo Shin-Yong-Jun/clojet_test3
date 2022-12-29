@@ -116,23 +116,14 @@
     color: black;
 }
 
+/*****************************************************************************/
 /* 카테고리 배너 */
-.title_banner_best {
+.title_banner {
     margin-bottom: 20px;
     width: 1100px;
     margin-top: -50px;
     margin-left: 15%;
     width: 1100px;
     height: 250px;
-    overflow: hidden;
-}
-
-.title_banner_sales {
-    margin-bottom: 20px;
-    width: 1100px;
-    margin-top: -50px;
-    margin-left: 15%;
-    width: 1100px;
-    height: 350px;
     overflow: hidden;
 }
