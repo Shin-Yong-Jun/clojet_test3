@@ -117,15 +117,16 @@ header .top .inner_submenu_right li:first-child:before {
 
 
 header .bottom {
-    height: 80px;
     border-bottom: 1px solid #ececec;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.9);
+    height: 60px;
 }
 
 header .bottom .inner {
     margin: 0 auto;
     position: relative;
+    height: 60px;
 }
 
 header .bottom .inner .left {
@@ -135,6 +136,9 @@ header .bottom .inner .left {
     font-size: 0;
     text-align: left;
     left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .bottom .material-symbols-outlined {
@@ -144,16 +148,17 @@ header .bottom .material-symbols-outlined {
 
 
 header .bottom .inner .left>a {
-    padding-top: 22px;
     display: inline-block;
     vertical-align: middle;
 }
 
 header .bottom .inner .left .logo_contain {
     display: inline-block;
-    vertical-align: middle;
-    padding-top: 22px;
+    height: 60px;
     margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header .bottom .inner .left .logo_contain img {
@@ -189,7 +194,7 @@ header .bottom .inner .center>ul>li a {
     font-size: 1.2rem;
     color: black;
     text-align: center;
-    line-height: 80px;
+    line-height: 60px;
     position: relative;
 }
 
@@ -221,7 +226,9 @@ header .bottom .inner .right {
     float: right;
     position: relative;
     z-index: 2;
-    padding: 28px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 header .bottom .inner .right ul {
