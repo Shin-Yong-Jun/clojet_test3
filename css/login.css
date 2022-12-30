@@ -61,6 +61,7 @@ position: relative;
   color: white;
   cursor: pointer;
   font-size: 18px;
+  font-weight: bold;
 }
 
 /* id체크관련 */
