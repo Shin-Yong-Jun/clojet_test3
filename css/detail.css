@@ -1,6 +1,8 @@
 .detail{
+    position: relative;
     background-color: aqua;
     width: 100%;
+
 }
 
 .detail_img{
@@ -16,9 +18,9 @@
 }
 .detail_info{
     display: inline-block;
+    margin-top: -40px;
     position: fixed;
     width: 400px;
-    height: 80vh;
     background-color: gold;
     padding: 10px;
     overflow: auto;
@@ -124,27 +126,30 @@
 /* ************************************ */
 /* shoping_box */
 .shoping_cart_btn{
+    display: inline-block;
     background-color: black;
     color: white;
     border-radius: 50px;
     line-height: 80px;
     text-align: center;
+    width: 45%;
 }
 .shoping_cart_btn:hover{
     background-color: rgba(0, 0, 0, .8);
 
 }
-.wish_list_btn{
-    margin-top: 5px;
+.buy_btn{
     background-color:white;
     line-height: 80px;
     text-align: center;
     border-radius: 50px;
     border: 2px solid gray;
     box-sizing: border-box;
+    width: 54%;
+    float: right;
 }
 
-.wish_list_btn:hover{
+.buy_btn:hover{
     border: 2px solid black;
     box-sizing: border-box;
 }
@@ -152,7 +157,7 @@
 /* ************************************ */
 /* .detail_item_info */
 .detail_item_info{
-    margin: 50px 0;
+    margin: 30px 0;
 }
 .detail_item_info li{
     margin-left: 30px;
@@ -161,7 +166,7 @@
 /* ************************************ */
 /* .detail_item_sub_info */
 .detail_item_sub_info{
-    margin: 50px 0;
+    margin-top: 20px;
 }
 .detail_item_sub_info li{
     border-bottom: 1px solid gray;
@@ -172,6 +177,9 @@
 }
 .detail_item_sub_info .table>div{
     display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
 }
 .detail_item_sub_info .table>div:first-child,
 .detail_item_sub_info .table>div:last-child{
@@ -182,7 +190,5 @@
 .detail_item_sub_info .table>div:nth-child(2){
     width:300px;
     background-color: blue;
-}
-.table div:first-child::after{
-    
+    text-align: left;
 }
