@@ -1,5 +1,4 @@
 .detail{
-    /* margin-top: 5%; */
     background-color: aqua;
     width: 100%;
 }
@@ -19,9 +18,10 @@
     display: inline-block;
     position: fixed;
     width: 400px;
+    height: 80vh;
     background-color: gold;
     padding: 10px;
-    /* width: ; */
+    overflow: auto;
 }
 
 .detail_info .item{
@@ -143,18 +143,12 @@
     border: 2px solid gray;
     box-sizing: border-box;
 }
-.wish_list_btn::after{
-    content: "♡";
-}
 
 .wish_list_btn:hover{
     border: 2px solid black;
     box-sizing: border-box;
 }
-.wish_list_btn:hover::after{
-    content: "♥";
-    color: red;
-}
+
 /* ************************************ */
 /* .detail_item_info */
 .detail_item_info{
