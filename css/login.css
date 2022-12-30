@@ -10,8 +10,9 @@
 
 .login_container {
 max-width: 420px;
-margin: 40px auto;
-padding: 0 0 250px 0;
+height: 600px;
+margin: 80px auto;
+padding: 0 0 200px 0;
 position: relative;
 }
 
