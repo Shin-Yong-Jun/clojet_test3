@@ -165,6 +165,10 @@ position: relative;
   align-items: center;
 }
 
+.signup_box a {
+  color: black;
+}
+
 .signup_box .signup {
   width: 100%;
   border-right: 1px solid #dedede;
