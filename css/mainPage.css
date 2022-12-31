@@ -280,6 +280,14 @@ main {
     box-sizing: border-box;
 }
 
+.category_nobanner {
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    box-sizing: border-box;
+}
+
+
+
 .main_banner_box1 {
     position: relative;
 }
