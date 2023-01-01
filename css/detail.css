@@ -47,11 +47,12 @@
     gap: 10px;
 }
 
-.size input{
+.size input {
     display: none;
 
 }
-.size label{
+
+.size label {
     display: inline-block;
     text-align: center;
     width: 50px;
@@ -59,7 +60,7 @@
     border: 1px solid gray;
 }
 
-.size input:checked+label{
+.size input:checked+label {
     background-color: gray;
     color: white;
 
@@ -75,17 +76,18 @@
     justify-content: space-between;
 }
 
-.color ul{
+.color ul {
     display: grid;
     grid-template: 1fr /repeat(4, 1fr);
     gap: 10px;
 }
 
-.color input{
+.color input {
     display: none;
 
 }
-.color label{
+
+.color label {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -93,20 +95,24 @@
     border: 1px solid gray;
 }
 
-.color input:checked+label{
+.color input:checked+label {
     border: 3px groove black;
 
 }
-.color label[for=red]{
+
+.color label[for=red] {
     background-color: red;
 }
-.color label[for=blue]{
+
+.color label[for=blue] {
     background-color: blue;
 }
-.color label[for=black]{
+
+.color label[for=black] {
     background-color: black;
 }
-.color label[for=white]{
+
+.color label[for=white] {
     background-color: white;
 }
 
@@ -142,23 +148,24 @@
 
 /* ************************************ */
 /* shoping_box */
-.shoping_cart_btn {
+
+.shoping_cart_btn,
+.buy_btn {
     display: inline-block;
     color: white;
-    border-radius: 50px;
-    line-height: 80px;
-    text-align: center;
-    width: 45%;
-    border: 2px solid gray;
-}
-
-.buy_btn {
     background-color: white;
     line-height: 80px;
     text-align: center;
     border-radius: 50px;
     border: 2px solid gray;
-    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.shoping_cart_btn {
+    width: 45%;
+}
+
+.buy_btn {
     width: 54%;
     float: right;
 }
@@ -168,7 +175,8 @@
     border: 2px solid black;
     box-sizing: border-box;
 }
-.shoping_box a{
+
+.shoping_box a {
     display: block;
     height: 100%;
     color: black;
@@ -203,7 +211,7 @@
     height: 50px;
 }
 
-.detail_item_sub_info .table_cell>p{
+.detail_item_sub_info .table_cell>p {
     font-weight: bolder;
 
 }
