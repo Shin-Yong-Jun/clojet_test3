@@ -2,14 +2,20 @@
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+
+main {
+    width: 1400px;
+    height: 170vh; 
+}
+
 .my_page{
     width: 1400px;
-    height: 100vh;
     /* border: 1px solid; */
     display: flex;
     /* flex-direction: column; */
     margin: 0 auto;
     padding: 0;
+    height: 1400px;
 }
 
 
@@ -19,9 +25,7 @@
 
 .mylistset {
     width: 200px;
-    height: 100vh;
-    /* border-right: 1px solid; */
-    
+    height: 800px;
 }
 
 
@@ -72,10 +76,15 @@
 
 /* =========main========== */
 
+.mmain {
+    width: 100%;
+    height: 100vh;
+}
 
 main .mymain {
 display: flex;
 width: 100%;
+height: auto;
 justify-content: center;
 position: relative;
 
@@ -84,19 +93,18 @@ position: relative;
 
 .mycolboxt1 {
     display: flex;
-    margin-top: 60px;
-    width: 700px;
+    margin-top: 20px;
+    width: 800px;
     height: 80px;
     border: 1px solid silver;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    align-content: space-around;
 }
 
 
 .coltxt {
     display: inline-block;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     font-size: 18px;
     height: 80px;
@@ -125,99 +133,273 @@ border-right: 1px solid silver;
 /* ========최근주문상품========== */
 
 
-.mmain {
-    width: 100%;
-    height: 700px;
-    
+
+.mmain2 {
+    visibility: visible;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
-.mycolbox2_container h3 {
-    position: absolute;
-    visibility: visible;
-    left: 20%;
-    bottom: 80px;
-    background-color: black;
-    color: white;
-}
+
 
 /* =================== */
 
-.mcon {
-    width: 40px;
-    height: 40px;
-    background-color: black;
-    border-radius: 50% 50%;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-    display:inline-block;
-    }
 
-.mcbox2{
+
+/* ======나의 주문상품======= */
+
+.mycolbox2 {
+    width: 800px;
+    height: 160px;
+    border-bottom: 1px solid lavender;
+    list-style: none;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+
+.mycolbox2 h3 {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+
+.mycolbox2 ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    transform: translateY(50%);
+}
+
+
+.mcbox2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -40px;
+    text-align: center;
+    align-content: center;
+}
+
+.mycolbox2 ul>li {
+    display: inline-block;
+    position: relative;
+    align-content: center;
+}
+
+.mycolbox2 strong {
+    display: block;
+    font-size: 12px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+
+.mycolbox2 span {
+    font-size: 30px;
+}
+
+
+.mconline li .material-symbols-outlined {
+    font-size: 50px;
+    color: silver;
+}
+
+.mconB {
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50% 50%;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    line-height: 45px;
+}
+
+/* ==========중간이미지========= */
+
+.mycolbox3 {
+    padding-top: 20px;
+    width: 800px;
+    height: 150px;
+    margin-top: 30px;
+    background-image: url(../image/clojet_logo_final_black.png);
+    background-size: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .3;
+}
+
+/* =============위시리스트=============== */
+
+.mycolbox4 {
+    width: 800px;
+    height: 300px;
+    list-style: none;
+}
+
+.mybox4 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.mybox4ul {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lavender;
+    
+}
+
+.mybox4con li {
+    display: inline-block;
+    
+}
+
+.box4img1 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box4con_img1.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.box4img2 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box4con_img2.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.box4img3 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box4con_img3.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.box4img4 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box4con_img4.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+
+.box4imgtxt p {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.box4link a {
+    width: 180px;
+    border: 1px solid dimgray;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+    padding: 5px 5px;
+    font-weight: bold;
+    
+}
+
+
+/* =========최근 본 상품=========== */
+
+.mycolbox5 {
+    margin-top: 60px;
+    width: 800px;
+    height: 300px;
+    list-style: none;
+    margin-bottom: 30px;
+
+}
+
+.mybox5 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+
+.mybox5ul {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lavender;
+
+}
+
+
+
+.mybox5con li {
     display: inline-block;
 }
 
-.mycolbox2 {
-    font-size: 18px;
-    border: 1px solid silver;
-    width: 700px;
-    height: 60px;
-    text-align: center;
-    line-height: 60px;
-    display: table;
-    padding-left: -20px;
-    
-}
-.mconline {
-    border-right: 1px solid silver;
-    margin-right: 10px;
-    margin-left: 10px;
-    padding-right: 20px;
-}
-
-
-
-/* ==========배송========== */
-
-
-.mycolbox2_container {
+.box5img1 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box5con_img1.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-top: 150px;
 }
 
 
-
-
-
-
-/* ==================== */
-
-
-/* .mymain-mbox{
-    position: absolute;
-    background-color:azure;
-    margin-top: 600px;
-    align-items: center;
-    left: 200px;
-    display: grid;
-    grid-template-rows: repeat(3, 300px);
-    width: 100%;
-}
-
-.mbox {
-    border-bottom: 1px solid;
-}
-.mymain_middle1 {
+.box5img2 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box5con_img2.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
     display: flex;
-    flex: 1;
 }
 
-.mymain_middle2{
-    flex: 1;
+
+.box5img3 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box5con_img3.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
 }
 
-.mymain_middle3 {
-    flex: 1;
-} */
+.box5img4 { 
+    margin-top: 0px;  
+    background: url(../image/Mypage_box5con_img4.jpg);
+    background-size:contain;
+    width: 190px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+
+.box5imgtxt p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+
