@@ -74,7 +74,7 @@ main {
     padding-bottom: 30px;
 }
 
-/* =========main========== */
+/* =========main/쿠폰/나의 마일리지/========== */
 
 .mmain {
     width: 100%;
@@ -299,9 +299,15 @@ border-right: 1px solid silver;
 
 
 .box4imgtxt p {
-    font-size: 11px;
+    font-size: 13px;
     margin-bottom: 10px;
 }
+
+
+.box4imgtxt p+p {
+    font-weight: bold;
+}
+
 
 .box4link a {
     width: 180px;
@@ -324,7 +330,7 @@ border-right: 1px solid silver;
     width: 800px;
     height: 300px;
     list-style: none;
-    margin-bottom: 30px;
+    /* margin-bottom: 20px; */
 
 }
 
@@ -338,10 +344,8 @@ border-right: 1px solid silver;
     width: 800px;
     height: 300px;
     display: flex;
-    width: 800px;
     justify-content: space-between;
     margin-top: 20px;
-    padding-bottom: 30px;
     border-bottom: 1px solid lavender;
 
 }
