@@ -583,23 +583,23 @@ footer .footer_logo {
 
 #slideshow {
     text-align: center;
-  overflow-x: hidden;
-  max-width: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
 
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .slide-wrapper {
-  width: 4050px;
-  -webkit-animation: slide 13s ease infinite;
+    width: 4050px;
+    -webkit-animation: slide 13s ease infinite;
 }
 
 .slide {
-  float: left;
-  height: 600px;
-  width: 1350px;
+    float: left;
+    height: 600px;
+    width: 1350px;
 }
 
 
