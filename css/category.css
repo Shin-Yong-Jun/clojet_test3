@@ -40,7 +40,9 @@
     text-decoration: none;
     color: rgba(0, 0, 0, .8);
 }
-.center a[href*="#"] ,.side_menu a[href*="#"]{
+
+.center a[href*="#"],
+.side_menu a[href*="#"] {
     color: black !important;
     font-weight: bolder;
 }
@@ -48,21 +50,24 @@
 /*****************************************************************************/
 /* 헛짓거리 삭제예정 */
 
-.side_bar_color{
+.side_bar_color {
     padding-left: 30px;
 }
-.side_bar_color li{
+
+.side_bar_color li {
     margin: 0 !important;
     display: inline-block;
 }
-.side_bar_color div{
+
+.side_bar_color div {
     position: relative;
     display: inline-block;
     width: 20px;
     height: 20px;
     border: 1px solid;
 }
-.side_bar_color div div{
+
+.side_bar_color div div {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -71,13 +76,16 @@
     height: 14px;
     border: 1px solid;
 }
-.side_bar_color li:nth-child(1) div div{
+
+.side_bar_color li:nth-child(1) div div {
     background-color: red;
 }
-.side_bar_color li:nth-child(2) div div{
+
+.side_bar_color li:nth-child(2) div div {
     background-color: blue;
 }
-.side_bar_color li:nth-child(3) div div{
+
+.side_bar_color li:nth-child(3) div div {
     background-color: black;
 }
 
@@ -92,45 +100,54 @@
     min-height: 65vh;
     /* background-color: antiquewhite; */
 }
-.item_list>div{
+
+.item_list>div {
     margin-top: -20px;
 }
-.item_list>div::after{
+
+.item_list>div::after {
     content: "";
     display: block;
     clear: both;
 }
-.item_list>div>strong{
+
+.item_list>div>strong {
     display: block;
     font-size: 50px;
 
 }
-.item_list>div>p{
+
+.item_list>div>p {
     padding-left: 5px;
     font-size: 20px;
     float: left;
 }
-.item_list>div>select{
+
+.item_list>div>select {
     float: right;
 }
 
 .item_name * {
     color: black;
 }
-.item_img a{
+
+
+.item_img a {
     position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 }
-.item_img a::after{
-    content: url("../html/category/icon/heart.png");
-    display: inline-block;
+
+.item_img span {
     position: absolute;
+    color: black;
     top: 3%;
     right: 3%;
 }
-.item_img a:hover::after{
-    content: url("../html/category/icon/heart2.png");
-}
 
+.item_img span:hover {
+    content: url(../html/category/icon/heart2.png);
+}
 
 /*****************************************************************************/
 /* 카테고리 배너 */
