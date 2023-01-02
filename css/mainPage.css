@@ -390,7 +390,7 @@ main h4 {
     color: black;
 }
 
-.item_info .disCount {
+.disCount {
     color: red;
     font-weight: 700;
 }
