@@ -1,5 +1,10 @@
 .event_wrap {
-  width: 100%;
+  width: 1350px;
   margin: 0 auto;
-  max-width: 1350px;
+}
+
+.event_wrap img {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
 }
