@@ -5,85 +5,81 @@ li {
 }
 
 .cart_box {
-    display: flex;
     float: left;
     width: 100%;
-    flex-direction: column;
     margin: auto;
-    padding: 5%;
 }
 
 .order_wrap .order_tit {
-    /* overflow: hidden; */
+    overflow: hidden;
     border-bottom: 1px solid #dbdbdb;
 }
 
-.order_wrap .order_tit h2 {
-    font-size: 3.2em;
-    font-weight: bold;
-}
-
-.order_wrap .order_tit ol {
-    display: flex;
+.order_wrap .order_tit ul {
     float: right;
-    line-height: 70px;
-    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.order_wrap .order_tit h2 {
+    font-size: 2em;
+    font-weight: bolder;
+}
+.order_wrap .order_tit ul li {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+.order_tit ul li .material-symbols-outlined {
+    font-size: 13px;
 }
 .order_wrap .order_tit .page_on {
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
 }
-.order_wrap .order_tit ol li.page_on span {
+.order_wrap .order_tit ul li.page_on span {
     color: black;
 }
 
-.order_wrap .order_tit li span .material-symbols-outlined {
-    padding: 0 14px;
-    vertical-align: -10px;
-}
-.order_wrap .order_tit ol li span {
+.order_wrap .order_tit ul li span {
     color: #d1d1d1;
 }
 
 .cart_in {
-    padding: 60px;
+    display: block;
+    line-height: 35vh;
+    border-bottom: 1px solid #dbdbdb;
 }
 .cart_in>p {
-    /* display: block; */
     text-align: center;
-    line-height: 20vh;
-    /* margin-block-start: 1em;*/
 }
 
 .left_box {
     text-align: left;
-    margin: auto;
-    padding: 5%;
+    width: 100%;
+}
+
+.go_shop {
+    display: inline-block;
     border-bottom: 1px solid #dbdbdb;
+    padding: 5px;
 }
 
 .price_box {
-    margin: 0;
-    /* border: none; */
-    /* display: block; */
-    /* float: right; */
-    /* padding: 10px 40px 30px; */
-    border-bottom: 1px solid #e2e2e2;
-    position: relative;
-    margin: 0;
-    border: none;
-    padding: 10px 40px 30px;
-}
-
-.price_sum {
-    /* display: table; */
-    float: right;
-    text-align: right;
-}
-
-.price_list {
     display: flex;
-    /* flex-direction: column; */
+    border: none;
+    padding: 40px;
+    margin-bottom: 20vh;
+    justify-content: flex-end;
+    border-bottom: 1px solid #dbdbdb;
+}
+.price_sum {
+    display: flex;
     float: right;
-    position: relative;
+}
+
+.price_list dl {
+    float: left;
+    text-align: center;
+}
+.price_list span {
+    padding: 8px;
+    float: left;
 }
