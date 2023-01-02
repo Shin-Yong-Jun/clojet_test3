@@ -1,0 +1,93 @@
+
+.signup_con {
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+
+
+.icon_set {
+  width: 510px;
+  height: 120px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-left: 60px;
+}
+
+
+
+
+
+
+/* ======================== */
+
+
+
+.checkoutbox {
+  width: 510px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -50px;
+}
+
+.checkouttxt {
+  margin-top: 70px;
+}
+
+.checkouttxt h1 {
+  font-size: 50px;
+  padding: 10px 0;
+}
+
+.checkouttxt p {
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+.completeBox {
+  width: 700px;
+  height: 80px;
+  position: relative;
+  left: -150px;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+.ct-Btn {
+display: inline-block;
+width: 300px;
+height: 60px;
+line-height: 60px;
+color: white;
+background-color: black;
+font-weight: bolder;
+border: 1px solid;
+
+}
+
+
+
+
+
+
+
+.ct-Btn :hover {
+  color: black;
+  background-color: white;
+  border: 1px solid;
+}
+
+
+
+
+
