@@ -4,15 +4,18 @@
     /* background-color: aqua; */
 
 }
-
-.detail_img {
+.detail_img_box{
     display: inline-block;
     width: 70%;
+}
+.detail_thum,
+.detail_img{
     padding-right: 5%;
     height: 100%;
     /* background-color: red; */
 }
 
+.detail_thum img,
 .detail_img img {
     width: 100%;
     height: 100%;
@@ -37,6 +40,9 @@
 }
 .detail_info .price_box{
     margin: 1em 0;
+}
+.detail_info .price:not(del){
+    font-size: 2em;
 }
 
 /* ************************************ */
@@ -229,7 +235,7 @@
     text-align: left;
 }
 
-@media screen and (max-height:1100px) {
+@media screen and (max-height:1050px) {
     footer{
         display: none;
     }
