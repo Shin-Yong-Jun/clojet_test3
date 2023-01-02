@@ -20,7 +20,7 @@ margin: 0px auto;
     margin-bottom: 20px;
     font-size: 3em;
     color: black;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 
@@ -93,9 +93,7 @@ margin: 0px auto;
 /* ====쿠폰 하단 텍스트 변경==== */
 
 .t3 {
-    left: 200px;
-    color: black; 
-    background-color: white;
+    left: 185px;
 }
 
 
