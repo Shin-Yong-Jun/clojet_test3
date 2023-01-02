@@ -21,6 +21,7 @@
     font-size: 110%;
     padding: 10px 0;
     font-weight: 900;
+    color: rgba(0, 0, 0, .7);
     border-bottom: 1px solid rgb(236, 236, 236);
 }
 
@@ -32,16 +33,16 @@
     font-weight: initial;
     /* margin-top: 10px; */
     margin-left: 30px;
+    height: 1.25em;
 }
 
 .side_menu a {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, .8);
 }
 .center a[href*="#"] ,.side_menu a[href*="#"]{
     color: black !important;
     font-weight: bolder;
-    font-size: 110%;
 }
 
 /*****************************************************************************/
