@@ -376,9 +376,12 @@ main h4 {
 
 .item_name a,
 .item_info .disCount,
-.item_name del,
-.item_info .price {
+.item_name del {
     font-size: .9rem;
+}
+
+.item_info .price strong {
+    font-size: 1.1rem;
 }
 
 .item_info .item_name {
