@@ -1,3 +1,42 @@
+li {
+  list-style: none;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.cart_box {
+  float: left;
+  width: 100%;
+  margin: auto;
+}
+
+.order_wrap .order_tit {
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.order_wrap .order_tit ul {
+  float: right;
+  margin-bottom: 10px;
+}
+.order_wrap .order_tit ul li {
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.order_tit ul li .material-symbols-outlined {
+  font-size: 13px;
+}
+.order_wrap .order_tit .page_on {
+  color: black;
+  font-weight: bolder;
+}
+.order_wrap .order_tit ul li.page_on span {
+  color: black;
+}
+
+.order_wrap .order_tit ul li span {
+  color: #d1d1d1;
+}
 
 .signup_con {
   width: 700px;
