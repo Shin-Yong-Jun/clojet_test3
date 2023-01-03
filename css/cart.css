@@ -39,15 +39,8 @@ table {
     font-size: .8em;
     line-height: 20px;
     border-collapse: collapse;
-    /* text-align: center; */
-    /* width: 100%; */
-    /* border-radius: 100px; */
-    /* border-spacing: 0; */
 }
 
-thead {
-    /* line-height: 10px; */
-}
 
 tbody td {
     border-bottom: 1px solid #dbdbdb;
@@ -64,12 +57,6 @@ th {
 
 tr {
     text-align: center;
-}
-
-td {
-    /* display: table-cell; */
-    /* vertical-align: middle; */
-    /* height: 90px; */
 }
 
 .order_sum_txt,
@@ -89,14 +76,10 @@ td {
     border-right: 1px solid #eee;
 }
 
-.td_del_list {
-    /* line-height: 30px; */
-    /* border: none; */
-}
 
 .td_left_img {
     text-align: left;
-    width: 50px;
+    width: 85px;
 }
 
 /* ============================================= */
@@ -153,12 +136,6 @@ td {
     text-align: center;
 }
 
-.left_box {
-    /* text-align: left; */
-    /* width: 100%; */
-}
-
-
 .go_shop {
     color: black;
     display: inline-block;
@@ -170,11 +147,6 @@ td {
     padding: 40px;
     justify-content: flex-end;
     border-bottom: 1px solid #dbdbdb;
-}
-
-.price_sum {
-    /* display: flex; */
-    /* float: right; */
 }
 
 .price_list dl {
