@@ -126,11 +126,22 @@
     color: black;
 }
 
-
 .item_img a {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.item_img img:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.item_img a:hover img:last-of-type{
+    opacity: 0;
 }
 
 .item_img span {

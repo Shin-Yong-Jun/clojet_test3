@@ -6,6 +6,7 @@
 .detail_img_box {
     display: inline-block;
     width: 70%;
+    text-align: center;
 }
 
 .detail_thum,
@@ -13,7 +14,13 @@
     padding-right: 5%;
 }
 
-.detail_thum img,
+.detail_thum img {
+    width: 70%;
+    margin-top: 3%;
+    margin-bottom: 20%;
+
+}
+
 .detail_img img {
     width: 100%;
 }
