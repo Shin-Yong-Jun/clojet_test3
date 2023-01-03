@@ -12,6 +12,7 @@ li {
 
 .order_wrap .order_tit {
   overflow: hidden;
+  margin-top: 36px;
   border-bottom: 1px solid #dbdbdb;
 }
 
@@ -37,7 +38,7 @@ li {
 .order_wrap .order_tit ul li span {
   color: #d1d1d1;
 }
-
+/* ================================================= */
 .signup_con {
   width: 700px;
   height: 700px;
