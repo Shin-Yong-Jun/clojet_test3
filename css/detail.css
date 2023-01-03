@@ -63,7 +63,6 @@
 
 .size input {
     display: none;
-
 }
 
 .size label {
@@ -77,7 +76,6 @@
 .size input:checked+label {
     background-color: gray;
     color: white;
-
 }
 
 
@@ -149,8 +147,6 @@
     width: 100%;
 }
 
-
-
 /* ************************************ */
 /* shoping_box */
 
@@ -219,6 +215,10 @@
     text-align: center;
     vertical-align: middle;
     height: 50px;
+}
+
+.detail_item_sub_info .table_cell a {
+    color: black;
 }
 
 .detail_item_sub_info .table_cell>p {
