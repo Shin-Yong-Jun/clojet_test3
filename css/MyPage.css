@@ -72,6 +72,8 @@
 .list_br {
     border-bottom: 1px solid rgb(233, 233, 233);
     padding-bottom: 30px;
+    width: 130px;
+    margin-bottom: 20px;
 }
 
 /* =========main/쿠폰/나의 마일리지/========== */
