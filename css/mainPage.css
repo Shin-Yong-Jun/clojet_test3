@@ -80,6 +80,11 @@ header .top .inner_submenu_right li a {
     position: relative;
 }
 
+/* 로그인/사인업 수직정렬을 위한 처리 */
+header .top .inner_submenu_right li a {
+    line-height: 2;
+}
+
 
 header .top .inner_submenu_right {
     display: inline-block;
