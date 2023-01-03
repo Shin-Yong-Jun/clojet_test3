@@ -377,7 +377,7 @@ main h4 {
     font-size: .9rem;
 }
 
-.item_info .price strong {
+.item_info .price:not(del) {
     font-size: 1.1rem;
 }
 
