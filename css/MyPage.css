@@ -3,19 +3,10 @@
 }
 
 
-main {
-    width: 1400px;
-    height: 170vh; 
-}
 
 .my_page{
-    width: 1400px;
-    /* border: 1px solid; */
     display: flex;
-    /* flex-direction: column; */
-    margin: 0 auto;
-    padding: 0;
-    height: 1400px;
+    height: 1350px;
 }
 
 
@@ -26,13 +17,14 @@ main {
 .mylistset {
     width: 220px;
     height: 800px;
+    flex: 1;
 }
 
 
 .mylistset ul {
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 14.5px;
-    margin-left: 35px;
+    margin-left: 12px;
     letter-spacing: 1px;
 }
 
@@ -44,17 +36,25 @@ main {
 
 }
 
-#ul_txt {
-    color: black;
+.ul_txt {
+    color: black !important;
     font-weight: bolder;
     font-size: 17px;
     letter-spacing: 2px;
 }
 
+.btxt {
+    margin-bottom: 30px;
+}
+
+.btxt em {
+    font-style: normal;
+    font-weight: bolder;
+}
 
 .mylistset a{
-    color: dimgray;
     font-weight: bold;
+    color: dimgray;
 }
 
 
@@ -87,7 +87,6 @@ width: 100%;
 height: auto;
 justify-content: center;
 position: relative;
-
 }
 
 
@@ -195,7 +194,7 @@ border-right: 1px solid silver;
 }
 
 .mycolbox2 span {
-    font-size: 30px;
+    font-size: 26px;
 }
 
 
@@ -264,7 +263,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 .box4img2 { 
@@ -274,7 +272,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 .box4img3 { 
@@ -284,7 +281,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 .box4img4 { 
@@ -294,7 +290,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 
@@ -330,7 +325,6 @@ border-right: 1px solid silver;
     width: 800px;
     height: 300px;
     list-style: none;
-    /* margin-bottom: 20px; */
 
 }
 
@@ -363,7 +357,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 
@@ -374,7 +367,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 
@@ -385,7 +377,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 .box5img4 { 
@@ -395,7 +386,6 @@ border-right: 1px solid silver;
     width: 190px;
     height: 200px;
     background-repeat: no-repeat;
-    display: flex;
 }
 
 
