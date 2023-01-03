@@ -53,8 +53,8 @@
                 </ul>
 
                 <ul class="inner_submenu_right">
-                        <li><a href="./login.html">LOGIN</a></li>
-                        <li><a href="../signup/signup.html">SIGN-UP</a></li>
+                    <li><a href="./login.html">LOGIN</a></li>
+                    <li><a href="../signup/signup.html">SIGN-UP</a></li>
                 </ul>
             </div>
         </div>
@@ -126,47 +126,43 @@
 
     <!-- Body Main -->
     <main>
-        
-      <div class="login_container">
-          <div class="login_contents">
-              <div class="login_top">
-                  <h2>아이디 찾기</h2>
-              </div>
-              
-              <div class="select_radio">
-                <input type="radio" id="findIdEmail" name="findId" value="email" checked>
-                <label for="findIdEmail" class="choice_s">이메일</label>
-                <input type="radio" id="findIdphone" name="findId" value="cellphone">
-                <label for="findIdphone" class="choice_s">휴대폰 번호</label>
-              </div>
-
-
-              <div class="findId_input">
-                  <input type="text" id="findIdName" name="findIdName" value="" placeholder="이름" required="true" aria-required="true">
-                  <input type="email" id="findIdEmail" name="findIdEmail" value="" placeholder="이메일" required="true" aria-required="true">
-                  <button type="submit" class="btn_findId">아이디 찾기</button>
+        <div class="login_container">
+            <div class="login_contents">
+                <div class="login_top">
+                    <h2>아이디 찾기</h2>
                 </div>
-                
+
+                <div class="select_radio">
+                    <input type="radio" id="rad_findIdEmail" name="findId" value="email" checked>
+                    <label for="rad_findIdEmail" class="choice_s">이메일</label>
+                    <input type="radio" id="rad_findIdphone" name="findId" value="cellphone">
+                    <label for="rad_findIdphone" class="choice_s">휴대폰 번호</label>
+                </div>
+
+
+                <div class="findId_input">
+                    <input type="text" id="findIdName" name="findIdName" value="" placeholder="이름" required>
+                    <input type="email" id="findIdEmail" name="findIdEmail" value="" placeholder="이메일" required>
+                    <button type="submit" class="btn_findId">아이디 찾기</button>
+                </div>
+
 
                 <div class="pwBox">
-                <a href="./find_pw.html" class="btn_idfindPw">비밀번호 찾기</a>
+                    <a href="./find_pw.html" class="btn_idfindPw">비밀번호 찾기</a>
+                </div>
+
+
+
+
+
+                <div class="findid_fail_box">
+                    <div class="signup"><a href="../signup/signup.html">회원가입</a></div>
+                    <div class="no_member"><a href="./login.html">로그인</a></div>
+                </div>
+
             </div>
-
-
-
-
-
-              <div class="findid_fail_box">
-                  <div class="signup"><a href="../signup/signup.html">회원가입</a></div>
-                  <div class="no_member"><a href="./login.html">로그인</a></div>
-              </div>
-
-      </div>
-
-          </div>
-
-      </div>
-  </main>
+        </div>
+    </main>
 
     <footer>
         <div class="inner">
