@@ -9,105 +9,73 @@
 /* ============================ */
 
 .signup_box {
-height: 600px;
 width: 800px;
 margin: 0px auto;
 }
 
-
-.signup_top h2{
+.signup_top>h2{
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 3em;
+    margin-bottom: 30px;
+    font-size: 3.5em;
     color: black;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
 
 .signup_center {
     width: 800px;
-    height: 250px;
-    /* background-color: rgb(243, 243, 243); */
     border: 1px solid silver;
-    position: relative;
-    margin: auto;
+    height: 240px;
+    margin: 0 auto;
+    
 }
 
 .coupontop {
     text-align: center;
     padding-top: 25px;
-    /* font-weight: bold; */
-    font-size: 17px;
+    font-size: 18px;
     color: black;
+    padding-bottom: 10px;
 }
 
-.coupon {
-    background-size: 100%;
+/* =========================== */
+
+.couponul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupondiv img {
     width: 250px;
-    height: 200px;
-    margin-top: 10px;
-    margin-left: 10px;
+}
+
+.coupontxt {
     display: inline-block;
-    background-repeat: no-repeat; 
-}
-
-
-.coupon1 {
-    background-image: url(../image/coupon_1.png);
-}
-
-.coupon2 {
-    background-image: url(../image/coupon_2.png);
-}
-
-.coupon3 {
-        background-image: url(../image/coupon_3.png);
-    }
-
-
-.coupontext {
-    bottom: 70px;
-    font-weight: bold;
-    color:white;
-    margin-left: 45px;
-    padding: 0 10px;
-    font-size: .85em;
-    display: inline;
-    position: relative;
+    color: white;
     background-color: black;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.coupondiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
-
-.t1{
-    position:relative;
-    border-bottom: 1px solid silver;
-    left: 12px;
-}
-
-.t2{
-    left: 100px;
-}
-
-
-/* ====쿠폰 하단 텍스트 변경==== */
-
-.t3 {
-    left: 185px;
-}
-
-
-
-.btn_box {
-    margin-top: 50px;
-    position: relative;
-    width: 800px;
-    height: 100px;
-}
 
 
 
 /* ==== 카카오/일반 회원가입 버튼 =========*/
+
+.btn_con {
+    margin-top: 50px;
+    position: relative;
+    width: 800px;
+    height: 100px;
+    margin: 40px auto;
+}
+
 
 .btn {
     width: 390px;
@@ -115,8 +83,6 @@ margin: 0px auto;
     text-align: center;
     font-weight: bold;
     line-height: 80px;
-    float: left;
-    /* margin: 0 15px; */
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -124,6 +90,7 @@ margin: 0px auto;
 }
 
 .btn-left {
+    float: left;
     background-color:#FEE500;
     color: #3a270f;
     transition: .3s;
@@ -146,6 +113,7 @@ margin: 0px auto;
 .btn-left:hover {
     opacity: 0.3;
 }
+
 
 .btn-right:hover{
     background-color: white;
