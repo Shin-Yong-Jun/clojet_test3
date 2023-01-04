@@ -5,7 +5,7 @@
 }
 
 .signupbox {
-    width: 1500px;
+    width: 1350px;
     height: 1200px;
     margin: 0 auto;
     margin-bottom: 200px;
@@ -28,7 +28,7 @@
 }
 
 .signbox_left {
-    width: 750px;
+    width: 675px;
     height: auto;
     position: absolute;
     border-right: 1px solid rgb(221, 221, 221);
@@ -313,7 +313,7 @@ main>div .material-symbols-outlined {
     text-align: center;
     position: relative;
     bottom: -80px;
-    left: -280px;
+    left: -210px;
     transition: 0.7s;
 }
 
