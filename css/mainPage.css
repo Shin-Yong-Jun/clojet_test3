@@ -14,12 +14,18 @@ ul {
     list-style: none;
 }
 
+header .inner, footer .inner{
+    min-width: 900px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
 
-.inner {
+main .inner {
     width: 1350px;
     margin: 0 auto;
     position: relative;
 }
+
 
 header {
     position: fixed;
@@ -29,8 +35,9 @@ header {
     z-index: 2;
     display: block;
     /* 화면축소했을 때 한계까지 헤더 다 보이게하는 크기 */
-    min-width: 1100px;
+    /* min-width: 1100px; */
 }
+
 
 /* ======= topmenu ======= */
 header .top {
@@ -183,7 +190,9 @@ header .bottom .inner .center {
 }
 
 header .bottom .inner .center>ul {
+    position: relative;
     text-align: center;
+    left: 30px;
 }
 
 header .bottom .inner .center>ul>li {
@@ -635,6 +644,7 @@ footer .footer_logo {
         margin-left: -2700px;
     }
 
-    /* 80% {margin-left: -2184px;}
-    90% {margin-left: -2184px;} */
 }
+
+/* 반응형 grid */
+
