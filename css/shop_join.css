@@ -139,6 +139,29 @@ main>div .material-symbols-outlined {
     padding: 5px;
     color: dimgray;
     font-weight: bold;
+    display: relative;
+}
+
+/* 체크박스 위치 미세조정 */
+
+.account_checkbox input, 
+.end_checkbox input {
+    position: relative;
+    top: 2px;
+    left: 0;
+    margin-right: 2px;
+}
+
+.gender input {
+    position: relative;
+    top: 3px;
+}
+
+
+.infolink {
+    display: flex;
+    text-align: right;
+    right: 0;
 }
 
 

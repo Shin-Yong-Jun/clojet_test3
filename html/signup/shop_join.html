@@ -177,19 +177,23 @@
                             <div class="account_agreebox">
                                 <h5>CLOJET 공식 온라인 스토어 회원 약관 및 개인정보 수집 이용에 대한 동의</h5>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" required> (필수) 이용약관에 대한 동의
+                                    <input type="checkbox" id="first_chk" required>
+                                    <label for="first_chk">(필수) 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" required> (필수) 멤버십 이용약관에 대한 동의
+                                    <input type="checkbox" id="second_chk" required>
+                                    <label for="second_chk">(필수) 멤버십 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" required> (필수) 개인정보 수집 및 이용에 대한 동의
+                                    <input type="checkbox" id="third_chk" required>
+                                    <label for="third_chk">(필수) 개인정보 수집 및 이용에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox"> (선택) 생년월일, 성별 제공에 대한 동의
+                                    <input type="checkbox" id="forth_chk">
+                                    <label for="forth_chk">(선택) 생년월일, 성별 제공에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_bottomt">
@@ -205,10 +209,12 @@
                                     <p>다양한 이벤트 소식을 받아보세요.</p>
                                 </div>
                                 <div class="end_checkbox">
-                                    <input type="checkbox"> (선택) 쇼핑정보 E-mail 수신 동의
+                                    <input type="checkbox" id="end_first_chk">
+                                    <label for="end_first_chk">(선택) 쇼핑정보 E-mail 수신 동의</label>
                                 </div>
                                 <div class="end_checkbox">
-                                    <input type="checkbox"> (선택) 쇼핑정보 SMS 수신 동의
+                                    <input type="checkbox" id="end_second_chk">
+                                    <label for="end_second_chk">(선택) 쇼핑정보 SMS 수신 동의</label>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +285,7 @@
                                 <span class="gender">
                                     <label>
                                         남성
-                                        <input type="radio" checked class="gender" name="gender">
+                                        <input type="radio" class="gender" name="gender" checked>
                                     </label>
                                 </span>
                                 <span class="gender">
@@ -290,9 +296,6 @@
                                 </span>
                             </div>
                             <!-- <button type="submit"> -->
-                            <!-- <div class="field_btn">
-                                <a href="../../html/signup/signup_complete.html">회원가입</a>
-                            </div> -->
                             <button type="submit" class="field_btn">회원가입</button>
                         </div>
                     </div>
