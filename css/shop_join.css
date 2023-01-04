@@ -274,7 +274,7 @@ main>div .material-symbols-outlined {
     font-weight: bold;
 }
 
-.field_btn a {
+.field_btn {
     background-color: black;
     display: inline-block;
     width: 350px;
@@ -291,7 +291,7 @@ main>div .material-symbols-outlined {
 }
 
 
-.field_btn a:hover {
+.field_btn:hover {
     background-color: white;
     border: 1px solid black;
     color: black;
