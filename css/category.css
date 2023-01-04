@@ -26,7 +26,6 @@
 
 .side_menu ul>li {
     font-weight: initial;
-    /* margin-top: 10px; */
     margin-left: 30px;
     height: 1.25em;
 }
@@ -42,8 +41,78 @@
     font-weight: bolder;
 }
 
+.side_menu .side_category {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.side_menu input {
+    display: none;
+}
+
+
 /*****************************************************************************/
-/* 헛짓거리 삭제예정 */
+/*리스트 클릭버튼 헛짓거리 삭제예정 js 대체예정 */
+.side_menu .side_category label {
+    font-size: 110%;
+    position: absolute;
+    right: 0;
+}
+
+.side_menu .side_category {
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.side_menu .side_category li a {
+    color: transparent;
+    transition: 2.6s;
+}
+
+.side_menu .side_category input:checked~ul a {
+    color: black;
+}
+
+.side_menu .side_category ul {
+    position: absolute;
+    top: -150px;
+    height: 0;
+}
+
+.side_menu .side_category input:checked~ul {
+    position: relative;
+    height: 100px;
+    top: 0px;
+    transition: 1s;
+    animation-name: movingBox;
+}
+
+.side_menu .side_category>label:first-of-type {
+    transform: rotate(90deg);
+    transition: 0.3s;
+
+}
+
+.side_menu .side_category input:checked+label {
+    transform: rotate(0deg);
+}
+
+@keyframes movingBox {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+
+/*****************************************************************************/
+/*색상연습 헛짓거리 삭제예정 js 대체예정 */
 
 .side_bar_color {
     padding-left: 30px;
@@ -140,7 +209,7 @@
     opacity: 1;
 }
 
-.item_img a:hover img:last-of-type{
+.item_img a:hover img:last-of-type {
     opacity: 0;
 }
 
@@ -163,12 +232,15 @@
     overflow: hidden;
 }
 
+/*****************************************************************************/
+/* 일정사이즈 이하 footer삭제 */
 @media screen and (max-height:1050px) {
     footer {
         display: none;
     }
 
-    .detail_info {
+    .side_menu {
         height: 70%;
+        overflow: auto;
     }
 }
