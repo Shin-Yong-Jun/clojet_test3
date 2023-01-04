@@ -131,11 +131,13 @@
                     <h2>비회원 주문조회</h2>
                 </div>
 
-                <div class="findNoMember_input">
-                    <input type="text" id="findNoMemberName" name="findNoMemberName" placeholder="주문자명" required>
-                    <input type="text" id="findNoMemberNum" name="findNoMemberNum" placeholder="주문번호" required>
-                    <button type="submit" class="btn_NoMemberOrder">비회원 주문조회</button>
-                </div>
+                <form action="../cart.html" name="NoMemberCart">
+                    <div class="findNoMember_input">
+                        <input type="text" id="findNoMemberName" name="findNoMemberName" placeholder="주문자명" required>
+                        <input type="text" id="findNoMemberNum" name="findNoMemberNum" placeholder="주문번호" required>
+                        <button type="submit" class="btn_NoMemberOrder">비회원 주문조회</button>
+                    </div>
+                </form>
 
                 <div class="findid_fail_box">
                     <div class="signup"><a href="../signup/signup.html">회원가입</a></div>

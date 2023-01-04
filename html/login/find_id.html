@@ -132,19 +132,19 @@
                     <h2>아이디 찾기</h2>
                 </div>
 
-                <div class="select_radio">
-                    <input type="radio" id="rad_findIdEmail" name="findId" value="email" checked>
-                    <label for="rad_findIdEmail" class="choice_s">이메일</label>
-                    <input type="radio" id="rad_findIdphone" name="findId" value="cellphone">
-                    <label for="rad_findIdphone" class="choice_s">휴대폰 번호</label>
-                </div>
-
-
-                <div class="findId_input">
-                    <input type="text" id="findIdName" name="findIdName" value="" placeholder="이름" required>
-                    <input type="email" id="findIdEmail" name="findIdEmail" value="" placeholder="이메일" required>
-                    <button type="submit" class="btn_findId">아이디 찾기</button>
-                </div>
+                <form action="#" name="findIdInfo">
+                    <div class="select_radio">
+                        <input type="radio" id="rad_findIdEmail" name="findId" value="email" checked>
+                        <label for="rad_findIdEmail" class="choice_s">이메일</label>
+                        <input type="radio" id="rad_findIdphone" name="findId" value="cellphone">
+                        <label for="rad_findIdphone" class="choice_s">휴대폰 번호</label>
+                    </div>
+                    <div class="findId_input">
+                        <input type="text" id="findIdName" name="findIdName" minlength="2" maxlength="5" value="" placeholder="이름" required>
+                        <input type="email" id="findIdEmail" name="findIdEmail" value="" placeholder="이메일" required>
+                        <button type="submit" class="btn_findId">아이디 찾기</button>
+                    </div>
+                </form>
 
 
                 <div class="pwBox">
