@@ -6,10 +6,9 @@
 
 .signupbox {
     width: 1350px;
-    height: 1200px;
+    height: 1300px;
     margin: 0 auto;
     margin-bottom: 200px;
-    position: relative;
 }
 
 .signupbox h1 {
@@ -23,31 +22,33 @@
     color: white;
 }
 
-.box {
-    margin-top: 30px;
-}
+
 
 .signbox_left {
     width: 675px;
-    height: auto;
+    height: 600px;
     position: absolute;
-    border-right: 1px solid rgb(221, 221, 221);
     font-weight: bold;
 }
 
+.centerline {
+    width: 675px;
+    height: 500px;
+    position: absolute;
+    border-right: 1px solid rgb(221, 221, 221);
+    top: 100px;
+}
+
 .agree_fieldset {
-    width: 700px;
-    height: auto;
-    padding: 0 50px;
+    width: 600px;
+    padding: 0 0px;
 
 }
 
 .signbox_right {
-    width: 700px;
+    width: 600px;
     height: 600px;
     float: right;
-    padding: 0 50px;
-    vertical-align: middle;
 }
 
 /* =================================== */
@@ -56,7 +57,6 @@
 .icon_set {
     width: 510px;
     height: 120px;
-    /* border: 1px solid; */
     margin: 0 auto;
     margin-top: 30px;
     text-align: center;
@@ -110,7 +110,7 @@ main>div .material-symbols-outlined {
 }
 
 .total_agreebox {
-    padding: 15px;
+    padding-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -128,7 +128,7 @@ main>div .material-symbols-outlined {
 
 
 .account_agreebox {
-    padding: 15px;
+    /* padding: 15px; */
     margin-bottom: 10px;
 }
 
@@ -190,7 +190,7 @@ main>div .material-symbols-outlined {
 }
 
 .end_agreebox {
-    padding: 15px;
+    /* padding: 15px; */
     margin-bottom: 10px;
 }
 
@@ -204,6 +204,10 @@ main>div .material-symbols-outlined {
     background-color:rgb(247, 247, 247);
     width: auto;
     height: auto;
+}
+
+.end_agreebox_top a {
+    margin-right: 5px;
 }
 
 .end_agreebox h5 {
@@ -313,7 +317,7 @@ main>div .material-symbols-outlined {
     text-align: center;
     position: relative;
     bottom: -80px;
-    left: -210px;
+    left: -260px;
     transition: 0.7s;
 }
 
