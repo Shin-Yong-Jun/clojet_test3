@@ -18,7 +18,9 @@ header .inner, footer .inner{
     min-width: 900px;
     max-width: 1350px;
     margin: 0 auto;
+    position: relative;
 }
+
 
 main .inner {
     width: 1350px;
@@ -46,7 +48,7 @@ header .top {
     background-color: #fff;
 }
 
-header .top .inner_submenu {
+header .top .inner_submenu{
     text-align: left;
     display: inline-block;
     position: relative;
@@ -92,14 +94,12 @@ header .top .inner_submenu_right li a {
     line-height: 2;
 }
 
-
 header .top .inner_submenu_right {
-    display: inline-block;
     text-align: right;
-    right: 0;
+    display: inline-block;
     position: absolute;
+    right: 0;
 }
-
 
 
 header .top .inner_submenu_right li {
