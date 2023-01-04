@@ -128,7 +128,6 @@
 
 .item_img a {
     position: relative;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -146,7 +145,7 @@
 
 .item_img span {
     position: absolute;
-    color: black;
+    color: rgba(192, 192, 192);
     top: 3%;
     right: 3%;
 }
