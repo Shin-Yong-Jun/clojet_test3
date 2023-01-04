@@ -86,12 +86,9 @@
 }
 
 .detail_info .title {
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
-.detail_info .sub_title {
-    font-size: 1.1em;
-}
 
 .detail_info .item {
     border-bottom: 1px solid;
@@ -102,7 +99,7 @@
 }
 
 .detail_info .price:not(del) {
-    font-size: 2em;
+    font-size: 1.9em;
 }
 
 /* ************************************ */
