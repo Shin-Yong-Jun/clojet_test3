@@ -12,18 +12,70 @@
 .detail_thum,
 .detail_img {
     padding-right: 5%;
-}
-
-.detail_thum img {
-    width: 70%;
-    margin-top: 3%;
-    margin-bottom: 20%;
 
 }
 
-.detail_img img {
-    width: 100%;
+/* ******************************************** */
+/* 뻘짓1 클릭대용 js 이후 삭제 교체예정 */
+
+.detail_thum {
+    display: grid;
+    grid-template: 750px 100px / repeat(9, 1fr);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
 }
+
+.detail_thum label {
+    height: 100px;
+}
+
+.detail_thum input {
+    display: none;
+}
+
+.detail_thum input:first-of-type,
+.detail_thum label:first-of-type {
+    grid-column: 4/5;
+}
+
+.detail_thum label:first-of-type {
+    background: url(../html/category/img/thum1.jpg) center/cover;
+}
+
+.detail_thum label:nth-of-type(2) {
+    background: url(../html/category/img/thum2.jpg) center/cover;
+}
+
+.detail_thum label:nth-of-type(3) {
+    background: url(../html/category/img/thum3.jpg) center/cover;
+}
+
+.detail_thum label:last-child {
+    background: url(../html/category/img/thum4.jpg) top/cover;
+    height: 100%;
+    grid-column: span 9;
+    order: -1;
+}
+
+.detail_thum input:nth-of-type(1):checked~label:last-of-type {
+    background: url(../html/category/img/thum1.jpg) top/cover;
+}
+
+.detail_thum input:nth-of-type(2):checked~label:last-of-type {
+    background: url(../html/category/img/thum2.jpg) top/cover;
+}
+
+.detail_thum input:nth-of-type(3):checked~label:last-of-type {
+    background: url(../html/category/img/thum3.jpg) top/cover;
+}
+
+
+/* */
 
 .detail_info {
     display: inline-block;

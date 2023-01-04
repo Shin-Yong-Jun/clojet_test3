@@ -162,3 +162,13 @@
     height: 250px;
     overflow: hidden;
 }
+
+@media screen and (max-height:1050px) {
+    footer {
+        display: none;
+    }
+
+    .detail_info {
+        height: 70%;
+    }
+}
