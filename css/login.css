@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+:root {
+  accent-color: black;
+}
+
 
 
 /* ============로그인 페이지================ */
@@ -83,39 +87,16 @@ position: relative;
   position: relative;
   padding-bottom: 10px;
   border-bottom: 1px solid #dedede;
+  margin: 10px 0;
 }
 
-.saveId_chk input {
-  display: none;
-}
-
-.saveId_chk input+label.check_s {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-top: 12px;
-  text-align: center;
-  display: inline-block;
-  min-width: 20px;
-  min-height: 20px;
-  padding: 0 0 0 30px;
-  font-size: 14px;
-  color: black;
-  background: url(../image/icon_check.png) no-repeat;
-  background-size: 18px;
-  cursor: pointer;
-}
-
-.saveId_chk input:checked+label.check_s {
-  background: url(../image/icon_check_on.png) no-repeat;
-  background-size: 20px;
-}
+/* ===============================================================수정예정 */
 
 .search_loginfo {
   position: absolute;
   right: 0;
-  margin-top: 10px;
   color: black;
+  margin: -1px 0;
 }
 
 .search_loginfo a {
@@ -192,26 +173,13 @@ position: relative;
   text-align: center;
 }
 
+.select_radio>input {
+  position: relative;
+  top: 1px;
+}
+
 .select_radio label:first-of-type {
   margin-right: 10px;
-}
-
-.select_radio input {
-  display: none;
-}
-
-.select_radio input + label.choice_s {
-  min-width: 20px;
-  padding: 0 0 0 20px;
-  background: url(../image/icon-radio.png) no-repeat 0 0;
-  background-size: 15px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.select_radio input:checked + label.choice_s {
-  background: url(../image/icon-radio-on.png) no-repeat 0 0;
-  background-size: 15px;
 }
 
 .findId_input input {
