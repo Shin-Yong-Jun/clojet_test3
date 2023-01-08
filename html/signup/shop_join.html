@@ -157,7 +157,7 @@
                     </div>
                 </div>
 
-                <form action="./signup_complete.html">
+                <form action="./signup_complete.html" accept-charset="utf-8" name="person_info" method="post">
                     <div class="signbox_left">
                         <div class="agree_fieldset">
                             <div class="total_agreebox">
@@ -180,22 +180,22 @@
                             <div class="account_agreebox">
                                 <h5>CLOJET 공식 온라인 스토어 회원 약관 및 개인정보 수집 이용에 대한 동의</h5>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="first_chk" required>
+                                    <input type="checkbox" id="first_chk" name="first_chk" required>
                                     <label for="first_chk">(필수) 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="second_chk" required>
+                                    <input type="checkbox" id="second_chk" name="second_chk" required>
                                     <label for="second_chk">(필수) 멤버십 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="third_chk" required>
+                                    <input type="checkbox" id="third_chk" name="third_chk"required>
                                     <label for="third_chk">(필수) 개인정보 수집 및 이용에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="forth_chk">
+                                    <input type="checkbox" id="forth_chk" name="forth_chk">
                                     <label for="forth_chk">(선택) 생년월일, 성별 제공에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
@@ -212,11 +212,11 @@
                                     <p>다양한 이벤트 소식을 받아보세요.</p>
                                 </div>
                                 <div class="end_checkbox">
-                                    <input type="checkbox" id="end_first_chk">
+                                    <input type="checkbox" id="end_first_chk" name="end_first_chk">
                                     <label for="end_first_chk">(선택) 쇼핑정보 E-mail 수신 동의</label>
                                 </div>
                                 <div class="end_checkbox">
-                                    <input type="checkbox" id="end_second_chk">
+                                    <input type="checkbox" id="end_second_chk" name="end_second_chk">
                                     <label for="end_second_chk">(선택) 쇼핑정보 SMS 수신 동의</label>
                                 </div>
                             </div>
@@ -234,28 +234,28 @@
                             <div class="field_title">
                                 <label>
                                     <span class="formtxt">아이디 <em>*</em></span>
-                                    <input type="text" size="40" class="input_text"
-                                        placeholder="아이디를 입력해주세요.(특수문자 입력불가)">
+                                    <input type="text" size="40" class="input_text" name="id"
+                                        placeholder="아이디를 입력해주세요.(특수문자 입력불가)" required>
                                 </label>
                             </div>
                             <div class="field_title">
                                 <label>
                                     <span class="formtxt">비밀번호 <em>*</em></span>
-                                    <input type="password" size="40" class="input_text" minlength="8" maxlength="16"
-                                        placeholder="영문/숫자/특수문자 조합 8~16자">
+                                    <input type="password" size="40" class="input_text" name="pw" minlength="8" maxlength="16"
+                                        placeholder="영문/숫자/특수문자 조합 8~16자" required>
                                 </label>
                             </div>
                             <div class="field_title">
                                 <label>
                                     <span class="formtxt">비밀번호 확인 <em>*</em></span>
-                                    <input type="password" size="40" class="input_text" minlength="8" maxlength="16"
-                                        placeholder="비밀번호 입력 확인">
+                                    <input type="password" size="40" class="input_text" name="pw_chk" minlength="8" maxlength="16"
+                                        placeholder="비밀번호 입력 확인" required>
                                 </label>
                             </div>
                             <div class="field_title">
                                 <label>
                                     <span class="formtxt">이메일 <em>*</em></span>
-                                    <input type="text" size="18" class="input_email" placeholder="이메일을 입력해주세요.">
+                                    <input type="text" size="18" class="input_email" name="email" placeholder="이메일을 입력해주세요." required>
                                     <span class="email_ent"> @</span>
                                 </label>
                                 <select name="email_domain" class="email_select">
@@ -270,19 +270,19 @@
                                 <label for="labelfor1">
                                     <span class="formtxt">이름 <em>*</em></span>
                                 </label>
-                                <input id="labelfor1" type="text" size="40" class="input_text" placeholder="이름을 입력해주세요."
+                                <input id="labelfor1" type="text" size="40" class="input_text" name="name" placeholder="이름을 입력해주세요."
                                     required>
                             </div>
                             <div class="field_title">
                                 <label for="labelfor2">
                                     <span class="formtxt">휴대폰 <em>*</em></span>
-                                    <input id="labelfor2" type="tel" size="40" class="input_text" minlength="11"
+                                    <input id="labelfor2" type="tel" size="40" class="input_text" name="phone_number" minlength="11"
                                         placeholder="휴대폰 번호를 입력해주세요." required>
                                 </label>
                             </div>
                             <div class="field_title">
                                 <span class="formtxt">생년월일 <em>*</em></span>
-                                <input type="text" size="40" class="input_text" minlength="6" maxlength="6"
+                                <input type="text" size="40" class="input_text" name="birth" minlength="6" maxlength="6"
                                     placeholder="생년월일 6자리   예)901225" required>
                             </div>
                             <div class="field_title">
@@ -290,18 +290,18 @@
                                 <span class="gender">
                                     <label>
                                         남성
-                                        <input type="radio" class="gender" name="gender" checked>
+                                        <input type="radio" class="gender" name="gender" value="male" checked required>
                                     </label>
                                 </span>
                                 <span class="gender">
                                     <label>
                                         여성
-                                        <input type="radio" name="gender">
+                                        <input type="radio" name="gender" value="female" required>
                                     </label>
                                 </span>
                             </div>
                             <!-- <button type="submit"> -->
-                            <button type="submit" class="field_btn">회원가입</button>
+                            <button type="submit" class="field_btn" value="전송">회원가입</button>
                         </div>
                     </div>
                 </form>
