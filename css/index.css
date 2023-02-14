@@ -31,16 +31,18 @@ header {
     display: flex;
 }
 
-.right  {
+.right {
     position: absolute;
     right: 0;
 }
 
 .material-symbols-outlined {
+    display: inline-block;
     line-height: 1.2;
     vertical-align: middle;
     color: white;
     font-size: 35px;
+    cursor: pointer;
 }
 
 ul {
@@ -51,6 +53,54 @@ ul {
 li {
     margin: 0 5px;
 }
+
+.icon_search input {
+    display: inline-block;
+    outline: 3px solid #fff;
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 4px;
+
+    color: white;
+    height: 30px;
+    width: 300px;
+    margin-right: 10px;
+    opacity: 0;
+
+    font-size: 12px;
+    transition: .2s;
+
+    box-shadow: none;
+    padding-left: 10px;
+
+
+    visibility: hidden;
+}
+
+/* 검색창 placeholder 화이트 */
+input::-webkit-input-placeholder {
+    position: absolute;
+    font-size: 1.2em;
+    vertical-align: text-bottom;
+    color: white;
+
+    top: 50%;
+    transform: translateY(-55%);
+    
+}
+
+input:-ms-input-placeholder {
+    color: white;
+}
+
+textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+textarea:-ms-input-placeholder {
+    color: white;
+}
+
 
 /* ===== main ===== */
 
