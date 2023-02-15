@@ -63,7 +63,7 @@ li {
 
     color: white;
     height: 30px;
-    width: 300px;
+    width: 0;
     margin-right: 10px;
     opacity: 0;
 
@@ -75,6 +75,7 @@ li {
 
 
     visibility: hidden;
+    transition: .4s;
 }
 
 /* 검색창 placeholder 화이트 */
