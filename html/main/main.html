@@ -126,7 +126,8 @@
         <!-- 사이드 배지 -->
         <div class="badges">
             <div class="badge">
-                <img src="../../image/clojet-main-badge1.png" alt="Badge" />
+                <img class = "badgeImg" src="../../image/clojet-main-badge1.png" alt="Badge" />
+                <img class = 'close' src="../../image/close_button.svg" alt="close" />
             </div>
         </div>
 
@@ -152,144 +153,18 @@
             </div>
             <div class="empty"></div>
             <!--MAIN item_list -->
-            <div class="main_products">
+            <div class="main_products1">
                 <h4> SPECIAL SALES</h4>
                 <ul>
-                    <li>Men</li>
-                    <li>Lady</li>
+                    <li><a href="#" class="Men">Men</a></li>
+                    <li><a href="#" class="Lady">Lady</a></li>
                 </ul>
             </div>
 
-            <div class="item_list">
-                <ul>
-                    <li>
-                        <div class="item_img">
-                            <a href="../detail/category_detail.html">
-                                <img src="../../image/0badcdcb623e5d6a6e2734507f967315.jpg" alt="item1">
-                            </a>
-                        </div>
-                        <div class="item_info">
-                            <p class="item_name">
-                                <a href="">라이언 무스탕 / 골덴</a>
-                            </p>
-                            <span class="disCount">
-                                30%
-                            </span>
-                            <del class="price">
-                                300,000원
-                            </del>
-                            <p class="price">
-                                <strong>210,000</strong>원
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item_img">
-                            <a href="../detail/category_detail.html">
-                                <img src="../../image/16b85bcd101150b4c177eaf4449a6db6.jpg" alt="item2">
-                            </a>
-                        </div>
-                        <div class="item_info">
-                            <p class="item_name">
-                                <a href="">라이언 무스탕 / 레더</a>
-                            </p>
-                            <span class="disCount">
-                                30%
-                            </span>
-                            <del class="price">
-                                300,000원
-                            </del>
-                            <p class="price">
-                                <strong>285,000</strong>원
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item_img">
-                            <a href="../detail/category_detail.html">
-                                <img src="../../image/1cd6cc0b2d3684636178061adb67efe6.jpg" alt="item3">
-                            </a>
-                        </div>
-                        <div class="item_info">
-                            <p class="item_name">
-                                <a href="">포레스트 그린 코트 / 롱</a>
-                            </p>
-                            <span class="disCount">
-                                30%
-                            </span>
-                            <del class="price">
-                                300,000원
-                            </del>
-                            <p class="price">
-                                <strong>285,000</strong>원
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item_img">
-                            <a href="../detail/category_detail.html">
-                                <img src="../../image/2b47db2d61cc39cad6e7105775390afa.jpg" alt="item4">
-                            </a>
-                        </div>
-                        <div class="item_info">
-                            <p class="item_name">
-                                <a href="">로얄 퍼 코트 / 브라운</a>
-                            </p>
-                            <span class="disCount">
-                                30%
-                            </span>
-                            <del class="price">
-                                300,000원
-                            </del>
-                            <p class="price">
-                                <strong>285,000</strong>원
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item_img">
-                            <a href="../detail/category_detail.html">
-                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
-                            </a>
-                        </div>
-                        <div class="item_info">
-                            <p class="item_name">
-                                <a href="">이안 디자인 오버셔츠</a>
-                            </p>
-                            <span class="disCount">
-                                30%
-                            </span>
-                            <del class="price">
-                                300,000원
-                            </del>
-                            <p class="price">
-                                <strong>285,000</strong>원
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="empty"></div>
-            <!--  -->
-            <!-- Main banner2 -->
-            <div class="inner">
-                <div class="main_banner_box2">
-                    <a href="#">
-                        <img src="../../image/clojet-mainfw-middle_banner.png" alt="middle_banner">
-                    </a>
-                </div>
-                <div class="empty"></div>
-
-                <!--MAIN item_list2 -->
-                <div class="main_products">
-                    <h4>WINTER CLOJET</h4>
-                    <ul>
-                        <li>Men</li>
-                        <li>Lady</li>
-                    </ul>
-                </div>
-
-                <div class="item_list">
+            <div class="item_container1">
+                <a class="btn_back nonVisible" href="#"> <img src="../../image/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="back_img"></a>
+                <a class="btn_foward" href="#"> <img src="../..//image/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="foward_img"></a>
+                <div class="item_list sales_men">
                     <ul>
                         <li>
                             <div class="item_img">
@@ -299,7 +174,7 @@
                             </div>
                             <div class="item_info">
                                 <p class="item_name">
-                                    <a href="">라이언 무스탕 / 골덴</a>
+                                    <a href="">남자라이언 무스탕 / 골덴</a>
                                 </p>
                                 <span class="disCount">
                                     30%
@@ -396,33 +271,355 @@
                                 </p>
                             </div>
                         </li>
+                        <li>
+                            <div class="item_img">
+                                <a href="../detail/category_detail.html">
+                                    <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                </a>
+                            </div>
+                            <div class="item_info">
+                                <p class="item_name">
+                                    <a href="">이안 디자인 오버셔츠</a>
+                                </p>
+                                <span class="disCount">
+                                    30%
+                                </span>
+                                <del class="price">
+                                    300,000원
+                                </del>
+                                <p class="price">
+                                    <strong>285,000</strong>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_img">
+                                <a href="../detail/category_detail.html">
+                                    <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                </a>
+                            </div>
+                            <div class="item_info">
+                                <p class="item_name">
+                                    <a href="">이안 디자인 오버셔츠</a>
+                                </p>
+                                <span class="disCount">
+                                    30%
+                                </span>
+                                <del class="price">
+                                    300,000원
+                                </del>
+                                <p class="price">
+                                    <strong>285,000</strong>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_img">
+                                <a href="../detail/category_detail.html">
+                                    <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                </a>
+                            </div>
+                            <div class="item_info">
+                                <p class="item_name">
+                                    <a href="">이안 디자인 오버셔츠</a>
+                                </p>
+                                <span class="disCount">
+                                    30%
+                                </span>
+                                <del class="price">
+                                    300,000원
+                                </del>
+                                <p class="price">
+                                    <strong>285,000</strong>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_img">
+                                <a href="../detail/category_detail.html">
+                                    <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                </a>
+                            </div>
+                            <div class="item_info">
+                                <p class="item_name">
+                                    <a href="">이안 디자인 오버셔츠</a>
+                                </p>
+                                <span class="disCount">
+                                    30%
+                                </span>
+                                <del class="price">
+                                    300,000원
+                                </del>
+                                <p class="price">
+                                    <strong>285,000</strong>원
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_img">
+                                <a href="../detail/category_detail.html">
+                                    <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                </a>
+                            </div>
+                            <div class="item_info">
+                                <p class="item_name">
+                                    <a href="">이안 디자인 오버셔츠</a>
+                                </p>
+                                <span class="disCount">
+                                    30%
+                                </span>
+                                <del class="price">
+                                    300,000원
+                                </del>
+                                <p class="price">
+                                    <strong>285,000</strong>원
+                                </p>
+                            </div>
+                        </li>
                     </ul>
+                </div>
+            
+            
+            <div class="item_list sales_lady">
+                <ul>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/0badcdcb623e5d6a6e2734507f967315.jpg" alt="item1">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">여자라이언 무스탕 / 골덴</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>210,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/16b85bcd101150b4c177eaf4449a6db6.jpg" alt="item2">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">라이언 무스탕 / 레더</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/1cd6cc0b2d3684636178061adb67efe6.jpg" alt="item3">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">포레스트 그린 코트 / 롱</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/2b47db2d61cc39cad6e7105775390afa.jpg" alt="item4">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">로얄 퍼 코트 / 브라운</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item_img">
+                            <a href="../detail/category_detail.html">
+                                <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                            </a>
+                        </div>
+                        <div class="item_info">
+                            <p class="item_name">
+                                <a href="">이안 디자인 오버셔츠</a>
+                            </p>
+                            <span class="disCount">
+                                30%
+                            </span>
+                            <del class="price">
+                                300,000원
+                            </del>
+                            <p class="price">
+                                <strong>285,000</strong>원
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="empty"></div>
+
+            <!--  -->
+            <!-- Main banner2 -->
+            <div class="inner">
+                <div class="main_banner_box2">
+                    <a href="#">
+                        <img src="../../image/clojet-mainfw-middle_banner.png" alt="middle_banner">
+                    </a>
                 </div>
                 <div class="empty"></div>
 
+                <!--MAIN item_list2 -->
+                <div class="main_products2">
+                    <h4>WINTER CLOJET</h4>
+                    <ul>
+                        <li><a href="#" class="Men">Men</a></li>
+                        <li><a href="#" class="Lady">Lady</a></li>
+                    </ul>
+                </div>
 
-
-                <!--  -->
-
-                <!-- Main banner3 -->
-                <div class="inner">
-                    <div class="main_banner_box3">
-                        <a href="#">
-                            <img src="../../image/clojet-mainfw-foot_banner.png" alt="foot_banner">
-                        </a>
-                    </div>
-                    <div class="empty"></div>
-
-                    <!--MAIN item_list3 -->
-                    <div class="main_products">
-                        <h4>NEW-YEAR CURATION</h4>
-                        <ul>
-                            <li>Men</li>
-                            <li>Lady</li>
-                        </ul>
-                    </div>
-
-                    <div class="item_list">
+                <div class="item_container2">
+                    <a class="btn_back nonVisible" href="#"> <img src="../../image/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="back_img"></a>
+                    <a class="btn_foward" href="#"> <img src="../..//image/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="foward_img"></a>
+                    <div class="item_list weather_men">
                         <ul>
                             <li>
                                 <div class="item_img">
@@ -432,7 +629,7 @@
                                 </div>
                                 <div class="item_info">
                                     <p class="item_name">
-                                        <a href="">라이언 무스탕 / 골덴</a>
+                                        <a href="">남자 라이언 무스탕 / 골덴</a>
                                     </p>
                                     <span class="disCount">
                                         30%
@@ -529,8 +726,784 @@
                                     </p>
                                 </div>
                             </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
+                    <div class="item_list weather_lady">
+                        <ul>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/0badcdcb623e5d6a6e2734507f967315.jpg" alt="item1">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">여자 라이언 무스탕 / 골덴</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>210,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/16b85bcd101150b4c177eaf4449a6db6.jpg" alt="item2">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">라이언 무스탕 / 레더</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/1cd6cc0b2d3684636178061adb67efe6.jpg" alt="item3">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">포레스트 그린 코트 / 롱</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/2b47db2d61cc39cad6e7105775390afa.jpg" alt="item4">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">로얄 퍼 코트 / 브라운</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_img">
+                                    <a href="../detail/category_detail.html">
+                                        <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                    </a>
+                                </div>
+                                <div class="item_info">
+                                    <p class="item_name">
+                                        <a href="">이안 디자인 오버셔츠</a>
+                                    </p>
+                                    <span class="disCount">
+                                        30%
+                                    </span>
+                                    <del class="price">
+                                        300,000원
+                                    </del>
+                                    <p class="price">
+                                        <strong>285,000</strong>원
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="empty"></div>
+
+
+                <!--  -->
+
+                <!-- Main banner3 -->
+                <div class="inner">
+                    <div class="main_banner_box3">
+                        <a href="#">
+                            <img src="../../image/clojet-mainfw-foot_banner.png" alt="foot_banner">
+                        </a>
+                    </div>
+                    <div class="empty"></div>
+
+                    <!--MAIN item_list3 -->
+                    <div class="main_products3">
+                        <h4>NEW-YEAR CURATION</h4>
+                        <ul>
+                            <li><a href="#" class="Men">Men</a></li>
+                            <li><a href="#" class="Lady">Lady</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="item_container3">
+                        <a class="btn_back nonVisible" href="#"> <img src="../../image/arrow_back_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="back_img"></a>
+                        <a class="btn_foward" href="#"> <img src="../..//image/arrow_forward_ios_FILL0_wght400_GRAD0_opsz48.svg" alt="foward_img"></a>
+                        <div class="item_list new_men">
+                            <ul>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/0badcdcb623e5d6a6e2734507f967315.jpg" alt="item1">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">남자 라이언 무스탕 / 골덴</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>210,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/16b85bcd101150b4c177eaf4449a6db6.jpg" alt="item2">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">라이언 무스탕 / 레더</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/1cd6cc0b2d3684636178061adb67efe6.jpg" alt="item3">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">포레스트 그린 코트 / 롱</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/2b47db2d61cc39cad6e7105775390afa.jpg" alt="item4">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">로얄 퍼 코트 / 브라운</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item_list new_lady">
+                            <ul>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/0badcdcb623e5d6a6e2734507f967315.jpg" alt="item1">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">여자 라이언 무스탕 / 골덴</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>210,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/16b85bcd101150b4c177eaf4449a6db6.jpg" alt="item2">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">라이언 무스탕 / 레더</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/1cd6cc0b2d3684636178061adb67efe6.jpg" alt="item3">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">포레스트 그린 코트 / 롱</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/2b47db2d61cc39cad6e7105775390afa.jpg" alt="item4">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">로얄 퍼 코트 / 브라운</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item_img">
+                                        <a href="../detail/category_detail.html">
+                                            <img src="../../image/6ce69fb172c2afb673a07d33be52a073.jpg" alt="item5">
+                                        </a>
+                                    </div>
+                                    <div class="item_info">
+                                        <p class="item_name">
+                                            <a href="">이안 디자인 오버셔츠</a>
+                                        </p>
+                                        <span class="disCount">
+                                            30%
+                                        </span>
+                                        <del class="price">
+                                            300,000원
+                                        </del>
+                                        <p class="price">
+                                            <strong>285,000</strong>원
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="empty"></div>
                 </div>
             </div>
         </div>

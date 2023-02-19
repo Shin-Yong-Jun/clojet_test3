@@ -283,11 +283,33 @@ header .badges {
     position: absolute;
     top: 145%;
     right: 12px;
-    opacity: 1;
-    transition: .4s;
 }
 
-header .badges .badge {
+header .badges .badge  {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+    width: 100%;
+}
+
+header .badges .badge .close {
+    position: absolute;
+    width: 20px;
+    right: 80%;
+    top: 3%;
+    opacity: .3;
+    transition: .2s;
+    cursor: pointer;
+}
+
+header .badges .badge .close:hover {
+    opacity: 1;
+    width: 25px;
+    right: 77%;
+}
+
+header .badges .badge .badgeImg {
     transition: .4s;
     border-radius: 15px;
     overflow: hidden;
@@ -295,6 +317,8 @@ header .badges .badge {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
     cursor: pointer
 }
+
+
 
 /* 백스크롤 버튼 */
 
@@ -409,7 +433,7 @@ main {
 }
 
 /* =========== 특가 products  ========== */
-.main_products {
+.main_products1, .main_products2, .main_products3 {
     text-align: center;
 }
 
@@ -419,12 +443,20 @@ main h4 {
     margin-bottom: 10px;
 }
 
-.main_products li {
+.main_products1 li, .main_products2 li, .main_products3 li {
     display: inline-block;
-    color: #797979;
     margin: 0 20px;
     font-weight: 700;
 }
+.main_products1 li a, .main_products2 li a, .main_products3 li a {
+    color: #d6d6d6;
+}
+
+.main_products1 li .Men, .main_products2 li .Men, .main_products3 li .Men {
+    color: black;
+}
+
+
 
 
 
@@ -434,6 +466,7 @@ main h4 {
 
 .item_list {
     position: relative;
+    overflow: hidden;
     padding: 10px 0 50px 10px;
     width: 100%;
     /* background-color: antiquewhite; */
@@ -442,13 +475,15 @@ main h4 {
 .item_list ul {
     position: relative;
     padding-left: 50px;
-    left: 50%;
+    width: 200%;
+    left: 100%;
     transform: translateX(-50%);
     /* background-color: aqua; */
+    transition: .5s;
 }
 
 .item_list li {
-    position: relative;
+    /* position: relative; */
     display: inline-block;
     margin-top: 30px;
     margin-right: 50px;
@@ -490,6 +525,61 @@ main h4 {
     color: red;
     font-weight: 700;
 }
+/* =========== 특가 item_list 핸들 ========== */
+
+.item_container1, .item_container2, .item_container3 {
+    position: relative;
+    width: 100%;
+}
+
+
+.sales_lady, .weather_lady, .new_lady {
+    display: none;
+}
+
+.sales_men, .weather_men, .new_men {
+    /* display: none; */
+}
+
+.item_container1>a, .item_container2>a, .item_container3>a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    z-index: 2;
+    opacity: .3;
+    transition: .2s;
+}
+
+.item_container1>.btn_back, .item_container2>.btn_back, .item_container3>.btn_back {
+    left: -5%;
+}
+/* .nonVisible {
+    visibility: hidden;
+} */
+
+.item_container1>.btn_back:hover, .item_container2>.btn_back:hover, .item_container3>.btn_back:hover  {
+    left: -5%;
+    opacity: 1;
+}
+
+.item_container1>.btn_foward,.item_container2>.btn_foward,.item_container3>.btn_foward {
+    right: -5.5%;
+}
+
+.item_container1>.btn_foward:hover, .item_container2>.btn_foward:hover, .item_container3>.btn_foward:hover {
+    right: -5.5%;
+    opacity: 1;
+}
+
+
+.btn_back>img, .btn_foward>img {
+    width: 50px;
+}
+
+
+
+
+
 
 /* =========== 계절,신상 큐레이션 banner  ========== */
 .main_banner_box2 {
