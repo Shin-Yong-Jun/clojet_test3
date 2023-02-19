@@ -17,7 +17,7 @@ function scrollInvisible(Element, opacity1,visibility1, opacity2, visibility2) {
 }
 
 //men_lady 컨텐츠 영역 교체 함수
-let sexual = 0;
+let sexuality = 0;
 
 function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady) {
   
@@ -43,33 +43,25 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
 };
 
 function switchMenUl() {
-  sexual = 0;
-  console.log(sexual);
+  sexuality = 0;
+  console.log(sexuality);
 }
 function switchLadyUl() {
-  sexual = 1;
-  console.log(sexual);
+  sexuality = 1;
+  console.log(sexuality);
 }
 
 //각 섹션 버튼 좌우 이동 함수
 
 function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady ) {
 
-if (sexual === 0 && targetBtn.className === 'btn_foward') {
-  btnKind[0].classList.remove('nonVisible');
-  btnKind[1].classList.add('nonVisible');
+if (sexuality === 0 && targetBtn.className === 'btn_foward') {
   targetUl_men.style.left = '4%'
-} else if (sexual === 0 && targetBtn.className === 'btn_back') {
-  btnKind[0].classList.add('nonVisible');
-  btnKind[1].classList.remove('nonVisible');
+} else if (sexuality === 0 && targetBtn.className === 'btn_back') {
   targetUl_men.style.left = '100%'
-} else if (sexual !== 0 && targetBtn.className === 'btn_foward') {
-  btnKind[0].classList.remove('nonVisible');
-  btnKind[1].classList.add('nonVisible');
+} else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
   targetUl_lady.style.left = '4%'
-} else {
-  btnKind[0].classList.add('nonVisible');
-  btnKind[1].classList.remove('nonVisible');
+} else if(sexuality=== 1 && targetBtn.className === 'btn_back') {
   targetUl_lady.style.left = '100%'
 }
 }
@@ -210,23 +202,24 @@ item_container3 = document.querySelector('.item_container3'),
 new_btn = item_container3.getElementsByTagName('a');
 
 item_container1.addEventListener('click', (e) => {
-  e.preventDefault();
   let targetBtn_sales = e.target.closest('a');
+  if(targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
+  console.log(sexuality);
   btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 })
 
 
 item_container2.addEventListener('click', (e) => {
-  e.preventDefault();
   let targetBtn_weather = e.target.closest('a');
-  console.log(sexual);
+  if(targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
+  console.log(sexuality);
   btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 })
 
 item_container3.addEventListener('click', (e) => {
-  e.preventDefault();
   let targetBtn_new = e.target.closest('a');
-  console.log(sexual);
+  if(targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
+  console.log(sexuality);
   btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 })
   
