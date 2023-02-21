@@ -6,16 +6,6 @@
 
 //스크롤 함수
 
-function scrollInvisible(Element, opacity1,visibility1, opacity2, visibility2) {
-  if(window.scrollY > window.innerHeight / 3) {
-    Element.style.opacity = `${opacity1}`;
-    Element.style.visibility = `${visibility1}`;
-  } else {
-    Element.style.opacity = `${opacity2}`;
-    Element.style.visibility = `${visibility2}`;
-  }
-}
-
 //men_lady 컨텐츠 영역 교체 함수
 let sexuality = 0;
 
@@ -72,51 +62,6 @@ if (sexuality === 0 && targetBtn.className === 'btn_foward') {
 //============================
 //====== 동작문 영역  ======
 //============================
-
-
-
-// 백스크롤 버튼
-const header = document.querySelector('header'); 
-header.innerHTML += '<div class="btn_scrollBack"><img src = "../../image/backscroll.png" </div>' ;
-const btn_scrollBack = document.querySelector('.btn_scrollBack');
-
-
-
-window.addEventListener('scroll', () => {
-  scrollInvisible(btn_scrollBack, 1, 'visible', 0, 'hidden');
-})
-
-btn_scrollBack.addEventListener('click', () => {
-const stopScroll = setInterval(() => {
-  window.scrollBy(0,-30);
-
-  if(window.scrollY <= 0) clearInterval(stopScroll);
-})
-});
-
-//검색창 등장  
-const search = document.querySelector('.search'),
-search_symbol = search.querySelector('span'),
-search_input = search.querySelector('input');
-
-
-let clickIdx = 0
-
-search_symbol.addEventListener('click', (e) => {
-  e.preventDefault();
-  
-  clickIdx = clickIdx + 1;
-  search_input.style.opacity = '1';
-  search_input.style.visibility = 'visible';
-  search_input.style.width = '180px'
-  
-  if (clickIdx % 2 === 0) {
-    search_input.style.opacity = '0';
-    search_input.style.visibility = 'hidden';
-    search_input.style.width = '0px'
-  }
-});
-
 
 
 //배지 배너 가위표 삭제버튼
@@ -225,6 +170,3 @@ item_container3.addEventListener('click', (e) => {
   
 
 
-
-// 멘 레이디를 클릭하면 각각 ul 을 초기상태로 돌리고 
-// 방향키가 맨 혹은 레이디로 대상을 바꾼다.
