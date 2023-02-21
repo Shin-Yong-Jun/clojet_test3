@@ -14,7 +14,15 @@ ul {
     list-style: none;
 }
 
-header .inner, footer .inner{
+header .inner {
+    min-width: 900px;
+    max-width: 1350px;
+    margin: 0 auto;
+    position: relative;
+    height: 20px;
+}
+
+footer .inner{
     min-width: 900px;
     max-width: 1350px;
     margin: 0 auto;
@@ -30,7 +38,7 @@ main .inner {
 
 
 header {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     width: 100%;
@@ -45,13 +53,14 @@ header {
 header .top {
     border-bottom: 1px solid #ececec;
     padding: 10px 0;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .9);
 }
 
 header .top .inner_submenu{
     text-align: left;
     display: inline-block;
     position: relative;
+    /* height: 50px; */
 }
 
 header .top .inner_submenu li {
@@ -406,7 +415,7 @@ textarea:-ms-input-placeholder {
 
 main {
     margin: 0 auto;
-    padding: 150px 0 0 0;
+    padding: 0px 0 0 0;
     box-sizing: border-box;
 }
 
