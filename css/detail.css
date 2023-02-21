@@ -66,8 +66,9 @@ main {
     display: inline-block;
     position: fixed;
     width: 400px;
-    height: 800px;
+    height: 1000px;
     overflow: auto;
+    z-index: 999;
 }
 
 .detail_info .title {
@@ -101,21 +102,18 @@ main {
     gap: 10px;
 }
 
-.size input {
-    display: none;
-}
-
-.size label {
+.size li a {
     display: inline-block;
     text-align: center;
+    text-decoration: none;
+    color: black;
     width: 50px;
     line-height: 20px;
     border: 1px solid gray;
     transition: 0.2s;
 }
-
-.size input:checked + label {
-    background-color: gray;
+.size li .check {
+    background-color: black;
     color: white;
 }
 
@@ -135,6 +133,17 @@ main {
 
 .item_box div:nth-child(2) {
     width: 100%;
+}
+
+/* ************************************ */
+/* item_check */
+.item_check {
+    background-color: gray;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+.item_check_size {
+    margin: 3% 0;
 }
 
 /* ************************************ */
