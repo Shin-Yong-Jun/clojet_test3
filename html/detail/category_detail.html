@@ -1,225 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/mainPage.css" />
+        <link rel="stylesheet" href="../../css/detail.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/detail.css">
+        <script defer src="../../javascript/detail.js"></script>
+        <script defer src="../../javascript/main.js"></script>
 
-    <script defer src="../../javascript/main.js"></script>
+        <!-- 구글 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- 구글 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <!-- 구글 아이콘 -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
 
-    <!-- 구글 아이콘 -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <!-- favicon -->
+        <link rel="icon" href="../../image/clojet_favicon.png" />
+        <title>CLOJET</title>
+    </head>
 
-    <!-- favicon -->
-    <link rel="icon" href="../../image/clojet_favicon.png">
-    <title>CLOJET</title>
-
-</head>
-
-<body>
-    <header>
-        <div class="top">
-            <div class="inner">
-                <ul class="inner_submenu">
-                    <li class="home">
-                        <a href="../../index.html">
-                            <span class="material-symbols-outlined">home
-                            </span>
-                        </a>
-                    </li>
-                    <li class="first">
-                        <a href="../main/main.html">
-                            F/W
-                        </a>
-                    </li>
-                    <li class="second">
-                        <a href="../main/main2.html">
-                            S/S
-                        </a>
-                    </li>
-                    <li class="third">
-                        <a href="../main/main3.html">
-                            ACC
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="inner_submenu_right">
-                    <li><a href="../login/login.html">LOGIN</a></li>
-                    <li><a href="../signup/signup.html">SIGN-UP</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="bottom">
-            <div class="inner">
-                <div class="left">
-                    <a class="burger" href="#">
-                        <span class="material-symbols-outlined">menu
-                        </span>
-                    </a>
-                    <div class="logo_contain">
-                        <a class="logo" href="../main/main.html">
-                            <img src="../../image/clojet_logo_final_black.png" alt="logo">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="center">
-                    <ul>
-                        <li>
-                            <a href="../category/category_New.html">NEW</a>
+    <body>
+        <header>
+            <div class="top">
+                <div class="inner">
+                    <ul class="inner_submenu">
+                        <li class="home">
+                            <a href="../../index.html">
+                                <span class="material-symbols-outlined"
+                                    >home
+                                </span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="../category/category_Sale.html">SALE</a>
+                        <li class="first">
+                            <a href="../main/main.html"> F/W </a>
                         </li>
-                        <li>
-                            <a href="../category/category_Best.html">BEST</a>
+                        <li class="second">
+                            <a href="../main/main2.html"> S/S </a>
                         </li>
-                        <li>
-                            <a href="../category/category_Mens.html">MENS</a>
-                        </li>
-                        <li>
-                            <a href="../category/category_Ladies.html">LADIES</a>
-                        </li>
-                        <li>
-                            <a href="../category/category_Acc.html">ACC</a>
+                        <li class="third">
+                            <a href="../main/main3.html"> ACC </a>
                         </li>
                     </ul>
-                </div>
 
-                <div class="right">
-                    <ul>
-                        <li>
-                            <div class="search">
-                                <input type="text", placeholder="검색어를 입력해주세요.">
-                                <a href="#">
-                                    <span class="material-symbols-outlined">search
+                    <ul class="inner_submenu_right">
+                        <li><a href="../login/login.html">LOGIN</a></li>
+                        <li><a href="../signup/signup.html">SIGN-UP</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="inner">
+                    <div class="left">
+                        <a class="burger" href="#">
+                            <span class="material-symbols-outlined">menu </span>
+                        </a>
+                        <div class="logo_contain">
+                            <a class="logo" href="../main/main.html">
+                                <img
+                                    src="../../image/clojet_logo_final_black.png"
+                                    alt="logo"
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="center">
+                        <ul>
+                            <li>
+                                <a href="../category/category_New.html">NEW</a>
+                            </li>
+                            <li>
+                                <a href="../category/category_Sale.html"
+                                    >SALE</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../category/category_Best.html"
+                                    >BEST</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../category/category_Mens.html"
+                                    >MENS</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../category/category_Ladies.html"
+                                    >LADIES</a
+                                >
+                            </li>
+                            <li>
+                                <a href="../category/category_Acc.html">ACC</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <div class="search">
+                                    <input
+                                        type="text"
+                                        ,
+                                        placeholder="검색어를 입력해주세요."
+                                    />
+                                    <a href="#">
+                                        <span class="material-symbols-outlined"
+                                            >search
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../cart.html">
+                                    <span class="material-symbols-outlined"
+                                        >shopping_cart
                                     </span>
                                 </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="../cart.html">
-                                <span class="material-symbols-outlined">shopping_cart
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../MyPage.html">
-                                <span class="material-symbols-outlined">person
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
+                            </li>
+                            <li>
+                                <a href="../MyPage.html">
+                                    <span class="material-symbols-outlined"
+                                        >person
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <div class="inner">
-            <div class="detail">
-                <div class="detail_img_box">
-                    <div class="detail_thum">
-                        <input type="radio" name="thum" id="thum1">
-                        <label for="thum1"></label>
-                        <input type="radio" name="thum" id="thum2">
-                        <label for="thum2"></label>
-                        <input type="radio" name="thum" id="thum3">
-                        <label for="thum3"></label>
-                        <label></label>
-                    </div>
-                    <div class="detail_img">
-                        <img src="../detail/img/detail_img.jpg" alt="d2">
-                    </div>
-                </div>
-
-                <div class="detail_info">
-                    <div class="item">
-                        <div class="title">
-                            <strong>
-                                캐시미어 코트 진품 여우털 재킷 여성용
-                                <br> 자연 칼라 슬림 패션 겨울 정품 2023
-                            </strong>
-                        </div>
-                        <div class="sub_title">
-                            유로컬렉션
-                        </div>
-                        <div class="price_box">
-                            <span class="disCount">
-                                5 %
-                            </span>
-                            <del class="price">
-                                3,000,000원
-                            </del>
-                            <p class="price">
-                                2,850,000원
-                            </p>
-                        </div>
-                        <div class="size">
-                            <strong>SIZE</strong>
-                            <ul>
-                                <li>
-                                    <input type="radio" name="size" id="90">
-                                    <label for="90">90</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="size" id="95">
-                                    <label for="95">95</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="size" id="100">
-                                    <label for="100">100</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="size" id="105">
-                                    <label for="105">105</label>
-                                </li>
+        <main>
+            <div class="inner">
+                <div class="detail">
+                    <div class="detail_img_box">
+                        <div class="detail_thum">
+                            <div class="thum">
+                                <img src="./img/detail_thum.png" alt="thum" />
+                            </div>
+                            <ul class="thum_list">
+                                <!-- JS -->
                             </ul>
                         </div>
-                        <div class="color">
-                            <strong>COLOR</strong>
-                            <ul>
-                                <li>
-                                    <input type="radio" name="color" id="red">
-                                    <label for="red">red</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="color" id="blue">
-                                    <label for="blue">blue</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="color" id="black">
-                                    <label for="black">black</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="color" id="white">
-                                    <label for="white">white</label>
-                                </li>
-                            </ul>
+                        <div class="detail_img">
+                            <img src="../detail/img/detail_img.jpg" alt="d2" />
                         </div>
                     </div>
-                    <div class="item_box">
-                        <div>유로컬렉션 22FW 쉬어드 리얼밍크 케이프 자켓</div>
-                        <div class="price">
-                            <strong>2,850,000원 |</strong>
+
+                    <div class="detail_info">
+                        <div class="item">
+                            <div class="title">
+                                <strong>
+                                    캐시미어 코트 진품 여우털 재킷 여성용
+                                    <br />
+                                    자연 칼라 슬림 패션 겨울 정품 2023
+                                </strong>
+                            </div>
+                            <div class="sub_title">유로컬렉션</div>
+                            <div class="price_box">
+                                <span class="disCount"> 5 % </span>
+                                <del class="price"> 3,000,000원 </del>
+                                <p class="price">2,850,000원</p>
+                            </div>
+                            <div class="size">
+                                <strong>SIZE</strong>
+                                <ul>
+                                    <li>
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="90"
+                                        />
+                                        <label for="90">90</label>
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="95"
+                                        />
+                                        <label for="95">95</label>
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="100"
+                                        />
+                                        <label for="100">100</label>
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="radio"
+                                            name="size"
+                                            id="105"
+                                        />
+                                        <label for="105">105</label>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shoping_box">
-                        <div class="shoping_cart_btn"><a href="../../html/cart.html">장바구니</a></div>
-                        <div class="buy_btn"><a href="../login/login.html">구매하기</a></div>
-                    </div>
-                    <!-- <div class="detail_item_info">
+                        <div class="item_box">
+                            <div>
+                                유로컬렉션 22FW 쉬어드 리얼밍크 케이프 자켓
+                            </div>
+                            <div class="price">
+                                <strong>2,850,000원 |</strong>
+                            </div>
+                        </div>
+                        <div class="shoping_box">
+                            <div class="shoping_cart_btn">
+                                <a href="../../html/cart.html">장바구니</a>
+                            </div>
+                            <div class="buy_btn">
+                                <a href="../login/login.html">구매하기</a>
+                            </div>
+                        </div>
+                        <!-- <div class="detail_item_info">
                         <ul>FEATURES
                             <li>종류 : 여행가방</li>
                             <li>소재 : 폴리카보네이트 100%</li>
@@ -230,143 +239,204 @@
                             <li>제조국 : 중국</li>
                         </ul>
                     </div> -->
-                    <div class="detail_item_sub_info">
+                        <div class="detail_item_sub_info">
+                            <ul>
+                                <li>
+                                    <div class="table">
+                                        <div class="table_cell">
+                                            <span
+                                                class="material-symbols-outlined"
+                                            >
+                                                local_shipping
+                                            </span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <p>배송 및 결제 혜택 안내</p>
+                                            <span>무료 배송 서비스</span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <a
+                                                href="#"
+                                                class="material-symbols-outlined"
+                                            >
+                                                open_in_new
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table">
+                                        <div class="table_cell">
+                                            <span
+                                                class="material-symbols-outlined"
+                                            >
+                                                receipt_long
+                                            </span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <p>품질보증기준 및 취급주의사항</p>
+                                        </div>
+                                        <div class="table_cell">
+                                            <a
+                                                href="#"
+                                                class="material-symbols-outlined"
+                                            >
+                                                open_in_new
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table">
+                                        <div class="table_cell">
+                                            <span
+                                                class="material-symbols-outlined"
+                                            >
+                                                credit_card_off
+                                            </span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <p>교환 및 환불 정책</p>
+                                            <span
+                                                >14일 이내에 교환 및 환불
+                                                가능</span
+                                            >
+                                        </div>
+                                        <div class="table_cell">
+                                            <a
+                                                href="#"
+                                                class="material-symbols-outlined"
+                                            >
+                                                open_in_new
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="table">
+                                        <div class="table_cell">
+                                            <span
+                                                class="material-symbols-outlined"
+                                            >
+                                                perm_phone_msg
+                                            </span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <p>상품문의 및 A/S서비스</p>
+                                            <span>카카오 상담 이용 가능</span>
+                                        </div>
+                                        <div class="table_cell">
+                                            <a
+                                                href="#"
+                                                class="material-symbols-outlined"
+                                            >
+                                                open_in_new
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="inner">
+                <div class="footer_top">
+                    <div class="footer_logo">
+                        <a href="#">
+                            <img
+                                src="../../image/clojet_logo_final_black.png"
+                                alt="하단 로고 이미지"
+                        /></a>
+                    </div>
+
+                    <div class="footer_icon">
                         <ul>
                             <li>
-                                <div class="table">
-                                    <div class="table_cell">
-                                        <span class="material-symbols-outlined">
-                                            local_shipping
-                                        </span>
-                                    </div>
-                                    <div class="table_cell">
-                                        <p>배송 및 결제 혜택 안내</p>
-                                        <span>무료 배송 서비스</span>
-                                    </div>
-                                    <div class="table_cell" onclick="alert('팝업예정')">
-                                        <a href="" class="material-symbols-outlined">
-                                            open_in_new
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="table">
-                                    <div class="table_cell">
-                                        <span class="material-symbols-outlined">
-                                            receipt_long
-                                        </span>
-                                    </div>
-                                    <div class="table_cell">
-                                        <p>품질보증기준 및 취급주의사항</p>
-                                    </div>
-                                    <div class="table_cell" onclick="alert('팝업예정')">
-                                        <a href="" class="material-symbols-outlined">
-                                            open_in_new
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="table">
-                                    <div class="table_cell">
-                                        <span class="material-symbols-outlined">
-                                            credit_card_off
-                                        </span>
-                                    </div>
-                                    <div class="table_cell">
-                                        <p>교환 및 환불 정책</p>
-                                        <span>14일 이내에 교환 및 환불 가능</span>
-                                    </div>
-                                    <div class="table_cell" onclick="alert('팝업예정')">
-                                        <a href="" class="material-symbols-outlined">
-                                            open_in_new
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="table">
-                                    <div class="table_cell">
-                                        <span class="material-symbols-outlined">
-                                            perm_phone_msg
-                                        </span>
-                                    </div>
-                                    <div class="table_cell">
-                                        <p>상품문의 및 A/S서비스</p>
-                                        <span>카카오 상담 이용 가능</span>
-                                    </div>
-                                    <div class="table_cell" onclick="alert('팝업예정')">
-                                        <a href="" class="material-symbols-outlined">
-                                            open_in_new
-                                        </a>
-                                    </div>
-                                </div>
+                                <a href="#"
+                                    ><img
+                                        src="../../image/f-icon.png"
+                                        alt="페이스북"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="../../image/i-icon.png"
+                                        alt="인스타그램"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="../../image/y-icon.png"
+                                        alt="유튜브"
+                                /></a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                <div class="footerline"></div>
+                <div class="footer_bottom">
+                    <div class="left">
+                        <div class="link">
+                            <ul class="link_list">
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">이용약관</a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <span>상호명 &colon; CLOJET </span>
+                            <span>대표명 &colon; 팀제이 </span>
+                            <span
+                                >주소 &colon; 경기도 성남시 분당구 돌마로 46 5층
+                                그린컴퓨터아카데미 성남분당점
+                            </span>
+                            <br />
+                            <span
+                                >사업자등록번호 &colon; 1234 &#x2D; 5678
+                            </span>
+                            <span
+                                >통신판매업신고번호 &colon; 12345 &#x2D; 67890
+                            </span>
+                            <p>
+                                copyright&#x24D2; 2021 MANDARINA DUCK. all
+                                rights reserved. hosting by
+                                &#xC5D4;&#xC5D0;&#xC774;&#xCE58;&#xC5D4;&#xCEE4;&#xBA38;&#xC2A4;(&#xC8FC;).
+                                design by
+                                &#xB514;&#xC790;&#xC778;&#xC704;&#xBE0C;.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="help">
+                            <p>HELP DESK</p>
+                            <p>010 &#x2D; 7577 &#x2D; 8029</p>
+                            <p>평일 AM 9&colon;00 &#x7E; PM 6&colon;10</p>
+                            <p>점심 PM 1&colon;20 &#x7E; PM 2&colon;10</p>
+                            <p>휴무 연중무휴</p>
+                        </div>
+                        <div class="as">
+                            <p>A&sol;S</p>
+                            <p>A&sol;S 실시간 문의 연락처</p>
+                            <p>P.N : 031-000-0000</p>
+                            <p>KakaoTalk Channel : CLOJET</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 모달 -->
+        <div class="modal hidden">
+            <div class="modal_content">
+                <div class="modal_detail">
+                    <p class="info_keyWord"></p>
+                    <div class="modal_detail_info">
+                        <strong>대충 관련제목</strong>
+                        <p>대충 관련내용</p>
+                    </div>
+                </div>
+                <button>X</button>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <div class="inner">
-            <div class="footer_top">
-                <div class="footer_logo">
-                    <a href="#">
-                        <img src="../../image/clojet_logo_final_black.png" alt="하단 로고 이미지"></a>
-                </div>
-
-                <div class="footer_icon">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="../../image/f-icon.png" alt="페이스북"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="../../image/i-icon.png" alt="인스타그램"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="../../image/y-icon.png" alt="유튜브"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footerline"></div>
-            <div class="footer_bottom">
-                <div class="left">
-                    <div class="link">
-                        <ul class="link_list">
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">이용약관</a></li>
-                        </ul>
-                    </div>
-                    <div class="info">
-                        <span>상호명 &colon; CLOJET </span>
-                        <span>대표명 &colon; 팀제이 </span>
-                        <span>주소 &colon; 경기도 성남시 분당구 돌마로 46 5층 그린컴퓨터아카데미 성남분당점 </span>
-                        <br>
-                        <span>사업자등록번호 &colon; 1234 &#x2D; 5678 </span>
-                        <span>통신판매업신고번호 &colon; 12345 &#x2D; 67890 </span>
-                        <p>copyright&#x24D2; 2021 MANDARINA DUCK. all rights reserved. hosting by
-                            &#xC5D4;&#xC5D0;&#xC774;&#xCE58;&#xC5D4;&#xCEE4;&#xBA38;&#xC2A4;(&#xC8FC;). design by
-                            &#xB514;&#xC790;&#xC778;&#xC704;&#xBE0C;.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="help">
-                        <p>HELP DESK</p>
-                        <p>010 &#x2D; 7577 &#x2D; 8029</p>
-                        <p>평일 AM 9&colon;00 &#x7E; PM 6&colon;10</p>
-                        <p>점심 PM 1&colon;20 &#x7E; PM 2&colon;10</p>
-                        <p>휴무 연중무휴</p>
-                    </div>
-                    <div class="as">
-                        <p>A&sol;S</p>
-                        <p>A&sol;S 실시간 문의 연락처</p>
-                        <p>P.N : 031-000-0000</p>
-                        <p>KakaoTalk Channel : CLOJET </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
+    </body>
 </html>
