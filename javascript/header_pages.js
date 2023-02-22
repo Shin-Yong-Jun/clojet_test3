@@ -13,7 +13,7 @@ function scrollInvisible(Element, opacity1,visibility1, opacity2, visibility2) {
 
 // 백스크롤 버튼
 const header = document.querySelector('header'); 
-header.innerHTML += '<div class="btn_scrollBack"><img src = "./image/backscroll.png" </div>' ;
+header.innerHTML += '<div class="btn_scrollBack"><img src = "../../image/backscroll.png" </div>' ;
 const btn_scrollBack = document.querySelector('.btn_scrollBack');
 
 
