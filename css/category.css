@@ -224,6 +224,42 @@
     content: url(../html/category/icon/heart2.png);
 }
 
+
+/* 신용 추가_main_page.css 로부터 가져옴, 이거 때문에 옆으로 안나가고 4열종대가 될수 있었습니다. 활용해주세요 */
+/* ============= */
+
+.item_list li {
+    /* position: relative; */
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 50px;
+    vertical-align: top;
+}
+
+.item_list .item_img a {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.item_list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item_name a,
+.item_info .disCount,
+.item_name del {
+    font-size: .9rem;
+}
+
+.disCount {
+    color: red;
+    font-weight: 700;
+}
+/* ============= */
+
 /*****************************************************************************/
 /* 카테고리 배너 */
 .title_banner {
