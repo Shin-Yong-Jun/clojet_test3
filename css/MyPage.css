@@ -7,6 +7,8 @@
 .my_page{
     display: flex;
     height: 1350px;
+    width: 100%;
+    position:relative;
 }
 
 
@@ -233,7 +235,7 @@ border-right: 1px solid silver;
 /* =============위시리스트=============== */
 
 .mycolbox4 {
-    width: 800px;
+    width: 100%;
     height: 300px;
     list-style: none;
 }
@@ -241,22 +243,45 @@ border-right: 1px solid silver;
 .mybox4 {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 .mybox4ul {
     display: flex;
-    width: 800px;
-    justify-content: space-between;
+    width: 200%;
+    /* 800px width를 잡다니..떼잉... */
     margin-top: 20px;
     padding-bottom: 30px;
     border-bottom: 1px solid lavender;
     
+    /* 전신용 */
+    position: relative;
+    transition: .3s;
+    gap: 15px;
+    left: 0%;
+    /* left: -102%; */
+    
+}
+
+/* 전신용 */
+.mabox4conbox{
+    width: 100%;
+    /* width: 120%; */
+    overflow: hidden;
+    transition: .3s;
+}
+
+/* 전신용 */
+.mabox4con {
+    width: 100%;
+    position: relative;
 }
 
 .mybox4con li {
     display: inline-block;
     
 }
+
 
 .box4img1 { 
     margin-top: 0px;  
@@ -324,29 +349,44 @@ border-right: 1px solid silver;
 
 .mycolbox5 {
     margin-top: 60px;
-    width: 800px;
+    width: 100%;
     height: 300px;
     list-style: none;
+
+    /* 전신용 */
+    overflow: hidden;
 
 }
 
 .mybox5 {
     border-bottom: 1px solid black;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 
 .mybox5ul {
-    width: 800px;
+    width: 200%;
     height: 300px;
     display: flex;
-    justify-content: space-between;
     margin-top: 20px;
     border-bottom: 1px solid lavender;
+    
+    /* 전신용 */
+    position: relative;
+    gap: 15px;
+    transition: .3s;
+    left: 0%;
+    /* left: -102%; */
+
 
 }
 
-
+.mabox5conbox{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
 .mybox5con li {
     display: inline-block;
@@ -398,4 +438,48 @@ border-right: 1px solid silver;
 }
 
 
+/* ======= 슬라이더 관련=======  */
 
+.my_page>a {
+    position: absolute;
+    opacity: .3;
+    transition: .2s;
+}
+
+.my_page>.btn1_back, .my_page>.btn1_foward {
+    top: 50%;
+    transform: translateY(-50%);
+} 
+.my_page>.btn2_back, .my_page>.btn2_foward {
+    top: 80%;
+    transform: translateY(-50%);
+} 
+
+.my_page>.btn1_back:hover, .my_page>.btn1_foward:hover, .my_page>.btn2_back:hover, .my_page>.btn2_foward:hover {
+    opacity: 1;
+}
+
+
+
+.my_page>.btn1_back{
+    left: 24%;
+}
+.my_page>.btn1_foward{
+    right: 7%;
+}
+.my_page>.btn2_back{
+    left: 24%;
+}
+.my_page>.btn2_foward{
+    right: 7%;
+}
+
+.mabox5conbox>a {
+    top: 40%;
+    transform: translateY(-100%);
+    transition: .2s;
+}
+
+.mabox4conbox>.btn_back,.mabox5conbox>.btn_back {
+    left: -5%;
+}

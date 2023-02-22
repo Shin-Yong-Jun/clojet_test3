@@ -149,7 +149,6 @@ new_btn = item_container3.getElementsByTagName('a');
 item_container1.addEventListener('click', (e) => {
   let targetBtn_sales = e.target.closest('a');
   if(targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
-  console.log(sexuality);
   btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 })
 
@@ -157,14 +156,12 @@ item_container1.addEventListener('click', (e) => {
 item_container2.addEventListener('click', (e) => {
   let targetBtn_weather = e.target.closest('a');
   if(targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
-  console.log(sexuality);
   btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 })
 
 item_container3.addEventListener('click', (e) => {
   let targetBtn_new = e.target.closest('a');
   if(targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
-  console.log(sexuality);
   btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 })
   
