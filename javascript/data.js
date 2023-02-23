@@ -15,8 +15,6 @@ const info = [
             '../detail/img/Preview/2.jpg',
             '../detail/img/Preview/3.jpg',
             '../detail/img/Preview/4.jpg',
-            '../detail/img/Preview/5.jpg',
-            '../detail/img/Preview/6.jpg',
         ],
     },
     {
