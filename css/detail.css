@@ -142,10 +142,33 @@ main {
     margin-bottom: 5%;
 }
 .item_check_size {
+    display: flex;
     background-color: gray;
     padding: 5%;
-    text-align: right;
-    word-break: keep-all;
+}
+.item_check_size strong {
+    flex: 60%;
+}
+.item_check_size div {
+    flex: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.item_check_size div a {
+    color: black;
+    text-align: center;
+    width: 30%;
+}
+.item_check_size div input {
+    text-align: center;
+    width: 4rem;
+    border: none;
+}
+.item_check_size > a {
+    color: black;
+    text-align: center;
+    flex: 10%;
 }
 
 /* ************************************ */
@@ -189,19 +212,6 @@ main {
     color: white;
 }
 
-/* ************************************ */
-/* .detail_item_info 보류중*/
-/* .detail_item_info {
-    margin: 30px 0;
-}
-
-.detail_item_info li {
-    margin-left: 30px;
-    list-style: inside;
-} */
-
-/* ************************************ */
-/* .detail_item_sub_info */
 .detail_item_sub_info {
     margin-top: 20px;
 }
