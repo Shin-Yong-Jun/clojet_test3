@@ -4,12 +4,12 @@
     padding: 0;
 }
 
-.signupbox {
-    width: 1350px;
-    height: 1300px;
-    margin: 0 auto;
-    margin-bottom: 200px;
+main {
+    margin-bottom: 3%;
+    height: 100;
 }
+
+
 
 .signupbox h1 {
     margin-top: 20px;
@@ -23,21 +23,34 @@
 }
 
 
+.formBox {
+    display: flex;
+}
+
+.signupbox {
+    width: 1350px;
+    height: 1030px;
+    margin: 0 auto;
+    /* margin-bottom: 200px; */
+}
 
 .signbox_left {
     width: 675px;
-    height: 600px;
-    position: absolute;
+    height: 100%;
     font-weight: bold;
 }
-
+.signbox_right {
+    width: 600px;
+    height: 600px;
+}
 /* ========이게 뭐야========= */
 
 
 .centerline {
-    width: 675px;
+    width: 1px;
     height: 500px;
     position: absolute;
+    left: 100%;
     border-right: 1px solid rgb(221, 221, 221);
     top: 100px;
 }
@@ -48,11 +61,7 @@
 
 }
 
-.signbox_right {
-    width: 600px;
-    height: 600px;
-    float: right;
-}
+
 
 /* =================================== */
 
@@ -318,10 +327,11 @@ main>div .material-symbols-outlined {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+
     position: relative;
-    bottom: -80px;
-    left: -260px;
     transition: 0.7s;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -343,4 +353,33 @@ main>div .material-symbols-outlined {
 
 .gender {
     padding-right: 10px;
+}
+
+/* 전신용 */
+
+.textrq {
+    color: red;
+}
+
+.agreement_view {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #F7F7F7;
+    margin: 10px 0 20px;
+    box-sizing: border-box;
+    height: 200px;
+    padding: 20px;
+    line-height: 20px;
+    font-size: 0.8rem;
+    display: block;
+    color: black;
+    display: none;
+}
+
+.agreement_view p {
+    font-weight: 400;
+}
+
+.agreement_view div {
+    margin-bottom: 40px;
 }

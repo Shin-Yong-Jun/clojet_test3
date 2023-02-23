@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 
 btn_scrollBack.addEventListener('click', () => {
 const stopScroll = setInterval(() => {
-  window.scrollBy(0,-30);
+  window.scrollBy(0,-80);
 
   if(window.scrollY <= 0) clearInterval(stopScroll);
 })
