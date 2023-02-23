@@ -65,10 +65,11 @@ main {
 .detail_info {
     display: inline-block;
     position: fixed;
-    width: 400px;
+    width: 450px;
+    padding: 0 25px;
     height: 1000px;
     overflow: auto;
-    z-index: 999;
+    /* z-index: 999; */
 }
 
 .detail_info .title {
@@ -138,12 +139,13 @@ main {
 /* ************************************ */
 /* item_check */
 .item_check {
-    background-color: gray;
-    padding: 5%;
     margin-bottom: 5%;
 }
 .item_check_size {
-    margin: 3% 0;
+    background-color: gray;
+    padding: 5%;
+    text-align: right;
+    word-break: keep-all;
 }
 
 /* ************************************ */
@@ -255,6 +257,7 @@ button {
     justify-content: center;
     align-items: center;
     background-color: #515151b0;
+    z-index: 999;
 }
 
 .modal_content {
