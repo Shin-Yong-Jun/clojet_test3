@@ -164,6 +164,7 @@ main {
     text-align: center;
     width: 4rem;
     border: none;
+    user-select: none;
 }
 .item_check_size > a {
     color: black;

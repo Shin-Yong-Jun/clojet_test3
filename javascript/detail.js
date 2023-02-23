@@ -46,10 +46,6 @@ thum_list.addEventListener('mouseover', (e) => {
 // 제품명생성
 const detail_info = main.querySelector('.detail_info'); // 보류1
 
-const disCount = detail_info.querySelector('.disCount'),
-    price = detail_info.querySelector('del'),
-    buy_price = detail_info.querySelector('p');
-
 //사이즈생성
 const size = detail_info.querySelector('.size'),
     size_list = size.querySelector('.size_list');
@@ -69,7 +65,7 @@ show_size();
 
 // 구매체크칸 생성
 const item_check = detail_info.querySelector('.item_check');
-let count = 1;
+let count_ = 1;
 
 function show_item_check() {
     info[0].size.forEach((value, index) => {
@@ -79,8 +75,8 @@ function show_item_check() {
 
                 <div class="count_box">
                     <a href="#" class="minus_btn">-</a>
-                    <input type="text" class="count_${index}" value="1" />
-                    <a href="#"class="plus">+</a>
+                    <input type="text" class="count count_${index}" value="0" readonly/>
+                    <a href="#"class="plus_btn">+</a>
                 </div>
                 <a href="#">X</a>
             </div>
@@ -91,19 +87,20 @@ show_item_check();
 
 // 구매수량증감
 
-const count_box = item_check.querySelectorAll('.count_box');
+const count_box = item_check.querySelectorAll('.count_box'),
+    count = item_check.querySelectorAll('.count');
 const input = item_check.querySelector('input');
 let tot_count = 0;
 
 item_check.addEventListener('click', (e) => {
     let targetE = e.target;
     if (targetE.className == 'minus_btn') {
-        if (count == 0) return;
-        input.value = `${--count}`;
+        if (count_ == 0) return;
+        input.value = `${--count_}`;
         alert(input.value);
         item_box_price1(--tot_count);
-    } else {
-        input.value = `${++count}`;
+    } else if (targetE.className == 'plus_btn') {
+        input.value = `${++count_}`;
         item_box_price1(++tot_count);
     }
 });
@@ -125,9 +122,13 @@ size_list.addEventListener('click', (e) => {
     before_size_list_a = now_size_list_a;
 
     item_check_size[targetE.dataset.size].classList.remove('hidden');
+    if (count[now_size_list_a].value == 0) {
+        count[now_size_list_a].value = 1;
+        item_box_price1(++tot_count);
+    }
 });
 
-// 구매체크칸 비 활성화
+//
 const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
