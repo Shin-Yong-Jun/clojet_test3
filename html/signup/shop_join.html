@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../../css/mainPage.css">
     <link rel="stylesheet" href="../../css/shop_join.css">
 
-    <script defer src="../../javascript/header_pages.js"></script>
+    <script defer src="../../javascript/header.js"></script>
+    <script defer src="../../javascript/shop_join.js"></script>
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,8 +148,8 @@
                                     </div>
                                     <p class="agreebox_top">약관동의</p>
                                     <div>
-                                        <input type="checkbox">
-                                        <label>모든약관 동의</label>
+                                        <input type="checkbox" id="req_chk" value="selectAll" onclick="selectAll(this)" name="required">
+                                        <label for="req_chk">모든약관 동의</label>                                    
                                     </div>
                                 </div>
                                 <h5 class="ptxet">아래 모든 약관(필수), 멤버십 이용약관(필수), 개인정보 수집 및 이용에 대한 동의(필수),
@@ -160,17 +161,17 @@
                             <div class="account_agreebox">
                                 <h5>CLOJET 공식 온라인 스토어 회원 약관 및 개인정보 수집 이용에 대한 동의</h5>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="first_chk" name="first_chk" required>
-                                    <label for="first_chk">(필수) 이용약관에 대한 동의</label>
+                                    <input type="checkbox" id="first_chkrq" value="termsCondition" name="required" required>
+                                    <label for="first_chkrq">(필수) 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="second_chk" name="second_chk" required>
+                                    <input type="checkbox" id="second_chk" value="membership" name="required" name="second_chk" required>
                                     <label for="second_chk">(필수) 멤버십 이용약관에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
                                 <div class="account_checkbox">
-                                    <input type="checkbox" id="third_chk" name="third_chk"required>
+                                    <input type="checkbox" id="third_chk" value="info" name="required" required>
                                     <label for="third_chk">(필수) 개인정보 수집 및 이용에 대한 동의</label>
                                     <a href="#" class="infolink">전문보기</a>
                                 </div>
