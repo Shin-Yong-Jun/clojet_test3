@@ -16,7 +16,6 @@ function show_thum() {
         img.setAttribute('src', `${value}`);
         img.setAttribute('alt', `thum_img_${[index]}`);
         img.setAttribute('data-no', `${[index]}`);
-
         thum_list.append(list);
         list.append(a_tag);
         a_tag.append(img);
@@ -65,7 +64,6 @@ show_size();
 
 // 구매체크칸 생성
 const item_check = detail_info.querySelector('.item_check');
-let count_ = 1;
 
 function show_item_check() {
     info[0].size.forEach((value, index) => {
@@ -75,10 +73,10 @@ function show_item_check() {
 
                 <div class="count_box">
                     <a href="#" class="minus_btn">-</a>
-                    <input type="text" class="count count_${index}" value="0" readonly/>
-                    <a href="#"class="plus_btn">+</a>
+                    <span class="count">0</span>
+                    <a href="#" class="plus_btn">+</a>
                 </div>
-                <a href="#">X</a>
+                <a href="#" class="close_btn">X</a>
             </div>
         `;
     });
@@ -86,59 +84,68 @@ function show_item_check() {
 show_item_check();
 
 // 구매수량증감
+const counters = document.querySelectorAll('.count_box');
 
-const count_box = item_check.querySelectorAll('.count_box'),
-    count = item_check.querySelectorAll('.count');
-const input = item_check.querySelector('input');
-let tot_count = 0;
+let total = 0;
 
-item_check.addEventListener('click', (e) => {
-    let targetE = e.target;
-    if (targetE.className == 'minus_btn') {
-        if (count_ == 0) return;
-        input.value = `${--count_}`;
-        alert(input.value);
-        item_box_price1(--tot_count);
-    } else if (targetE.className == 'plus_btn') {
-        input.value = `${++count_}`;
-        item_box_price1(++tot_count);
-    }
+counters.forEach((counter) => {
+    const minus_btn = counter.querySelector('.minus_btn');
+    const plus_btn = counter.querySelector('.plus_btn');
+    const count = counter.querySelector('.count');
+
+    let value = 0;
+
+    minus_btn.addEventListener('click', () => {
+        if (value == 0) return;
+        value--;
+        count.textContent = value;
+        --total;
+        item_box_price1(total);
+    });
+
+    plus_btn.addEventListener('click', () => {
+        value++;
+        count.textContent = value;
+        ++total;
+        item_box_price1(total);
+    });
+
+    const item_check_size = item_check.querySelectorAll('.item_check_size');
+    const size_list_a = size_list.querySelectorAll('a');
+    let before_size_list_a = 0;
+
+    size_list.addEventListener('click', (e) => {
+        e.preventDefault();
+        let targetE = e.target.closest('a');
+        if (!targetE) return;
+
+        let now_size_list_a = targetE.getAttribute('data-size');
+        size_list_a[before_size_list_a].classList.remove('check');
+        size_list_a[now_size_list_a].classList.add('check');
+        before_size_list_a = now_size_list_a;
+
+        item_check_size[targetE.dataset.size].classList.remove('hidden');
+        count[now_size_list_a].value = 1;
+        count[now_size_list_a].textContent = 1;
+        total++;
+        item_box_price1(total);
+    });
 });
 
 // 구매체크칸 활성화
 // 사이즈버튼체크 활성화
-const item_check_size = item_check.querySelectorAll('.item_check_size');
-const size_list_a = size_list.querySelectorAll('a');
-let before_size_list_a = 0;
-
-size_list.addEventListener('click', (e) => {
-    e.preventDefault();
-    let targetE = e.target.closest('a');
-    if (!targetE) return;
-
-    let now_size_list_a = targetE.getAttribute('data-size');
-    size_list_a[before_size_list_a].classList.remove('check');
-    size_list_a[now_size_list_a].classList.add('check');
-    before_size_list_a = now_size_list_a;
-
-    item_check_size[targetE.dataset.size].classList.remove('hidden');
-    if (count[now_size_list_a].value == 0) {
-        count[now_size_list_a].value = 1;
-        item_box_price1(++tot_count);
-    }
-});
 
 //
 const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
-function item_box_price1(totcount) {
-    totcount;
+function item_box_price1(total) {
+    total;
     item_box_price.innerHTML = `<strong>${String(
-        tot_count * info[0].buy_price,
+        total * info[0].buy_price,
     ).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원 |</strong>`;
 }
-item_box_price1();
+item_box_price1(total);
 
 /****************************************************************************/
 // 모달창
