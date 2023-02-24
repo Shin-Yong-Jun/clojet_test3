@@ -4,11 +4,14 @@
     padding: 0;
 }
 
+:root {
+    accent-color: black;
+  }
+
 main {
     margin-bottom: 3%;
     height: 100;
 }
-
 
 
 .signupbox h1 {
