@@ -76,7 +76,6 @@ function show_item_check() {
                     <span class="count">0</span>
                     <a href="#" class="plus_btn">+</a>
                 </div>
-                <a href="#" class="close_btn">X</a>
             </div>
         `;
     });
@@ -100,52 +99,48 @@ counters.forEach((counter) => {
         value--;
         count.textContent = value;
         --total;
-        item_box_price1(total);
+        show_box_price(total);
     });
 
     plus_btn.addEventListener('click', () => {
         value++;
         count.textContent = value;
         ++total;
-        item_box_price1(total);
+        show_box_price(total);
     });
+});
 
-    const item_check_size = item_check.querySelectorAll('.item_check_size');
-    const size_list_a = size_list.querySelectorAll('a');
-    let before_size_list_a = 0;
+const item_check_size = item_check.querySelectorAll('.item_check_size');
+const size_list_a = size_list.querySelectorAll('a');
+let before_size_list_a = 0;
 
-    size_list.addEventListener('click', (e) => {
-        e.preventDefault();
-        let targetE = e.target.closest('a');
-        if (!targetE) return;
-
+size_list.addEventListener('click', (e) => {
+    e.preventDefault();
+    let targetE = e.target.closest('a');
+    if (!(targetE.className == 'check')) {
         let now_size_list_a = targetE.getAttribute('data-size');
-        size_list_a[before_size_list_a].classList.remove('check');
         size_list_a[now_size_list_a].classList.add('check');
         before_size_list_a = now_size_list_a;
 
         item_check_size[targetE.dataset.size].classList.remove('hidden');
-        count[now_size_list_a].value = 1;
-        count[now_size_list_a].textContent = 1;
-        total++;
-        item_box_price1(total);
-    });
+    } else {
+        item_check_size[targetE.dataset.size].classList.add('hidden');
+        size_list_a[targetE.dataset.size].classList.remove('check');
+        show_box_price(total);
+    }
 });
-
-// 구매체크칸 활성화
-// 사이즈버튼체크 활성화
 
 //
 const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
-function item_box_price1(total) {
+function show_box_price(total) {
     total;
     item_box_price.innerHTML = `<strong>${String(
         total * info[0].buy_price,
     ).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원 |</strong>`;
 }
-item_box_price1(total);
+show_box_price(total);
 
 /****************************************************************************/
 // 모달창
@@ -162,4 +157,16 @@ detail_item_sub_info.addEventListener('click', (e) => {
 
 closebutton.addEventListener('click', () => {
     modal.classList.add('hidden');
+});
+
+/****************************************************************************/
+// 구매확정(구매하기,장바구니)
+
+const shoping_box = document.querySelector('.shoping_box');
+
+shoping_box.addEventListener('click', (e) => {
+    if (total == 0) {
+        e.preventDefault();
+        alert('구매하실 상품을 선택해주세요!');
+    }
 });
