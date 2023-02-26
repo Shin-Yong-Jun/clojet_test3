@@ -73,7 +73,7 @@ function show_item_check() {
 
                 <div class="count_box">
                     <a href="#" class="minus_btn">-</a>
-                    <span class="count">0</span>
+                    <span class="count" data-total="0">0</span>
                     <a href="#" class="plus_btn">+</a>
                 </div>
             </div>
@@ -86,25 +86,27 @@ show_item_check();
 const counters = document.querySelectorAll('.count_box');
 
 let total = 0;
+let value1 = 1;
 
 counters.forEach((counter) => {
     const minus_btn = counter.querySelector('.minus_btn');
     const plus_btn = counter.querySelector('.plus_btn');
     const count = counter.querySelector('.count');
-
-    let value = 0;
+    let count_value = 1;
 
     minus_btn.addEventListener('click', () => {
-        if (value == 0) return;
-        value--;
-        count.textContent = value;
+        if (count_value <= 1) return;
+        count_value--;
+        count.textContent = count_value;
+        count.dataset.total = count_value;
         --total;
         show_box_price(total);
     });
 
     plus_btn.addEventListener('click', () => {
-        value++;
-        count.textContent = value;
+        count_value++;
+        count.textContent = count_value;
+        count.dataset.total = count_value;
         ++total;
         show_box_price(total);
     });
@@ -117,20 +119,36 @@ let before_size_list_a = 0;
 size_list.addEventListener('click', (e) => {
     e.preventDefault();
     let targetE = e.target.closest('a');
+    const count = item_check_size[targetE.dataset.size].querySelector('.count');
     if (!(targetE.className == 'check')) {
         let now_size_list_a = targetE.getAttribute('data-size');
         size_list_a[now_size_list_a].classList.add('check');
         before_size_list_a = now_size_list_a;
 
         item_check_size[targetE.dataset.size].classList.remove('hidden');
+        ++total;
+        show_box_price(total);
+
+        let value = Number(count.textContent);
+        count.textContent = ++value;
+        count.dataset.total = value;
     } else {
         item_check_size[targetE.dataset.size].classList.add('hidden');
         size_list_a[targetE.dataset.size].classList.remove('check');
+        let value = Number(count.textContent);
+
+        --total;
+        show_box_price(total);
+
+        count.textContent = 0;
+        count.dataset.total = 0;
+
+        total -= --value;
         show_box_price(total);
     }
 });
 
-//
+// 총 금액 생성
 const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
@@ -141,7 +159,6 @@ function show_box_price(total) {
     ).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원 |</strong>`;
 }
 show_box_price(total);
-
 /****************************************************************************/
 // 모달창
 const detail_item_sub_info = document.querySelector('.detail_item_sub_info'),
