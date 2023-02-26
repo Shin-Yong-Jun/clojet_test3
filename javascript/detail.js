@@ -86,7 +86,6 @@ show_item_check();
 const counters = document.querySelectorAll('.count_box');
 
 let total = 0;
-let value1 = 1;
 
 counters.forEach((counter) => {
     const minus_btn = counter.querySelector('.minus_btn');
