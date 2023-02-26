@@ -53,33 +53,22 @@ search_symbol.addEventListener('click', (e) => {
   }
 });
 
-window.addEventListener('wheel', (e) => {
-  let wheel = e.deltaY;
-  if(wheel > 0) {
-    header_top.style.visibility = 'hidden'
-    header_top_comment.style.visibility = 'hidden'
-    header_inner_ul.style.visibility = 'hidden'
-    header_inner.style.height = '0px'
-    header_top.style.padding = '0px'
-  } else {
-    header_top.style.visibility = 'visible'
-    header_top_comment.style.visibility = 'visible'
-    header_inner_ul.style.visibility = 'visible'
-    header_inner.style.height = '20px'
-    header_top.style.padding = '10px'
-  }
-})
+
 
 
 //top헤더메뉴 스크롤 내렸을때 없어지고 사라지게 하기
 
-const header_top = document.querySelector('.top'),
-header_inner = header_top.querySelector('.inner'),
-header_inner_ul = header_inner.querySelector('ul');
-
+const header_top = document.querySelector('.top');
+const header_inner = header_top.querySelector('.inner');
+const header_inner_ul = header_inner.querySelector('ul');
 const header_top_comment = header_top.querySelector('.comment');
+const detail_info = document.querySelector('.detail_info');  // detail_info 블럭상의 div 작동불가 처리
 
 window.addEventListener('wheel', (e) => {
+  if (e.target.closest('.detail_info')) {  // detail_info 블럭상의 div 작동불가 처리
+    return; 
+  }
+
   let wheel = e.deltaY;
   if(wheel > 0) {
     header_top.style.visibility = 'hidden'
