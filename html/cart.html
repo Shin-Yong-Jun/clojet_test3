@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/mainPage.css">
     <link rel="stylesheet" href="../css/cart.css">
     <script defer src="../javascript/header.js"></script>
+    <script defer src="../javascript/cart.js"></script>
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,7 +151,7 @@
                                 <tr>
                                     <th>
                                         <div class="form_element">
-                                            <input type="checkbox" id="allCheck1" name="product" value="choice" checked>
+                                            <input type="checkbox" id="allCheck1" name="product" value="choice" onclick="selectAll(this)">
                                             <label for="allCheck1" class="check_on"></label>
                                         </div>
                                     </th>
@@ -166,7 +167,7 @@
                                 <tr>
                                     <td>
                                         <div class="order_check">
-                                            <input type="checkbox" id="allCheck" name="product" value="choice" checked>
+                                            <input type="checkbox" id="allCheck" name="product" value="choice">
                                             <label for="allCheck1" class="check_on"></label>
                                         </div>
                                     </td>
