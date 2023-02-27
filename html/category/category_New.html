@@ -6,26 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/category.css" />
         <link rel="stylesheet" href="../../css/mainPage.css" />
-        <link rel="stylesheet" href="../../css/index.css" />
 
-        <script defer src="./javascript/header.js"></script>
+        <script defer src="../../javascript/header.js"></script>
+        <script defer type="module" src="./javascript/category.js"></script>
+        <!-- type="module"사용시 CORS 정책에 의하여 로컬에서 실행불가 -->
+        <!-- 서버이후 해결가능예상 -->
 
-        <!-- 구글 폰트 -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
             rel="stylesheet"
         />
-
-        <!-- 구글 아이콘 -->
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        <!-- 구글 아이콘 /폰트 -->
 
-        <!-- favicon -->
         <link rel="icon" href="../../image/clojet_favicon.png" />
+        <!-- favicon -->
         <title>CLOJET</title>
     </head>
 
@@ -158,29 +158,41 @@
                                 <li><a href="#"></a></li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="color">
                             COLOR
                             <ul class="side_bar_color">
-                                <li>
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div></div>
-                                    </div>
-                                </li>
+                                <li
+                                    data-color="brown"
+                                    style="background-color: brown"
+                                ></li>
+                                <li
+                                    data-color="red"
+                                    style="background-color: red"
+                                ></li>
+                                <li
+                                    data-color="green"
+                                    style="background-color: green"
+                                ></li>
+                                <li
+                                    data-color="orange"
+                                    style="background-color: orange"
+                                ></li>
+                                <li
+                                    data-color="yellow"
+                                    style="background-color: yellow"
+                                ></li>
+                                <li
+                                    data-color="white"
+                                    style="background-color: white"
+                                ></li>
+                                <li
+                                    data-color="gray"
+                                    style="background-color: gray"
+                                ></li>
+                                <li
+                                    data-color="black"
+                                    style="background-color: black"
+                                ></li>
                             </ul>
                         </li>
                     </ul>
@@ -193,7 +205,7 @@
                             alt=""
                         />
                     </div>
-                    <div>
+                    <div class="title">
                         <strong>NEW</strong>
                         <p>4개의 상품</p>
                         <select>
@@ -203,34 +215,8 @@
                             <option value="low_price">낮은가격순</option>
                         </select>
                     </div>
-                    <ul>
-                        <li>
-                            <div class="item_img">
-                                <a href="./detail_page.html">
-                                    <img
-                                        src="../category/image/product_0/1.jpg"
-                                        alt="thum_1"
-                                    />
-                                    <img
-                                        src="../category/image/product_0/0.jpg"
-                                        alt="thum"
-                                    />
-                                    <span class="material-symbols-outlined"
-                                        >favorite</span
-                                    >
-                                </a>
-                            </div>
-                            <div class="item_info">
-                                <p class="item_name">
-                                    <a href="">세이블카라 반코트 -F636BL076</a>
-                                </p>
-                                <span class="disCount"> 5 % </span>
-                                <del class="price"> 3,000,000원 </del>
-                                <p class="price">
-                                    <strong>2,850,000원</strong>
-                                </p>
-                            </div>
-                        </li>
+                    <ul class="product_list_ul">
+                        <!-- JS -->
                     </ul>
                 </div>
             </div>

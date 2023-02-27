@@ -115,41 +115,20 @@
     padding-left: 30px;
 }
 
-.side_bar_color li {
-    margin: 0 !important;
+.color .side_bar_color li {
     display: inline-block;
-}
-
-.side_bar_color div {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid;
-}
-
-.side_bar_color div div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 14px;
-    height: 14px;
-    border: 1px solid;
-}
-
-.side_bar_color li:nth-child(1) div div {
-    background-color: red;
-}
-
-.side_bar_color li:nth-child(2) div div {
-    background-color: blue;
-}
-
-.side_bar_color li:nth-child(3) div div {
+    width: 25px;
+    height: 25px;
+    margin-left: 0px;
+    border-radius: 100%;
     background-color: black;
+    opacity: 0.7;
+    border: 2px solid;
+    transition: 0.3s;
 }
-
+.color .side_bar_color li:hover {
+    opacity: 1;
+}
 /*****************************************************************************/
 /* 상품리스트 */
 
@@ -162,14 +141,20 @@
     /* background-color: antiquewhite; */
 }
 
-.item_list > div {
+.item_list > .title_banner {
+    margin-top: -20px;
+}
+.item_list > .title_banner > div {
     margin-top: -20px;
 }
 
-.item_list > div::after {
+.item_list > .title_banner::after {
     content: '';
     display: block;
     clear: both;
+}
+.item_list > .title {
+    height: 100px;
 }
 
 .item_list > div > strong {
@@ -185,6 +170,9 @@
 
 .item_list > div > select {
     float: right;
+}
+.item_list .product_list_ul {
+    margin-left: 5%;
 }
 
 .item_name {
@@ -220,9 +208,6 @@
     content: url(../html/category/icon/heart2.png);
 }
 
-/* 신용 추가_main_page.css 로부터 가져옴, 이거 때문에 옆으로 안나가고 4열종대가 될수 있었습니다. 활용해주세요 */
-/* ============= */
-
 .item_list li {
     /* position: relative; */
     display: inline-block;
@@ -243,10 +228,33 @@
     object-fit: cover;
 }
 
+.item_name a,
+.item_info .disCount,
+.item_name del {
+    font-size: 0.9rem;
+}
+
+.item_info .price:not(del) {
+    font-size: 1.1rem;
+}
+
+.item_info .item_name {
+    color: black;
+    font-size: 1.1rem;
+}
+
+.item_name a {
+    color: black;
+}
+
+.disCount {
+    color: red;
+    font-weight: 700;
+}
 /*****************************************************************************/
 /* 카테고리 배너 */
 .title_banner {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     height: 250px;
     overflow: hidden;
 }
