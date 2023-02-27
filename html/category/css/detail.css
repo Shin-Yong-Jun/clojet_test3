@@ -143,7 +143,7 @@ main {
 }
 .item_check_size {
     display: flex;
-    background-color: gray;
+    background-color: rgba(238, 238, 236, 1);
     padding: 5%;
 }
 .item_check_size strong {
@@ -247,8 +247,9 @@ main {
     padding: 10px;
     text-align: left;
 }
+
 /**************************************************************/
-/* 모달 */
+/* modal */
 button {
     all: unset;
     background-color: #990000;
@@ -268,12 +269,13 @@ button {
     justify-content: center;
     align-items: center;
     background-color: #515151b0;
-    z-index: 999;
 }
 
 .modal_content {
     padding: 30px;
     width: 400px;
+    max-height: 80vh;
+    overflow: auto;
     background-color: white;
     text-align: center;
     border-radius: 6px;

@@ -1,346 +1,406 @@
 <!DOCTYPE html>
 <html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/mainPage.css" />
+        <link rel="stylesheet" href="../css/cart.css" />
+        <script defer src="../javascript/header.js"></script>
+        <script defer src="../javascript/cart.js"></script>
 
-    <link rel="stylesheet" href="../css/mainPage.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <script defer src="../javascript/header.js"></script>
-    <script defer src="../javascript/cart.js"></script>
+        <!-- 구글 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- 구글 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <!-- 구글 아이콘 -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
 
-    <!-- 구글 아이콘 -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <!-- favicon -->
+        <link rel="icon" href="../image/clojet_favicon.png" />
+        <title>CLOJET</title>
+    </head>
 
-    <!-- favicon -->
-    <link rel="icon" href="../image/clojet_favicon.png">
-    <title>CLOJET</title>
-
-</head>
-
-<body>
-    <header>
-        <div class="top">
-            <div class="inner">
-                <div class="comment">클로젯 공식 온라인 스토어</div>
-                <ul class="inner_submenu_right">
-                    <li><a href="./login/login.html">LOGIN</a></li>
-                    <li><a href="./signup/signup.html">SIGN-UP</a></li>
-                </ul>
+    <body>
+        <header>
+            <div class="top">
+                <div class="inner">
+                    <div class="comment">클로젯 공식 온라인 스토어</div>
+                    <ul class="inner_submenu_right">
+                        <li><a href="./login/login.html">LOGIN</a></li>
+                        <li><a href="./signup/signup.html">SIGN-UP</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="bottom">
-            <div class="inner">
-                <div class="left">
-                    <a class="burger" href="#">
-                        <span class="material-symbols-outlined">menu
-                        </span>
-                    </a>
-                    <div class="logo_contain">
-                        <a class="logo" href="../index.html">
-                            <img src="../image/clojet_logo_final_black.png" alt="logo">
+            <div class="bottom">
+                <div class="inner">
+                    <div class="left">
+                        <a class="burger" href="#">
+                            <span class="material-symbols-outlined">menu </span>
                         </a>
-                    </div>
-                </div>
-
-                <div class="center">
-                    <ul>
-                        <li>
-                            <a href="./category/category_New.html">NEW</a>
-                        </li>
-                        <li>
-                            <a href="./category/category_Sale.html">SALE</a>
-                        </li>
-                        <li>
-                            <a href="./category/category_Best.html">BEST</a>
-                        </li>
-                        <li>
-                            <a href="./category/category_Mens.html">MENS</a>
-                        </li>
-                        <li>
-                            <a href="./category/category_Ladies.html">LADIES</a>
-                        </li>
-                        <li>
-                            <a href="./category/category_Acc.html">ACC</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="right">
-                    <ul>
-                        <li>
-                            <div class="search">
-                                <input type="text", placeholder="검색어를 입력해주세요.">
-                                <a href="#">
-                                    <span class="material-symbols-outlined">search
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="./login/login.html">
-                                <span class="material-symbols-outlined">shopping_cart
-                                </span>
+                        <div class="logo_contain">
+                            <a class="logo" href="../index.html">
+                                <img
+                                    src="../image/clojet_logo_final_black.png"
+                                    alt="logo"
+                                />
                             </a>
-                        </li>
-                        <li>
-                            <a href="./MyPage.html">
-                                <span class="material-symbols-outlined">person
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="inner">
-            <div class="cart_wrap">
-                <div class="cart_box">
-                    <div class="order_wrap">
-                        <div class="order_tit">
-                            <h2>CART</h2>
-                            <ul>
-                                <li class="page_on">
-                                    <span>01</span>
-                                    장바구니
-                                    <span class="material-symbols-outlined">
-                                        arrow_forward_ios
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>02</span>
-                                    주문서 작성/결제
-                                    <span class="material-symbols-outlined">
-                                        arrow_forward_ios
-                                    </span>
-                                </li>
-                                <li>
-                                    <span>03</span>
-                                    주문완료
-                                </li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="cart_cont">
-                    <div class="cart_in">
-                        <table>
-                            <colgroup>
-                                <col class="attr1">
-                                <col class="attr2">
-                                <col class="attr3">
-                                <col class="attr4">
-                                <col class="attr5">
-                                <col class="attr6">
-                                <col class="attr7">
-                                <col class="attr8">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <div class="form_element">
-                                            <input type="checkbox" id="allCheck1" name="product" value="choice" onclick="selectAll(this)">
-                                            <label for="allCheck1" class="check_on"></label>
-                                        </div>
-                                    </th>
-                                    <th colspan="2">상품/옵션 정보</th>
-                                    <th>수량</th>
-                                    <th>상품금액</th>
-                                    <th>할인/적립</th>
-                                    <th>합계금액</th>
-                                    <th>배송비</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="order_check">
-                                            <input type="checkbox" id="allCheck" name="product" value="choice">
-                                            <label for="allCheck1" class="check_on"></label>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td_left">
-                                            <span>
-                                                <a href="./detail/category_detail.html">
-                                                    <img src="../image/Mypage_box4con_img1.jpg" alt="cart_img"
-                                                        class="td_left_img">
-                                                </a>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="pd_name">
-                                            M'S 1992 NUPTSE JACKET <br>
-                                            369,000 원
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td_order_amount">
-                                            <strong>1개</strong>
-                                            <div class="btn_choice">
-                                                <button>옵션/수량변경</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="order_sum_txt">
-                                            <strong>
-                                                369,000 원
-                                            </strong>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="td_benefit">
 
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="order_sum_txt2">
-                                            <strong>
-                                                369,000 원
-                                            </strong>
-                                        </div>
-                                    </td>
-                                    <td class="td_delivery">
-                                        <div class="td_del_list">
-                                            기본 - 금액별배송비 <br>
-                                            0원 <br>
-                                            (택배 - 선결제)
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="left_box">
-                        <a href="../html/main/main.html" class="go_shop">
-                            <em>&#x3C; 쇼핑 계속하기 </em>
-                        </a>
-                    </div>
-                    <div class="price_box">
-                        <div class="price_sum">
-                            <div class="price_list">
-                                <dl>
-                                    <dt>
-                                        총
-                                        <strong>0</strong>
-                                        개의 상품금액
-                                    </dt>
-                                    <dd>
-                                        <strong>0</strong>
-                                        원
-                                    </dd>
-                                </dl>
-                                <span class="material-symbols-outlined">
-                                    add_circle
-                                </span>
-                                <dl>
-                                    <dt>배송비</dt>
-                                    <dd>
-                                        <strong>0</strong>
-                                        원
-                                    </dd>
-                                </dl>
-                                <span class="material-symbols-outlined">
-                                    play_circle
-                                </span>
-                                <dl>
-                                    <dt>합계</dt>
-                                    <dd>
-                                        <strong>0</strong>
-                                        원
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn_order_box">
-                        <span class="btn_right_box">
-                            <button type="button" onclick="location.href='./order.html';">선택 상품 주문</button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-    <footer>
-        <div class="inner">
-            <div class="footer_top">
-                <div class="footer_logo">
-                    <a href="../index.html">
-                        <img src="../image/clojet_logo_final_black.png" alt="하단 로고 이미지"></a>
-                </div>
-
-                <div class="footer_icon">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="../image/f-icon.png" alt="페이스북"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="../image/i-icon.png" alt="인스타그램"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="../image/y-icon.png" alt="유튜브"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footerline"></div>
-            <div class="footer_bottom">
-                <div class="left">
-                    <div class="link">
-                        <ul class="link_list">
-                            <li><a href="#">고객센터</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">이용약관</a></li>
+                    <div class="center">
+                        <ul>
+                            <li>
+                                <a href="./category/category_New.html">NEW</a>
+                            </li>
+                            <li>
+                                <a href="./category/category_Sale.html">SALE</a>
+                            </li>
+                            <li>
+                                <a href="./category/category_Best.html">BEST</a>
+                            </li>
+                            <li>
+                                <a href="./category/category_Mens.html">MENS</a>
+                            </li>
+                            <li>
+                                <a href="./category/category_Ladies.html"
+                                    >LADIES</a
+                                >
+                            </li>
+                            <li>
+                                <a href="./category/category_Acc.html">ACC</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="info">
-                        <span>상호명 &colon; CLOJET </span>
-                        <span>대표명 &colon; 팀제이 </span>
-                        <span>주소 &colon; 경기도 성남시 분당구 돌마로 46 5층 그린컴퓨터아카데미 성남분당점 </span>
-                        <br>
-                        <span>사업자등록번호 &colon; 1234 &#x2D; 5678 </span>
-                        <span>통신판매업신고번호 &colon; 12345 &#x2D; 67890 </span>
-                        <p>copyright&#x24D2; 2021 MANDARINA DUCK. all rights reserved. hosting by
-                            &#xC5D4;&#xC5D0;&#xC774;&#xCE58;&#xC5D4;&#xCEE4;&#xBA38;&#xC2A4;(&#xC8FC;). design by
-                            &#xB514;&#xC790;&#xC778;&#xC704;&#xBE0C;.</p>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="help">
-                        <p>HELP DESK</p>
-                        <p>010 &#x2D; 7577 &#x2D; 8029</p>
-                        <p>평일 AM 9&colon;00 &#x7E; PM 6&colon;10</p>
-                        <p>점심 PM 1&colon;20 &#x7E; PM 2&colon;10</p>
-                        <p>휴무 연중무휴</p>
-                    </div>
-                    <div class="as">
-                        <p>A&sol;S</p>
-                        <p>A&sol;S 실시간 문의 연락처</p>
-                        <p>P.N : 031-000-0000</p>
-                        <p>KakaoTalk Channel : CLOJET </p>
+
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <div class="search">
+                                    <input
+                                        type="text"
+                                        ,
+                                        placeholder="검색어를 입력해주세요."
+                                    />
+                                    <a href="#">
+                                        <span class="material-symbols-outlined"
+                                            >search
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="./login/login.html">
+                                    <span class="material-symbols-outlined"
+                                        >shopping_cart
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./MyPage.html">
+                                    <span class="material-symbols-outlined"
+                                        >person
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </header>
 
-</body>
+        <main>
+            <div class="inner">
+                <div class="cart_wrap">
+                    <div class="cart_box">
+                        <div class="order_wrap">
+                            <div class="order_tit">
+                                <h2>CART</h2>
+                                <ul>
+                                    <li class="page_on">
+                                        <span>01</span>
+                                        장바구니
+                                        <span class="material-symbols-outlined">
+                                            arrow_forward_ios
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>02</span>
+                                        주문서 작성/결제
+                                        <span class="material-symbols-outlined">
+                                            arrow_forward_ios
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>03</span>
+                                        주문완료
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_cont">
+                        <div class="cart_in">
+                            <table>
+                                <colgroup>
+                                    <col class="attr1" />
+                                    <col class="attr2" />
+                                    <col class="attr3" />
+                                    <col class="attr4" />
+                                    <col class="attr5" />
+                                    <col class="attr6" />
+                                    <col class="attr7" />
+                                    <col class="attr8" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="form_element">
+                                                <input
+                                                    type="checkbox"
+                                                    id="allCheck1"
+                                                    name="product"
+                                                    value="choice"
+                                                    onclick="selectAll(this)"
+                                                />
+                                                <label
+                                                    for="allCheck1"
+                                                    class="check_on"
+                                                ></label>
+                                            </div>
+                                        </th>
+                                        <th colspan="2">상품/옵션 정보</th>
+                                        <th>수량</th>
+                                        <th>상품금액</th>
+                                        <th>할인/적립</th>
+                                        <th>합계금액</th>
+                                        <th>배송비</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="order_check">
+                                                <input
+                                                    type="checkbox"
+                                                    id="allCheck"
+                                                    name="product"
+                                                    value="choice"
+                                                />
+                                                <label
+                                                    for="allCheck1"
+                                                    class="check_on"
+                                                ></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="td_left">
+                                                <span>
+                                                    <a
+                                                        href="./detail/category_detail.html"
+                                                    >
+                                                        <img
+                                                            src="../image/Mypage_box4con_img1.jpg"
+                                                            alt="cart_img"
+                                                            class="td_left_img"
+                                                        />
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="pd_name">
+                                                M'S 1992 NUPTSE JACKET <br />
+                                                369,000 원
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="td_order_amount">
+                                                <strong>1개</strong>
+                                                <div class="btn_choice">
+                                                    <button>
+                                                        옵션/수량변경
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="order_sum_txt">
+                                                <strong> 369,000 원 </strong>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="td_benefit"></div>
+                                        </td>
+                                        <td>
+                                            <div class="order_sum_txt2">
+                                                <strong> 369,000 원 </strong>
+                                            </div>
+                                        </td>
+                                        <td class="td_delivery">
+                                            <div class="td_del_list">
+                                                기본 - 금액별배송비 <br />
+                                                0원 <br />
+                                                (택배 - 선결제)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="left_box">
+                            <a href="../html/main/main.html" class="go_shop">
+                                <em>&#x3C; 쇼핑 계속하기 </em>
+                            </a>
+                        </div>
+                        <div class="price_box">
+                            <div class="price_sum">
+                                <div class="price_list">
+                                    <dl>
+                                        <dt>
+                                            총
+                                            <strong>0</strong>
+                                            개의 상품금액
+                                        </dt>
+                                        <dd>
+                                            <strong>0</strong>
+                                            원
+                                        </dd>
+                                    </dl>
+                                    <span class="material-symbols-outlined">
+                                        add_circle
+                                    </span>
+                                    <dl>
+                                        <dt>배송비</dt>
+                                        <dd>
+                                            <strong>0</strong>
+                                            원
+                                        </dd>
+                                    </dl>
+                                    <span class="material-symbols-outlined">
+                                        play_circle
+                                    </span>
+                                    <dl>
+                                        <dt>합계</dt>
+                                        <dd>
+                                            <strong>0</strong>
+                                            원
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_order_box">
+                            <span class="btn_right_box">
+                                <button
+                                    type="button"
+                                    onclick="location.href='./order.html';"
+                                >
+                                    선택 상품 주문
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
+        <footer>
+            <div class="inner">
+                <div class="footer_top">
+                    <div class="footer_logo">
+                        <a href="../index.html">
+                            <img
+                                src="../image/clojet_logo_final_black.png"
+                                alt="하단 로고 이미지"
+                        /></a>
+                    </div>
+
+                    <div class="footer_icon">
+                        <ul>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="../image/f-icon.png"
+                                        alt="페이스북"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="../image/i-icon.png"
+                                        alt="인스타그램"
+                                /></a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    ><img
+                                        src="../image/y-icon.png"
+                                        alt="유튜브"
+                                /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerline"></div>
+                <div class="footer_bottom">
+                    <div class="left">
+                        <div class="link">
+                            <ul class="link_list">
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">이용약관</a></li>
+                            </ul>
+                        </div>
+                        <div class="info">
+                            <span>상호명 &colon; CLOJET </span>
+                            <span>대표명 &colon; 팀제이 </span>
+                            <span
+                                >주소 &colon; 경기도 성남시 분당구 돌마로 46 5층
+                                그린컴퓨터아카데미 성남분당점
+                            </span>
+                            <br />
+                            <span
+                                >사업자등록번호 &colon; 1234 &#x2D; 5678
+                            </span>
+                            <span
+                                >통신판매업신고번호 &colon; 12345 &#x2D; 67890
+                            </span>
+                            <p>
+                                copyright&#x24D2; 2021 MANDARINA DUCK. all
+                                rights reserved. hosting by
+                                &#xC5D4;&#xC5D0;&#xC774;&#xCE58;&#xC5D4;&#xCEE4;&#xBA38;&#xC2A4;(&#xC8FC;).
+                                design by
+                                &#xB514;&#xC790;&#xC778;&#xC704;&#xBE0C;.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="help">
+                            <p>HELP DESK</p>
+                            <p>010 &#x2D; 7577 &#x2D; 8029</p>
+                            <p>평일 AM 9&colon;00 &#x7E; PM 6&colon;10</p>
+                            <p>점심 PM 1&colon;20 &#x7E; PM 2&colon;10</p>
+                            <p>휴무 연중무휴</p>
+                        </div>
+                        <div class="as">
+                            <p>A&sol;S</p>
+                            <p>A&sol;S 실시간 문의 연락처</p>
+                            <p>P.N : 031-000-0000</p>
+                            <p>KakaoTalk Channel : CLOJET</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

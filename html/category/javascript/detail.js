@@ -1,6 +1,7 @@
 import info from './data.js';
 ('use strict');
-
+/****************************************************************************/
+// detail_img_box 구역
 // 썸네일 이미지 리스트 생성
 const main = document.querySelector('main'),
     detail_thum = main.querySelector('.detail_thum'),
@@ -40,10 +41,24 @@ thum_list.addEventListener('mouseover', (e) => {
     thum_list_li[now_thum].classList.add('show_now');
     before_thum = now_thum;
 });
+
+// 상품정보 상세 이미지 생성
+const detail_img = main.querySelector('.detail_img');
+
+function show_detailImg() {
+    info[0].info_imgAr.forEach((value, index) => {
+        const img = document.createElement('img');
+        img.setAttribute('src', `${value}`);
+        img.setAttribute('alt', `thum_img_${[index]}`);
+        detail_img.append(img);
+    });
+}
+show_detailImg();
+
 /****************************************************************************/
+// detail_info 구역
 // 상품정보 생성
-// 제품명생성
-const detail_info = main.querySelector('.detail_info'); // 보류1
+const detail_info = main.querySelector('.detail_info');
 
 //사이즈생성
 const size = detail_info.querySelector('.size'),
@@ -73,7 +88,7 @@ function show_item_check() {
 
                 <div class="count_box">
                     <a href="#" class="minus_btn">-</a>
-                    <span class="count" data-total="0">0</span>
+                    <span class="count">0</span>
                     <a href="#" class="plus_btn">+</a>
                 </div>
                 <a href="#" class="close_btn">X</a>
@@ -89,34 +104,31 @@ const counters = document.querySelectorAll('.item_check_size');
 let total = 0;
 
 counters.forEach((counter, index) => {
-    const minus_btn = counter.querySelector('.minus_btn');
-    const plus_btn = counter.querySelector('.plus_btn');
+    const decrease_btn = counter.querySelector('.minus_btn');
+    const increase_btn = counter.querySelector('.plus_btn');
     const close_btn = counter.querySelector('.close_btn');
     const count = counter.querySelector('.count');
     let count_value = 1;
 
-    minus_btn.addEventListener('click', () => {
-        if (count_value <= 1) return;
-        count_value--;
-        count.textContent = count_value;
-        count.dataset.total = count_value;
-        --total;
+    function count_calc(increase, count_value_increase, init) {
+        total = total + increase;
         show_box_price(total);
+
+        count_value_increase;
+        count.textContent = count_value - init;
+    }
+
+    decrease_btn.addEventListener('click', () => {
+        if (count_value <= 1) return;
+        count_calc(-1, --count_value, 0);
     });
 
-    plus_btn.addEventListener('click', () => {
-        count_value++;
-        count.textContent = count_value;
-        count.dataset.total = count_value;
-        ++total;
-        show_box_price(total);
+    increase_btn.addEventListener('click', () => {
+        count_calc(1, ++count_value, 0);
     });
+
     close_btn.addEventListener('click', () => {
-        total -= count_value;
-        count.textContent = 0;
-        count.dataset.total = 0;
-        count_value = 1;
-        show_box_price(total);
+        count_calc(-count_value, (count_value = 1), 1);
 
         item_check_size[index].classList.add('hidden');
         size_list_a[index].classList.remove('check');
@@ -151,12 +163,12 @@ const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
 function show_box_price(total) {
-    total;
     item_box_price.innerHTML = `<strong>${String(
         total * info[0].buy_price,
     ).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원 |</strong>`;
 }
 show_box_price(total);
+
 /****************************************************************************/
 // 모달창
 const detail_item_sub_info = document.querySelector('.detail_item_sub_info'),
@@ -176,12 +188,11 @@ closebutton.addEventListener('click', () => {
 
 /****************************************************************************/
 // 구매확정(구매하기,장바구니)
-
 const shoping_box = document.querySelector('.shoping_box');
 
 shoping_box.addEventListener('click', (e) => {
     if (total == 0) {
         e.preventDefault();
-        alert('구매하실 상품을 선택해주세요!');
+        alert('상품을 선택해주세요!');
     }
 });

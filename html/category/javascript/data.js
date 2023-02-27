@@ -8,13 +8,15 @@ const info = [
         discount: 5,
         size: ['90', '95', '100', '105'],
         color: ['gray'],
-        sex: 'woman',
+        sex: ['woman'],
+        info_imgAr: ['../category/image/product_0/detail.jpg'],
         thum_imgAr: [
-            '../detail/img/Preview/0.jpg',
-            '../detail/img/Preview/1.jpg',
-            '../detail/img/Preview/2.jpg',
-            '../detail/img/Preview/3.jpg',
-            '../detail/img/Preview/4.jpg',
+            '../category/image/product_0/0.jpg',
+            '../category/image/product_0/1.jpg',
+            '../category/image/product_0/2.jpg',
+            '../category/image/product_0/3.jpg',
+            '../category/image/product_0/4.jpg',
+            '../category/image/product_0/5.jpg',
         ],
     },
     {
@@ -25,7 +27,7 @@ const info = [
         discount: 5,
         size: ['90', '95', '100', '105'],
         color: ['gray'],
-        sex: 'man',
+        sex: ['man'],
     },
 ];
 
