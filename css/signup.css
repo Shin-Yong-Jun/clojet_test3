@@ -84,13 +84,14 @@ margin: 0px auto;
 
 .btn {
     width: 390px;
-    height: 80px;
+    height: 95px;
     text-align: center;
-    font-weight: bold;
-    line-height: 80px;
+    font-weight: 400;
+    line-height: 95px;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
+    border-radius: 12px;
     
 }
 

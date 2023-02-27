@@ -72,3 +72,25 @@ account_checkbox[2].addEventListener('click', (e) => {
     expand2 = expandOrNot(account_agreement_view[2], expand2);
   }
 })
+
+
+// 비밀번호 영문숫자조합 8자리 이상
+
+const passwordInput = document.getElementById("pw"),
+passwordInput_chk = document.getElementById("pw_chk");
+
+passwordInput.addEventListener("blur", function() {
+  const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z\d]{8,}$/;
+  if (!passwordRegex.test(this.value)) {
+    alert("비밀번호는 영문대문자와 소문자, 숫자조합의 8자리 이상이어야 합니다.");
+    this.value = "";
+  }
+});
+
+passwordInput_chk.addEventListener("blur", function() {
+  if(passwordInput_chk.value !== passwordInput.value) {
+    alert("비밀번호 입력란과 확인란이 일치하지 않습니다.");
+    passwordInput_chk.value = "";
+    passwordInput.focus()
+  }
+})
