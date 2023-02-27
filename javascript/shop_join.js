@@ -77,7 +77,8 @@ account_checkbox[2].addEventListener('click', (e) => {
 // 비밀번호 영문숫자조합 8자리 이상
 
 const passwordInput = document.getElementById("pw"),
-passwordInput_chk = document.getElementById("pw_chk");
+passwordInput_chk = document.getElementById("pw_chk"),
+idInput = document.getElementById("id");
 
 passwordInput.addEventListener("blur", function() {
   const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z\d]{8,}$/;
@@ -91,6 +92,6 @@ passwordInput_chk.addEventListener("blur", function() {
   if(passwordInput_chk.value !== passwordInput.value) {
     alert("비밀번호 입력란과 확인란이 일치하지 않습니다.");
     passwordInput_chk.value = "";
-    passwordInput.focus()
+    idInput.focus();
   }
 })
