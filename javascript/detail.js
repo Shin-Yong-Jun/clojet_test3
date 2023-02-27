@@ -76,6 +76,7 @@ function show_item_check() {
                     <span class="count" data-total="0">0</span>
                     <a href="#" class="plus_btn">+</a>
                 </div>
+                <a href="#" class="close_btn">X</a>
             </div>
         `;
     });
@@ -83,13 +84,14 @@ function show_item_check() {
 show_item_check();
 
 // 구매수량증감
-const counters = document.querySelectorAll('.count_box');
+const counters = document.querySelectorAll('.item_check_size');
 
 let total = 0;
 
-counters.forEach((counter) => {
+counters.forEach((counter, index) => {
     const minus_btn = counter.querySelector('.minus_btn');
     const plus_btn = counter.querySelector('.plus_btn');
+    const close_btn = counter.querySelector('.close_btn');
     const count = counter.querySelector('.count');
     let count_value = 1;
 
@@ -109,6 +111,16 @@ counters.forEach((counter) => {
         ++total;
         show_box_price(total);
     });
+    close_btn.addEventListener('click', () => {
+        total -= count_value;
+        count.textContent = 0;
+        count.dataset.total = 0;
+        count_value = 1;
+        show_box_price(total);
+
+        item_check_size[index].classList.add('hidden');
+        size_list_a[index].classList.remove('check');
+    });
 });
 
 const item_check_size = item_check.querySelectorAll('.item_check_size');
@@ -119,32 +131,19 @@ size_list.addEventListener('click', (e) => {
     e.preventDefault();
     let targetE = e.target.closest('a');
     const count = item_check_size[targetE.dataset.size].querySelector('.count');
-    if (!(targetE.className == 'check')) {
-        let now_size_list_a = targetE.getAttribute('data-size');
-        size_list_a[now_size_list_a].classList.add('check');
-        before_size_list_a = now_size_list_a;
+    if (targetE.classList.contains('check')) return;
 
-        item_check_size[targetE.dataset.size].classList.remove('hidden');
-        ++total;
-        show_box_price(total);
+    let now_size_list_a = targetE.getAttribute('data-size');
+    size_list_a[now_size_list_a].classList.add('check');
+    before_size_list_a = now_size_list_a;
 
-        let value = Number(count.textContent);
-        count.textContent = ++value;
-        count.dataset.total = value;
-    } else {
-        item_check_size[targetE.dataset.size].classList.add('hidden');
-        size_list_a[targetE.dataset.size].classList.remove('check');
-        let value = Number(count.textContent);
+    item_check_size[targetE.dataset.size].classList.remove('hidden');
+    ++total;
+    show_box_price(total);
 
-        --total;
-        show_box_price(total);
-
-        count.textContent = 0;
-        count.dataset.total = 0;
-
-        total -= --value;
-        show_box_price(total);
-    }
+    let value = count.textContent;
+    count.textContent = ++value;
+    count.dataset.total = value;
 });
 
 // 총 금액 생성
