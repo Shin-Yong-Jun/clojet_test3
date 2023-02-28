@@ -163,9 +163,10 @@ const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
 function show_box_price(total) {
-    item_box_price.innerHTML = `<strong>${String(
-        total * info[0].buy_price,
-    ).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원 |</strong>`;
+    item_box_price.innerHTML = `<strong>${String(total * info[0].buy_price).replace(
+        /(\d)(?=(?:\d{3})+(?!\d))/g,
+        '$1,',
+    )} 원 |</strong>`;
 }
 show_box_price(total);
 
@@ -193,6 +194,6 @@ const shoping_box = document.querySelector('.shoping_box');
 shoping_box.addEventListener('click', (e) => {
     if (total == 0) {
         e.preventDefault();
-        alert('상품을 선택해주세요!');
+        alert('사이즈를 선택해주세요!');
     }
 });
