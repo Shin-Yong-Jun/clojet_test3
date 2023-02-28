@@ -20,6 +20,8 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
     list_men.style.left = '100%'
     section_lady.style.display = 'none'
 
+    //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
+    btnKind[0].style.visibility ="hidden"
     btnKind[1].style.visibility ="visible"
     switchMenUl();
   } else {
@@ -78,7 +80,9 @@ window.addEventListener('scroll', () => {
 - 화살표 클릭할때 한번에 5개씩 보이도록 5% 로 설정
 */
 
-//men lady 교체
+//men lady 교체를 위한 대상잡는 변수 목록
+
+//1. 각 슬라이더 영역의 div박스와 ul의 li a 태그
 const main_products1 = document.querySelector('.main_products1'),
 main_products1_li = main_products1.querySelectorAll('li a'),
 
@@ -89,16 +93,19 @@ main_products3 = document.querySelector('.main_products3'),
 main_products3_li = main_products3.querySelectorAll('li a'),
 
 
+//2. 1번째 세일 섹션의 슬라이더 div박스와 남녀 아이템 목록의 ul 
 sales_div_men = document.querySelector('.sales_men'),
 sales_list_men = document.querySelector('.sales_men > ul'),
 sales_div_lady = document.querySelector('.sales_lady'),
 sales_list_lady = document.querySelector('.sales_lady > ul'),
 
+//3. 2번째 계절 섹션의 슬라이더 div박스와 남녀 아이템 목록의 ul 
 weather_div_men = document.querySelector('.weather_men'),
 weather_list_men = document.querySelector('.weather_men > ul'),
 weather_div_lady = document.querySelector('.weather_lady'),
 weather_list_lady = document.querySelector('.weather_lady > ul'),
 
+//4. 3번째  섹션의 슬라이더 div박스와 남녀 아이템 목록의 ul 
 new_div_men = document.querySelector('.new_men'),
 new_list_men = document.querySelector('.new_men > ul'),
 new_div_lady = document.querySelector('.new_lady'),
@@ -149,6 +156,7 @@ function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady ) {
     targetUl_lady.style.left = '100%'
   }
   }
+
   
 
 

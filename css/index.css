@@ -525,9 +525,9 @@ main h4 {
 .item_container2 > .btn_back,
 .item_container3 > .btn_back {
     left: -5%;
+    visibility: hidden;
 }
 /* .nonVisible {
-    visibility: hidden;
 } */
 
 .item_container1 > .btn_back:hover,
