@@ -504,11 +504,11 @@ main h4 {
     display: none;
 }
 
-.sales_men,
+/* .sales_men,
 .weather_men,
 .new_men {
-    /* display: none; */
-}
+    display: none;
+} */
 
 .item_container1 > a,
 .item_container2 > a,

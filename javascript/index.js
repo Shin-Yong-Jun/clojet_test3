@@ -19,3 +19,7 @@ search_symbol.addEventListener('click', () => {
     search_input.style.width = '0px'
   }
 })
+
+
+
+//확인 보류
