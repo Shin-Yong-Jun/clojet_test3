@@ -9,7 +9,7 @@
 //men_lady 컨텐츠 영역 교체 함수
 let sexuality = 0;
 
-function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady) {
+function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
   
   if(target.className === "Men") {
     target.style.color = 'black';
@@ -19,6 +19,8 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
     section_men.style.left = '0%'
     list_men.style.left = '100%'
     section_lady.style.display = 'none'
+
+    btnKind[1].style.visibility ="visible"
     switchMenUl();
   } else {
     target.style.color = 'black';
@@ -28,33 +30,21 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
     section_lady.style.left = '0%'
     list_lady.style.left = '100%'
     section_men.style.display = 'none'
+
+    //레이디 등장할때 첫화면 버튼 visibility 세팅
+    btnKind[0].style.visibility ="hidden"
+    btnKind[1].style.visibility ="visible"
     switchLadyUl();
   }
 };
 
 function switchMenUl() {
   sexuality = 0;
-  console.log(sexuality);
 }
 function switchLadyUl() {
   sexuality = 1;
-  console.log(sexuality);
 }
 
-//각 섹션 버튼 좌우 이동 함수
-
-function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady ) {
-
-if (sexuality === 0 && targetBtn.className === 'btn_foward') {
-  targetUl_men.style.left = '4%'
-} else if (sexuality === 0 && targetBtn.className === 'btn_back') {
-  targetUl_men.style.left = '100%'
-} else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
-  targetUl_lady.style.left = '4%'
-} else if(sexuality=== 1 && targetBtn.className === 'btn_back') {
-  targetUl_lady.style.left = '100%'
-}
-}
 
 
 
@@ -121,20 +111,45 @@ new_list_lady = document.querySelector('.new_lady > ul');
 main_products1.addEventListener('click', function (e) {
   e.preventDefault();
   let targetLi = e.target.closest('a');
-  switchMenLady(targetLi, main_products1_li, sales_div_men, sales_list_men, sales_div_lady, sales_list_lady);
+  switchMenLady(targetLi, main_products1_li, sales_div_men, sales_list_men, sales_div_lady, sales_list_lady, sales_btn);
 });
 
 main_products2.addEventListener('click', function (e) {
   e.preventDefault();
   let targetLi = e.target.closest('a');
-  switchMenLady(targetLi, main_products2_li, weather_div_men, weather_list_men, weather_div_lady, weather_list_lady);
+  switchMenLady(targetLi, main_products2_li, weather_div_men, weather_list_men, weather_div_lady, weather_list_lady, weather_btn);
 });
 
 main_products3.addEventListener('click', function (e) {
   e.preventDefault();
   let targetLi = e.target.closest('a');
-  switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady);
+  switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady, new_btn);
 });
+
+
+//각 섹션 버튼 좌우 이동 함수
+
+function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady ) {
+
+  if (sexuality === 0 && targetBtn.className === 'btn_foward') {
+    targetUl_men.style.left = '4%';
+    btnKind[1].style.visibility = "hidden";
+    btnKind[0].style.visibility = "visible";
+  } else if (sexuality === 0 && targetBtn.className === 'btn_back') {
+    targetUl_men.style.left = '100%'
+    btnKind[1].style.visibility = "visible";
+    btnKind[0].style.visibility = "hidden";
+  } else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
+    btnKind[1].style.visibility = "hidden";
+    btnKind[0].style.visibility = "visible";
+    targetUl_lady.style.left = '4%'
+  } else if(sexuality=== 1 && targetBtn.className === 'btn_back') {
+    btnKind[1].style.visibility = "visible";
+    btnKind[0].style.visibility = "hidden";
+    targetUl_lady.style.left = '100%'
+  }
+  }
+  
 
 
 //item_list 화살표 슬라이더
@@ -145,6 +160,13 @@ item_container2 = document.querySelector('.item_container2'),
 weather_btn = item_container2.getElementsByTagName('a'),
 item_container3 = document.querySelector('.item_container3'),
 new_btn = item_container3.getElementsByTagName('a');
+
+
+//back버튼 초기에 안보이게 세팅
+sales_btn[0].style.visibility = "hidden";
+weather_btn[0].style.visibility = "hidden";
+new_btn[0].style.visibility = "hidden";
+
 
 item_container1.addEventListener('click', (e) => {
   let targetBtn_sales = e.target.closest('a');
