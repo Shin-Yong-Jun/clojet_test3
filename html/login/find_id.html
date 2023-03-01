@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../css/login.css"> -->
     <link rel="stylesheet" href="../../css/mainPage.css">
-    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="./css/login.css">
+
     <script defer src="../../javascript/header.js"></script>
+    <script defer src="./javascript/findId.js"></script>
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,16 +115,20 @@
 
                 <form action="#" name="findIdInfo">
                     <div class="select_radio">
-                        <input type="radio" id="rad_findIdEmail" name="findId" value="email" checked>
+                        <input type="radio" id="rad_findIdEmail" name="rad_findid" value="email" checked>
                         <label for="rad_findIdEmail" class="choice_s">이메일</label>
-                        <input type="radio" id="rad_findIdphone" name="findId" value="cellphone">
+                        <input type="radio" id="rad_findIdphone" name="rad_findid" value="cellphone">
                         <label for="rad_findIdphone" class="choice_s">휴대폰 번호</label>
                     </div>
                     <div class="findId_input">
                         <input type="text" id="findIdName" name="findIdName" minlength="2" maxlength="5" value="" placeholder="이름" required>
                         <input type="email" id="findIdEmail" name="findIdEmail" value="" placeholder="이메일" required>
-                        <button type="submit" class="btn_findId">아이디 찾기</button>
                     </div>
+                    <div class="findId_input_phoneNum">
+                        <input type="text" id="findIdName" name="findIdName" minlength="2" maxlength="5" value="" placeholder="이름" required>
+                        <input type="text" id="findIdPhoneNum" name="findIdPhoneNum" maxlength="13" value="" placeholder="휴대폰 번호 (-) 제외" required>
+                    </div>
+                        <button type="submit" class="btn_findId">아이디 찾기</button>
                 </form>
 
 

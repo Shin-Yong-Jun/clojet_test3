@@ -35,7 +35,8 @@
     color: rgba(0, 0, 0, 0.8);
 }
 
-.center a[href*='#'],
+
+/* .center a[href*='#'], */
 .side_menu a[href*='#'] {
     color: black !important;
     font-weight: bolder;
@@ -205,7 +206,7 @@
     cursor: pointer;
 }
 
-.material-symbols-outlined {
+.list_sort .material-symbols-outlined {
     vertical-align: bottom !important;
     font-size: 16px !important;
 }

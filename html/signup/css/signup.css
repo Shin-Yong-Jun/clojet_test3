@@ -10,6 +10,14 @@
 }
 
 
+스크롤바 크기 없애기 테스트
+body::-webkit-scrollbar {
+    width: 0px;  /* for Chrome, Safari, and Opera */
+  }
+  
+  body {
+    overflow-y: scroll; /* for Firefox */
+  }
 
 /* ============================ */
 
