@@ -91,22 +91,28 @@ const item_list = main.querySelector('.item_list'),
     list_sort = item_list.querySelector('.list_sort');
 
 list_sort.addEventListener('click', (e) => {
+    // 컬러선택 초기화
+    side_bar_color_li.forEach((value) => {
+        value.classList.remove('checked');
+    });
+    colorAr = [];
+
+    console.log(colorAr);
+
+    //상품리스트 소팅
     let targetE = e.target.closest('span');
 
     if (targetE.className == 'low_price') {
         product_list_ul.innerHTML = '';
         info.sort((a, b) => a.price - b.price);
-        colorAr.forEach((value, index, ar) => {
-            show_list(ar);
-            show_product_list_li_length();
-        });
-        console.log(info);
+        show_list();
+        show_product_list_li_length();
     } else {
         product_list_ul.innerHTML = '';
         info.sort((a, b) => b.price - a.price);
-        colorAr.forEach((value) => {
-            show_list(value);
-            show_product_list_li_length();
-        });
+        show_list();
+        show_product_list_li_length();
     }
+    // 소팅 버튼 변경
+    [high_price_btn, low_price_btn] = list_sort.querySelectorAll('material-symbols-outlined');
 });
