@@ -85,11 +85,11 @@ window.addEventListener('scroll', () => {
 //men lady 교체를 위한 대상잡는 변수 목록
 
 //1. 각 슬라이더 영역의 div박스와 ul의 li a 태그
-const main_products1 = document.querySelector('.main_products1'),
+const main_products1 = document.getElementById('main_products1'),
     main_products1_li = main_products1.querySelectorAll('li a'),
-    main_products2 = document.querySelector('.main_products2'),
+    main_products2 = document.getElementById('main_products2'),
     main_products2_li = main_products2.querySelectorAll('li a'),
-    main_products3 = document.querySelector('.main_products3'),
+    main_products3 = document.getElementById('main_products3'),
     main_products3_li = main_products3.querySelectorAll('li a'),
     //2. 1번째 세일 섹션의 슬라이더 div박스와 남녀 아이템 목록의 ul
     sales_div_men = document.querySelector('.sales_men'),
@@ -106,6 +106,44 @@ const main_products1 = document.querySelector('.main_products1'),
     new_list_men = document.querySelector('.new_men > ul'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
+
+    function switchMenLady(
+        target,
+        main_num,
+        section_men,
+        list_men,
+        section_lady,
+        list_lady,
+        btnKind,
+    ) {
+        if (target.className === 'Men') {
+            target.style.color = 'black';
+            main_num[1].style.color = '#d6d6d6';
+    
+            section_men.style.display = 'block';
+            section_men.style.left = '0%';
+            list_men.style.left = '100%';
+            section_lady.style.display = 'none';
+    
+            //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
+            btnKind[0].style.visibility = 'hidden';
+            btnKind[1].style.visibility = 'visible';
+            switchMenUl();
+        } else {
+            target.style.color = 'black';
+            main_num[0].style.color = '#d6d6d6';
+    
+            section_lady.style.display = 'block';
+            section_lady.style.left = '0%';
+            list_lady.style.left = '100%';
+            section_men.style.display = 'none';
+    
+            //레이디 등장할때 첫화면 버튼 visibility 세팅
+            btnKind[0].style.visibility = 'hidden';
+            btnKind[1].style.visibility = 'visible';
+            switchLadyUl();
+        }
+    }
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
