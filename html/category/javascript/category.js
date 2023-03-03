@@ -88,7 +88,9 @@ side_bar_color.addEventListener('click', (e) => {
 /***********************************************************************/
 // 상품 금액별 소팅
 const item_list = main.querySelector('.item_list'),
-    list_sort = item_list.querySelector('.list_sort');
+    list_sort = item_list.querySelector('.list_sort'),
+    [high_price_btn, low_price_btn] = list_sort.querySelectorAll('label'),
+    [high_price_symbols, low_price_symbols] = list_sort.querySelectorAll('.material-symbols-outlined');
 
 list_sort.addEventListener('click', (e) => {
     // 컬러선택 초기화
@@ -100,19 +102,26 @@ list_sort.addEventListener('click', (e) => {
     console.log(colorAr);
 
     //상품리스트 소팅
-    let targetE = e.target.closest('span');
+    let targetE = e.target.closest('label');
+
+    function btn_change(now_btn, now_symbols, before_btn, before_symbols) {
+        show_list();
+        show_product_list_li_length();
+        now_btn.style.fontWeight = 'bold';
+        before_btn.style.fontWeight = 'normal';
+        now_symbols.textContent = 'task_alt';
+        now_symbols.style.color = 'goldenrod';
+        before_symbols.textContent = 'circle';
+        before_symbols.style.color = 'black';
+    }
 
     if (targetE.className == 'low_price') {
         product_list_ul.innerHTML = '';
         info.sort((a, b) => a.price - b.price);
-        show_list();
-        show_product_list_li_length();
+        btn_change(low_price_btn, low_price_symbols, high_price_btn, high_price_symbols);
     } else {
         product_list_ul.innerHTML = '';
         info.sort((a, b) => b.price - a.price);
-        show_list();
-        show_product_list_li_length();
+        btn_change(high_price_btn, high_price_symbols, low_price_btn, low_price_symbols);
     }
-    // 소팅 버튼 변경
-    [high_price_btn, low_price_btn] = list_sort.querySelectorAll('material-symbols-outlined');
 });

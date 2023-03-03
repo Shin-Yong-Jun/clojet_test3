@@ -35,7 +35,6 @@
     color: rgba(0, 0, 0, 0.8);
 }
 
-
 /* .center a[href*='#'], */
 .side_menu a[href*='#'] {
     color: black !important;
@@ -202,7 +201,7 @@
     font-size: 16px;
 }
 
-.item_list .title .title_bottom .list_sort {
+.item_list .title .title_bottom .list_sort label {
     cursor: pointer;
 }
 
