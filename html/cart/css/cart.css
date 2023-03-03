@@ -14,8 +14,7 @@ li {
 
 :root {
     accent-color: black;
-  }
-
+}
 
 /* ========================================================================== */
 /* Table */
@@ -45,11 +44,10 @@ li {
 
 table {
     border-top: 1px solid #8c8888;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 20px;
     border-collapse: collapse;
 }
-
 
 tbody td {
     border-bottom: 1px solid #dbdbdb;
@@ -85,7 +83,6 @@ tr {
     border-right: 1px solid #eee;
 }
 
-
 .td_left_img {
     text-align: left;
     width: 85px;
@@ -97,7 +94,6 @@ tr {
     width: 100%;
     margin: auto;
 }
-
 
 .order_wrap .order_tit {
     overflow: hidden;
@@ -141,7 +137,7 @@ tr {
     display: block;
 }
 
-.cart_in>p {
+.cart_in > p {
     text-align: center;
 }
 
