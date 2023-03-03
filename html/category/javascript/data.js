@@ -57,7 +57,7 @@ const info = [
         buy_price: 3390000,
         discount: `0%`,
         size: ['80', '85', '90', '95'],
-        color: 'brown',
+        color: ' burlywood',
         sex: 'woman',
         info_imgAr: [''],
         thum_imgAr: ['../category/image/product_3/0.jpg', '../category/image/product_3/1.jpg'],

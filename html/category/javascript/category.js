@@ -21,6 +21,7 @@ function show_list(search = '') {
                         src=${value.thum_imgAr[0]}
                             alt="thum"
                         />
+                        <div style="background-color: ${value.color};"></div>
                     </a>
                 </div>
 

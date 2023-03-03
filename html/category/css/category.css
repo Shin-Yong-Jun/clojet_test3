@@ -233,6 +233,16 @@
     opacity: 1;
 }
 
+.item_img div:last-of-type {
+    right: 5px;
+    bottom: 5px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-radius: 100%;
+}
+
 .item_img a:hover img:last-of-type {
     opacity: 0;
 }
