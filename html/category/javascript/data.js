@@ -108,7 +108,7 @@ const info = [
         color: 'gray',
         sex: 'woman',
         info_imgAr: [''],
-        thum_imgAr: ['../category/image/product_2/0.jpg', '../category/image/product_2/1.jpg'],
+        thum_imgAr: ['../category/image/product_7/0.jpg', '../category/image/product_7/1.jpg'],
     },
 ];
 
