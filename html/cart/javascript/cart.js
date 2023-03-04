@@ -185,9 +185,14 @@ for (let i = 0; i < btn_choice.length; i++) {
 }
 
 const modal = document.querySelector('.modal'),
-modal_exit = modal.querySelector('button');
+modal_exit = modal.querySelector('.modal_exit'),
+modal_chk = modal.querySelector('.modal_chk');
 
 modal_exit.addEventListener('click', () => {
+  modal.classList.add('hidden');
+})
+
+modal_chk.addEventListener('click', () => {
   modal.classList.add('hidden');
 })
 

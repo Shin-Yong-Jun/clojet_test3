@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../css/mainPage.css">
     <link rel="stylesheet" href="./css/order.css">
     <script defer src="../../javascript/header.js"></script>
+    <script defer src="../cart/javascript/cart.js"></script>
 
     <!-- 구글 폰트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,7 +148,8 @@
                                 <tr>
                                     <th>
                                         <div class="form_element">
-                                            <input type="checkbox" id="allCheck1" name="product" value="choice" checked>
+                                            <input type="checkbox" id="allCheck" name="product" value="selectAll"
+                                                onclick="selectAll(this)" />
                                             <label for="allCheck1" class="check_on"></label>
                                         </div>
                                     </th>
@@ -163,57 +165,106 @@
                                 <tr>
                                     <td>
                                         <div class="order_check">
-                                            <input type="checkbox" id="allCheck" name="product" value="choice" checked>
+                                            <input type="checkbox" id="product1" name="product" value="369,000"
+                                                class="product first" />
                                             <label for="allCheck1" class="check_on"></label>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="td_left">
                                             <span>
-                                                <a href="./detail/category_detail.html">
+                                                <a href="../category/detail_page.html">
                                                     <img src="./image/Mypage_box4con_img1.jpg" alt="cart_img"
-                                                        class="td_left_img">
+                                                        class="td_left_img" />
                                                 </a>
                                             </span>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="pd_name">
-                                            M'S 1992 NUPTSE JACKET
+                                            M'S 1992 NUPTSE JACKET <br />
+                                            369,000 원
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="td_order_amount">
-                                            <strong>1개</strong>
+                                        <div>
+                                            <strong class="td_order_amount">1</strong>개
+                                            <div class="btn_choice">
+                                                <button>옵션/수량변경</button>
+                                            </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="order_sum_txt">
-                                            <strong>
-                                                369,000 원
-                                            </strong>
+                                        <div>
+                                            <strong class="order_sum_txt">369,000</strong>원
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="td_benefit">
-                                            적립 <br>
-                                            <strong>
-                                                상품 +3,690 원
-                                            </strong>
-                                        </div>
+                                        <div class="td_benefit"></div>
                                     </td>
                                     <td>
-                                        <div class="order_sum_txt2">
-                                            <strong>
-                                                369,000 원
-                                            </strong>
+                                        <div>
+                                            <strong class="order_sum_txt2">369,000</strong>원
                                         </div>
                                     </td>
                                     <td class="td_delivery">
                                         <div class="td_del_list">
-                                            배송비 무료<br>
-                                            무료배송<br>
-                                            (택배-선결제)
+                                            기본 - 금액별배송비 <br />
+                                            0원 <br />
+                                            (택배 - 선결제)
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="order_check">
+                                            <input type="checkbox" id="product2" name="product" value="369,000"
+                                                class="product second" />
+                                            <label for="allCheck1" class="check_on"></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="td_left">
+                                            <span>
+                                                <a href="../category/detail_page.html">
+                                                    <img src="./image/Mypage_box4con_img1.jpg" alt="cart_img"
+                                                        class="td_left_img" />
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="pd_name">
+                                            M'S 1992 NUPTSE JACKET <br />
+                                            369,000 원
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong class="td_order_amount">1</strong>개
+                                            <div class="btn_choice">
+                                                <button>옵션/수량변경</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong class="order_sum_txt">369,000</strong>원
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="td_benefit"></div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong class="order_sum_txt2">369,000</strong>원
+                                        </div>
+                                    </td>
+                                    <td class="td_delivery">
+                                        <div class="td_del_list">
+                                            기본 - 금액별배송비 <br />
+                                            0원 <br />
+                                            (택배 - 선결제)
                                         </div>
                                     </td>
                                 </tr>
@@ -221,7 +272,7 @@
                         </table>
                     </div>
                     <div class="left_box">
-                        <a href="../html/cart.html" class="go_shop">
+                        <a href="../cart/cart.html" class="go_shop">
                             <em>&#x3C; 장바구니 가기 </em>
                         </a>
                     </div>
@@ -231,31 +282,27 @@
                                 <dl>
                                     <dt>
                                         총
-                                        <strong>1</strong>
+                                        <strong class="amount">0</strong>
                                         개의 상품금액
                                     </dt>
                                     <dd>
-                                        <strong>369,000</strong>
+                                        <strong class="sumproductPrice">0</strong>
                                         원
                                     </dd>
                                 </dl>
-                                <span class="material-symbols-outlined">
-                                    add_circle
-                                </span>
+                                <span class="material-symbols-outlined"> add_circle </span>
                                 <dl>
                                     <dt>배송비</dt>
                                     <dd>
-                                        <strong>0</strong>
+                                        <strong class="deliveryfee">4,000</strong>
                                         원
                                     </dd>
                                 </dl>
-                                <span class="material-symbols-outlined">
-                                    play_circle
-                                </span>
+                                <span class="material-symbols-outlined"> play_circle </span>
                                 <dl>
                                     <dt>합계</dt>
                                     <dd>
-                                        <strong>369,000</strong>
+                                        <strong class="sumTotalPrice">0</strong>
                                         원
                                     </dd>
                                 </dl>
@@ -611,6 +658,67 @@
             </div>
         </div>
     </footer>
+
+
+    
+    <div class="modal hidden">
+        <div class="modal_content">
+            <div class="modal_title">주문변경</div>
+
+            <div class="modal_item">
+                <div class="modal_item_image">
+                    <img src="./image/Mypage_box4con_img1.jpg" alt="cart_img" class="modal_img" />
+                </div>
+                <div class="modal_item_detail">
+                    <div class="modal_item_detail_title">M'S 1992 NUPTSE JACKET</div>
+                    <div class="modal_item_detail_price">369,000</div> 원
+                </div>
+            </div>
+            <hr>
+
+            <div class="modal_select_option">
+                <div class="select_title">옵션 변경</div>
+                <select name="color" id="color">
+                    <option value="select">색상</option>
+                    <option value="black">블랙</option>
+                    <option value="white">화이트</option>
+                    <option value="gray">그레이</option>
+                    <option value="kakhi">카키</option>
+                    <option value="bagie">베이지</option>
+                    <option value="red">레드</option>
+                    <option value="blue">블루</option>
+                </select>
+                <select name="size" id="size">
+                    <option value="select">사이즈</option>
+                    <option value="80">80</option>
+                    <option value="85">85</option>
+                    <option value="90">90</option>
+                    <option value="95">95</option>
+                </select>
+            </div>
+
+            <hr>
+            <div class="modal_select_amount">
+                <div class="select_title">수량 변경</div>
+                <div class="count_box">
+                    <a href="#" class="btn_box minus">-</a>
+                    <span class="count">1</span>
+                    <a href="#" class="btn_box plus">+</a>
+                </div>
+                <div class="count_box_currency">원</div>
+                <div class="count_box_result"></div>
+            </div>
+            <hr>
+            <div class="empty"></div>
+            <hr>
+            <div class="modal_final_modify">
+                <div class="final_modify_title">상품 금액</div>
+                <div class="final_modify_result"></div>
+                <div class="final_modify_currency">원</div>
+        </div>
+        <button class="modal_exit">X</button>
+        <button class="modal_chk">확인</button>
+
 
 </body>
 
