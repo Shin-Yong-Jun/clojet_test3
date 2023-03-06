@@ -58,9 +58,6 @@ for (let i = 0; i < product_chkBox.length; i++) {
   //금액기호 없애기 
   let pure_sum_txt = order_sum_txt2[i].textContent.replace(',', '');
   
-  
-  
-  
   product_chkBox[i].addEventListener('change', () => {
     //개수워딩 간소화
     let pure_amount = td_order_amount[i].textContent;
@@ -97,10 +94,12 @@ for (let i = 0; i < product_chkBox.length; i++) {
 /*전체 체크박스까지 고려함*/
 //============================//
 allCheck.addEventListener('change', () => {
+  
   if (allCheck.checked) {
     amount_count = 0;
+    
     for (let i = 0; i < product_chkBox.length; i++) {
-
+      
       //개수워딩 간소화
       let pure_amount = td_order_amount[i].textContent;
 
@@ -117,6 +116,7 @@ allCheck.addEventListener('change', () => {
   } else {
     amount_count = 0;
     amount_price = 0;
+    
     for (let i = 0; i < product_chkBox.length; i++) {
       selectedAr.countData = 0; // set text content to count
       selectedAr.finalPrice = 0; // set text content to count
@@ -139,6 +139,8 @@ allCheck.addEventListener('change', () => {
     }
   }
 )
+
+
 
 //====================================================================================
 //===================- 주문변경 관련 모달창 작업 ==========================
@@ -176,6 +178,10 @@ function addCommas(num) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 //모달창 종료와 발동
+const modal = document.querySelector('.modal'),
+modal_exit = modal.querySelector('.modal_exit'),
+modal_chk = modal.querySelector('.modal_chk');
+
 const btn_choice = document.querySelectorAll('.btn_choice button');
 for (let i = 0; i < btn_choice.length; i++) {
   btn_choice[i].addEventListener('click', () => {
@@ -184,9 +190,6 @@ for (let i = 0; i < btn_choice.length; i++) {
   
 }
 
-const modal = document.querySelector('.modal'),
-modal_exit = modal.querySelector('.modal_exit'),
-modal_chk = modal.querySelector('.modal_chk');
 
 modal_exit.addEventListener('click', () => {
   modal.classList.add('hidden');
@@ -194,5 +197,13 @@ modal_exit.addEventListener('click', () => {
 
 modal_chk.addEventListener('click', () => {
   modal.classList.add('hidden');
+  //추후 모달창 html 코드를 자동으로 1,2,3 넘버링한 코드대로 작동시켜서 반영되게 하기
+    td_order_amount[0].textContent = countSpan.textContent;
+    order_sum_txt2[0].textContent = finalResultSpan.textContent;
+    
 })
 
+//문제사항.
+//전체 선택했을 때는 모달창에서 작업한 내용이 반영이 된 금액이 함께 계산되는데 개별 체크에선 안 잡힘.
+// 모달창 1, 2, 이렇게 html에 없는 이상 하나로 각각의 아이템 섹션의 개수와 가격을 반영하기엔 무리. 
+//개별체크박스들을 클릭하고 난 뒤, 전체 선택 체크를 하면 개별체크박스들의 금액의 두배의 가격이 반영됨.
