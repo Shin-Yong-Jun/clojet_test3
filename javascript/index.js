@@ -269,6 +269,7 @@ function btnClick(num) {
 
 function showSlide(num) {
     const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider ul li');
     if (num > slides.length) {
         currSlide = 1;
     }
@@ -278,14 +279,19 @@ function showSlide(num) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
     }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('active');
+    }
     slides[currSlide - 1].style.display = 'block';
+    dots[currSlide - 1].classList.add('active');
 }
 
+const dots = document.querySelectorAll('.slider ul li');
 const preBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-const dots = document.querySelectorAll('.slider ul li');
 
-preBtn.addEventListener('click', () => {
+preBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     for (let i = 0; i < dots.length; i++) {
         if (dots[i].dataset.index == currSlide) {
             dots[i].classList.add('active');
@@ -298,7 +304,8 @@ preBtn.addEventListener('click', () => {
     }
 });
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     for (let i = 0; i < dots.length; i++) {
         if (dots[i].dataset.index == currSlide) {
             dots[i].classList.add('active');
