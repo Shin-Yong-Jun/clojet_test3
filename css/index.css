@@ -759,6 +759,7 @@ footer .footer_logo {
     height: 100%;
     /* border-radius: 0px; */
     position: relative;
+    transition: 1s;
 }
 
 .slide {
