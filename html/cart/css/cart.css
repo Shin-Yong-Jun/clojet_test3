@@ -183,7 +183,6 @@ tr {
     border: none;
     cursor: pointer;
 }
-<<<<<<< HEAD
 
 /* ====================== 모달창 관련 ========================== */
 
@@ -203,12 +202,10 @@ tr {
     display: none;
 }
 
-
 .modal hr {
     width: 100%;
     margin: 10px 0;
-    border: .5px solid rgb(216, 216, 216);
-
+    border: 0.5px solid rgb(216, 216, 216);
 }
 
 .modal_title {
@@ -219,20 +216,19 @@ tr {
 }
 .select_title {
     text-align: left;
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin-bottom: 5px;
 }
 
 .modal_select_amount {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 40px;
 }
-
 
 select {
     display: block;
     width: 100%;
-    font-size: .8rem;
+    font-size: 0.8rem;
     margin: 5px 0;
 }
 
@@ -241,7 +237,7 @@ select {
 }
 
 .modal_item_image {
-text-align: left;
+    text-align: left;
 }
 
 .modal_item .modal_img {
@@ -253,10 +249,9 @@ text-align: left;
     text-align: left;
 }
 
-
-.modal_item_detail_title { 
+.modal_item_detail_title {
     margin-left: 5px;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .modal_item_detail_price {
@@ -264,9 +259,8 @@ text-align: left;
     margin-left: 5px;
     display: inline-block;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
-
 
 .modal_content {
     padding: 30px;
@@ -280,7 +274,6 @@ text-align: left;
 }
 
 .count_box {
-    display: inline-block;
     font-size: 10px;
     border: 1px solid black;
     float: left;
@@ -289,7 +282,7 @@ text-align: left;
 .count {
     text-align: center;
     padding: 0 5px;
-    font-size: .7rem;
+    font-size: 0.7rem;
 }
 
 .btn_box {
@@ -297,30 +290,29 @@ text-align: left;
     border: solid 1px black;
     background-color: #dddddd;
 }
-.minus{ 
+.minus {
     padding: 4px 8px;
     border-right: 2px solid black;
 }
 
-.plus{ 
+.plus {
     padding: 4px 6px;
     border-left: 2px solid black;
- }
+}
 
- .count_box_result {
-     display: block;
-     float: right;
+.count_box_result {
+    display: block;
+    float: right;
 }
 
 .count_box_currency {
     display: block;
     float: right;
-    
 }
 
 .modal_final_modify {
     display: flex;
-    font-size: .8rem;
+    font-size: 0.8rem;
     justify-content: right;
     margin-bottom: 10px;
 }
@@ -341,10 +333,10 @@ text-align: left;
     color: black;
     background-color: transparent;
     border: none;
-    
+
     font-weight: bold;
     font-size: 1rem;
-    
+
     cursor: pointer;
 }
 
@@ -355,7 +347,4 @@ text-align: left;
     color: white;
     background-color: black;
     cursor: pointer;
-    
 }
-=======
->>>>>>> 희수
