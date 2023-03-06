@@ -8,6 +8,10 @@ function selectAll(selectAll) {
     checkbox.checked = selectAll.checked;
   })
 }
+
+
+
+
 //====================================================================================
 //===================- 체크박스 체크 시, 하단 출력부분 관련 ==========================
 //====================================================================================
@@ -23,10 +27,11 @@ const price_list = document.querySelector('.price_list'),
 //상품개수 금액 목록영역 대상 잡기
 const tbody = document.querySelector('tbody'),
   td_order_amount = tbody.querySelectorAll('.td_order_amount'),
+  order_sum_txt = tbody.querySelectorAll('.order_sum_txt'),
   order_sum_txt2 = tbody.querySelectorAll('.order_sum_txt2');
 
 
-// //체크박스 대상 잡기
+// //체크박스 상 잡기
 const product_chkBox = document.getElementsByClassName("product");
 
 // 체크박스 간의 개수, 금액 대상잡기
@@ -50,13 +55,14 @@ function priceToString(price) {
 let pure_deliveryfee = Number(deliveryfee.textContent.replace(',', ''));
 
 
+
 //============================//
 /*개별 체크박스 체크할때*/
 //============================//
 for (let i = 0; i < product_chkBox.length; i++) {
 
   //금액기호 없애기 
-  let pure_sum_txt = order_sum_txt2[i].textContent.replace(',', '');
+  let pure_sum_txt2 = order_sum_txt2[i].textContent.replace(',', '');
   
   product_chkBox[i].addEventListener('change', () => {
     //개수워딩 간소화
@@ -65,16 +71,31 @@ for (let i = 0; i < product_chkBox.length; i++) {
     //개별추가 배송비값 변수 선언
     let price_with_d = 0;
     
+    //개별 체크박스가 모두 체크됬는지 여부
+    let all_checked = true;
+    for (let j = 0; j < product_chkBox.length; j++) {
+      if (!product_chkBox[j].checked) {
+        all_checked = false;
+        break;
+      }
+    }
+    
+    if (all_checked) {
+      allCheck.disabled = true;
+    } else {
+      allCheck.disabled=false;
+    }
+    
     if (product_chkBox[i].checked) {
       amount_count += Number(pure_amount);
-      amount_price += Number(pure_sum_txt);
+      amount_price += Number(pure_sum_txt2);
       
       //개별추가시 통일된 배송비값 단일 추가
       price_with_d = amount_price + pure_deliveryfee; 
       
     } else {
       amount_count -= Number(pure_amount);
-      amount_price -= Number(pure_sum_txt);
+      amount_price -= Number(pure_sum_txt2);
 
       //개별삭제시 배송비값 제거
       price_with_d = 0; 
@@ -88,7 +109,11 @@ for (let i = 0; i < product_chkBox.length; i++) {
     //총합계 산출
     sumTotalPrice.innerText = priceToString(price_with_d);
   });
+  
 }
+
+
+
 
 //============================//
 /*전체 체크박스까지 고려함*/
@@ -153,7 +178,6 @@ const plusBtn = document.querySelector('.plus');
 const countSpan = document.querySelector('.count');
 const priceSpan = document.querySelector('.modal_item_detail_price');
 const countResultSpan = document.querySelector('.count_box_result');
-const finalResultSpan = document.querySelector('.final_modify_result');
 
 let count = parseInt(countSpan.textContent);
 const price = parseInt(priceSpan.textContent.replace(',', ''));
@@ -181,13 +205,14 @@ function addCommas(num) {
 const modal = document.querySelector('.modal'),
 modal_exit = modal.querySelector('.modal_exit'),
 modal_chk = modal.querySelector('.modal_chk');
+const finalResultSpan = document.querySelector('.final_modify_result');
 
 const btn_choice = document.querySelectorAll('.btn_choice button');
 for (let i = 0; i < btn_choice.length; i++) {
-  btn_choice[i].addEventListener('click', () => {
+  let j =
+  btn_choice[0].addEventListener('click', () => {
     modal.classList.remove('hidden');
   })
-  
 }
 
 
@@ -207,3 +232,5 @@ modal_chk.addEventListener('click', () => {
 //전체 선택했을 때는 모달창에서 작업한 내용이 반영이 된 금액이 함께 계산되는데 개별 체크에선 안 잡힘.
 // 모달창 1, 2, 이렇게 html에 없는 이상 하나로 각각의 아이템 섹션의 개수와 가격을 반영하기엔 무리. 
 //개별체크박스들을 클릭하고 난 뒤, 전체 선택 체크를 하면 개별체크박스들의 금액의 두배의 가격이 반영됨.
+
+
