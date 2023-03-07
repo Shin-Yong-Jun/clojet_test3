@@ -265,12 +265,12 @@ const slider = document.querySelector('.slider'),
     slide = slides.querySelectorAll('.slide');
 
 const [prevBtn, nextBtn] = slider.querySelectorAll('.slideBtn');
-const pager = slider.querySelector('.pager');
+const pager = slider.querySelector('.pager li');
 
 let before_date = -new Date();
 
 function delay() {
-    if (new Date() - before_date > 800 + 100) {
+    if (new Date() - before_date > 1000 + 100) {
         before_date = new Date();
         return true;
     }
@@ -279,53 +279,73 @@ function delay() {
 slide[0].style.left = 0;
 let nowSlide = 0;
 let beforeSlide = 0;
+let num = 0;
+let maxImg = 3;
 
 slider.addEventListener('click', (e) => {
     let targetE = e.target.closest('.slideBtn');
     if (!targetE) return;
 
-    if (targetE.className.includes('prev')) {
-        clickSlide(nowSlide++, 1);
-    }
     if (targetE.className.includes('next')) {
+        clickSlide(nowSlide++, 1);
+
+        num++;
+        // if (num == maxImg) {
+        //     num = 0;
+        // }
+
+        let abc = `translateX(${num * 100}%)`;
+        pager.style.transform = abc;
+    }
+
+    if (targetE.className.includes('prev')) {
         clickSlide(nowSlide--, -1);
+
+        num--;
+        let abc = `translateX(${num * 100}%)`;
+        pager.style.transform = abc;
     }
 });
 
 let stopSlide;
+function autoSlide() {
+    stopSlide = setInterval(() => {
+        clickSlide(nowSlide++, 1);
+    }, 2000);
+}
 
-// slider.addEventListener('mouseover', (e) => {
-//     stopSlide = setInterval(() => {
-//         nowSlide++;
+autoSlide();
 
-//         nowSlide %= 3;
-
-//         slide[beforeSlide].style.left = '-100%';
-//         slide[nowSlide].style.left = 0;
-
-//         beforeSlide = nowSlide;
-//     }, 1000);
-// });
-
-slider.addEventListener('mouseout', (e) => {
+slider.addEventListener('mouseover', (e) => {
     clearInterval(stopSlide);
 });
 
+slider.addEventListener('mouseout', (e) => {
+    autoSlide();
+});
+
 function clickSlide(a, b) {
-    a;
-    nowSlide = Math.abs((nowSlide %= 3));
+    if (delay()) {
+        a;
 
-    slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
-    slide[nowSlide].style.left = `${b * 100}%`;
+        if (nowSlide == maxImg) {
+            nowSlide = 0;
+        } else if (nowSlide == -1) {
+            nowSlide = maxImg - 1;
+        }
 
-    // =============================================
+        slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
+        slide[nowSlide].style.left = `${b * 100}%`;
 
-    setTimeout(() => {
-        slide[beforeSlide].style.transition = '1s';
-        slide[nowSlide].style.transition = '1s';
-        slide[beforeSlide].style.left = `${b * -100}%`;
-        slide[nowSlide].style.left = 0;
+        // =============================================
 
-        beforeSlide = nowSlide;
-    }, 100);
+        setTimeout(() => {
+            slide[beforeSlide].style.transition = '1s';
+            slide[nowSlide].style.transition = '1s';
+            slide[beforeSlide].style.left = `${b * -100}%`;
+            slide[nowSlide].style.left = 0;
+
+            beforeSlide = nowSlide;
+        }, 10);
+    }
 }

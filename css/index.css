@@ -735,27 +735,27 @@ footer .footer_logo {
 .slider {
     position: relative;
     height: 600px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slides {
     display: flex;
-    /* overflow: hidden; */
 }
 
 .slide {
     position: absolute;
-    opacity: .5;
-    /* transition: 1s; */
     left: 100%;
 }
 
 .slideBtn {
     position: absolute;
-    /* left: 0; */
     top: 0;
-    background-color: rgba(255, 255, 255, 0.393);
     width: 25%;
     height: 100%;
+}
+.slideBtn:hover {
+    background-color: rgba(255, 255, 255, 0.393);
 }
 
 .prev {
@@ -769,7 +769,6 @@ footer .footer_logo {
 
 .pager {
     position: absolute;
-    display: flex;
     background-color: #000;
     left: 50%;
     transform: translate(-50%, 0);
@@ -779,6 +778,10 @@ footer .footer_logo {
 }
 
 .pager li {
-    width: 33%;
+    position: relative;
+    height: 100%;
+    width: calc(100% / 3);
+    background-color: red;
+    transition: 1s;
+    transform: 
 }
-
