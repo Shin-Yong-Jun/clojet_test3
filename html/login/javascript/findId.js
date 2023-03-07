@@ -24,3 +24,9 @@ function showInput(inputId) {
     findId_input_phoneNum.style.display = 'block';
   }
 }
+
+rad_findIdphone.addEventListener('input', function() {
+
+});
+
+

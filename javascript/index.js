@@ -1,14 +1,38 @@
 'use strict';
 
+//배지 배너 가위표 삭제버튼
+
+const badges = header.querySelector('.badges'),
+    badge = badges.querySelector('.badge'),
+    badgeClose = header.querySelector('.badges .badge .close');
+
+badges.addEventListener('click', (e) => {
+    let targetEle = e.target.closest('img');
+
+    if (targetEle.className === 'close') {
+        badges.style.display = 'none';
+    }
+});
+
+window.addEventListener('scroll', () => {
+    scrollInvisible(badge, 0, 'hidden', 1, 'visible');
+});
+
 //============================
 //====== 함수선언 영역  ======
 //============================
 
-//스크롤 함수
-
-//men_lady 컨텐츠 영역 교체 함수
+//성별 판별을 위한 스위치
 let sexuality = 0;
 
+function switchMenUl() {
+    sexuality = 0;
+}
+function switchLadyUl() {
+    sexuality = 1;
+}
+
+//men_lady 컨텐츠 영역 교체 함수
 function switchMenLady(
     target,
     main_num,
@@ -47,34 +71,12 @@ function switchMenLady(
     }
 }
 
-function switchMenUl() {
-    sexuality = 0;
-}
-function switchLadyUl() {
-    sexuality = 1;
-}
+
 
 //============================
 //====== 동작문 영역  ======
 //============================
 
-//배지 배너 가위표 삭제버튼
-
-const badges = header.querySelector('.badges'),
-    badge = badges.querySelector('.badge'),
-    badgeClose = header.querySelector('.badges .badge .close');
-
-badges.addEventListener('click', (e) => {
-    let targetEle = e.target.closest('img');
-
-    if (targetEle.className === 'close') {
-        badges.style.display = 'none';
-    }
-});
-
-window.addEventListener('scroll', () => {
-    scrollInvisible(badge, 0, 'hidden', 1, 'visible');
-});
 
 //item_list 화살표 슬라이더
 /*

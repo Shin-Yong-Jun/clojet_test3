@@ -117,7 +117,7 @@
                     <div class="select_radio">
                         <input type="radio" id="rad_findIdEmail" name="rad_findid" value="email" checked>
                         <label for="rad_findIdEmail" class="choice_s">이메일</label>
-                        <input type="radio" id="rad_findIdphone" name="rad_findid" value="cellphone">
+                        <input type="radio" id="rad_findIdphone" name="rad_findid" value="cellphone" >
                         <label for="rad_findIdphone" class="choice_s">휴대폰 번호</label>
                     </div>
                     <div class="findId_input">
@@ -126,7 +126,8 @@
                     </div>
                     <div class="findId_input_phoneNum">
                         <input type="text" id="findIdName" name="findIdName" minlength="2" maxlength="5" value="" placeholder="이름" required>
-                        <input type="text" id="findIdPhoneNum" name="findIdPhoneNum" maxlength="13" value="" placeholder="휴대폰 번호 (-) 제외" required>
+                        <input type="text" id="findIdPhoneNum" name="findIdPhoneNum" maxlength="13" value="" placeholder="휴대폰 번호 (-) 제외" required
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                     </div>
                         <button type="submit" class="btn_findId">아이디 찾기</button>
                 </form>
