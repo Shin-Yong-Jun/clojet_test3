@@ -25,8 +25,3 @@ function showInput(inputId) {
   }
 }
 
-rad_findIdphone.addEventListener('input', function() {
-
-});
-
-

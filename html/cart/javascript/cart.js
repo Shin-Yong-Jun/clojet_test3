@@ -86,6 +86,7 @@ for (let i = 0; i < product_chkBox.length; i++) {
       allCheck.disabled=false;
     }
     
+    //개별 체크박스가 체크될때의 동작
     if (product_chkBox[i].checked) {
       amount_count += Number(pure_amount);
       amount_price += Number(pure_sum_txt2);
@@ -103,8 +104,8 @@ for (let i = 0; i < product_chkBox.length; i++) {
 
     amount.innerText = `${amount_count}`;
     sumproductPrice.innerText = priceToString(`${amount_price}`);
-    selectedAr.countData = amount_count; // set text content to count
-    selectedAr.finalPrice = amount_price; // set text content to count
+    selectedAr.countData = amount_count; // 임시 객체에 저장
+    selectedAr.finalPrice = amount_price; // 임시 객체에 저장
 
     //총합계 산출
     sumTotalPrice.innerText = priceToString(price_with_d);
@@ -134,8 +135,8 @@ allCheck.addEventListener('change', () => {
       amount_count += Number(pure_amount);
       amount_price += Number(pure_sum_txt);
 
-      selectedAr.countData = amount_count; // set text content to count
-      selectedAr.finalPrice = amount_price; // set text content to count
+      selectedAr.countData = amount_count; // 임시 객체에 저장
+      selectedAr.finalPrice = amount_price; // 임시 객체에 저장
       product_chkBox[i].checked = true;
     }
   } else {
@@ -143,8 +144,8 @@ allCheck.addEventListener('change', () => {
     amount_price = 0;
     
     for (let i = 0; i < product_chkBox.length; i++) {
-      selectedAr.countData = 0; // set text content to count
-      selectedAr.finalPrice = 0; // set text content to count
+      selectedAr.countData = 0; // 임시 객체에 저장
+      selectedAr.finalPrice = 0; // 임시 객체에 저장t
       product_chkBox[i].checked = false;
     }
   }
@@ -157,7 +158,7 @@ allCheck.addEventListener('change', () => {
   
 })
 
-/* 체크박스 다 꺼져있을때 배달비 없애기 */
+/* 체크박스 다 꺼져있을때 상품합계 없애기 */
 allCheck.addEventListener('change', () => {
   if(allCheck.checked === false) {
     sumTotalPrice.innerText = 0;
