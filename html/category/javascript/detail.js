@@ -215,9 +215,6 @@ function show_box_price(total) {
 }
 show_box_price(total);
 
-// 키값증발
-sessionStorage.clear();
-
 /****************************************************************************/
 // 모달창
 const detail_item_sub_info = document.querySelector('.detail_item_sub_info'),
