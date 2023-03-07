@@ -10,7 +10,7 @@ function show_list(search = '') {
     info.forEach((value, index) => {
         if (search === '' || value.color.includes(search)) {
             product_list_ul.innerHTML += `
-            <li class="product_list_li">
+            <li class="product_list_li" data-page="${index}">
                 <div class="item_img">
                     <a href="./detail_page.html">
                         <img
@@ -41,6 +41,11 @@ function show_list(search = '') {
     });
 }
 show_list();
+
+product_list_ul.addEventListener('click', (e) => {
+    let targetE = e.target.closest('li').dataset.page;
+    sessionStorage.setItem('page_key', targetE);
+});
 
 /****************************************************************************/
 // 상품 리스트 수량 체크

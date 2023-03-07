@@ -10,6 +10,7 @@
 .side_menu {
     position: fixed;
     width: 170px;
+    user-select: none;
 }
 
 .side_menu > li {
@@ -212,6 +213,8 @@
 
 /* ********************************* */
 .item_list .product_list_ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-left: 5%;
 }
 
@@ -249,8 +252,8 @@
 
 .item_list li {
     display: inline-block;
-    margin-top: 30px;
-    margin-right: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
     vertical-align: top;
 }
 

@@ -8,8 +8,11 @@ const main = document.querySelector('main'),
     thum_main_img = detail_thum.querySelector('.thum img'),
     thum_list = detail_thum.querySelector('.thum_list');
 
+// 키값보존
+let infokey = sessionStorage.getItem('page_key');
+
 function show_thum() {
-    info[0].thum_imgAr.forEach((value, index) => {
+    info[infokey].thum_imgAr.forEach((value, index) => {
         const list = document.createElement('li');
         const a_tag = document.createElement('a');
         const img = document.createElement('img');
@@ -27,7 +30,7 @@ show_thum();
 // 썸네일 현재 이미지 변경 / 알림
 const thum_list_li = thum_list.querySelectorAll('li');
 let before_thum = 0;
-thum_main_img.setAttribute('src', info[0].thum_imgAr[0]);
+thum_main_img.setAttribute('src', info[infokey].thum_imgAr[0]);
 thum_list_li[0].classList.add('show_now');
 
 thum_list.addEventListener('mouseover', (e) => {
@@ -46,7 +49,7 @@ thum_list.addEventListener('mouseover', (e) => {
 const detail_img = main.querySelector('.detail_img');
 
 function show_detailImg() {
-    info[0].info_imgAr.forEach((value, index) => {
+    info[infokey].info_imgAr.forEach((value, index) => {
         const img = document.createElement('img');
         img.setAttribute('src', `${value}`);
         img.setAttribute('alt', `thum_img_${[index]}`);
@@ -60,12 +63,54 @@ show_detailImg();
 // 상품정보 생성
 const detail_info = main.querySelector('.detail_info');
 
+// 이름,할인율,금액,할인금액
+const item = detail_info.querySelector('.item');
+
+function show_detail_info() {
+    // 상품이름
+    const title = document.createElement('div');
+    title.textContent = info[infokey].title;
+    title.className = 'title';
+
+    // 상품서브타이틀
+    const sub_title = document.createElement('div');
+    sub_title.textContent = info[infokey].subtitle;
+    sub_title.className = 'sub_title';
+
+    // 금액박스
+    const price_box = document.createElement('div');
+    price_box.className = 'price_box';
+
+    // 할인율
+    const disCount = document.createElement('span');
+    disCount.textContent = info[infokey].discount;
+    disCount.className = 'disCount';
+
+    // 금액
+    const price = document.createElement('del');
+    price.textContent = `${String(info[infokey].price).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원`;
+    price.className = 'price';
+
+    // 할인금액
+    const buy_price = document.createElement('p');
+    buy_price.textContent = `${String(info[infokey].buy_price).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,')} 원`;
+    buy_price.className = 'buy_price';
+
+    price_box.append(disCount);
+    price_box.append(price);
+    price_box.append(buy_price);
+    item.prepend(price_box);
+    item.prepend(sub_title);
+    item.prepend(title);
+}
+show_detail_info();
+
 //사이즈생성
 const size = detail_info.querySelector('.size'),
     size_list = size.querySelector('.size_list');
 
 function show_size() {
-    info[0].size.forEach((value, index) => {
+    info[infokey].size.forEach((value, index) => {
         const list = document.createElement('li');
         const a_tag = document.createElement('a');
         a_tag.href = '#';
@@ -81,7 +126,7 @@ show_size();
 const item_check = detail_info.querySelector('.item_check');
 
 function show_item_check() {
-    info[0].size.forEach((value, index) => {
+    info[infokey].size.forEach((value, index) => {
         item_check.innerHTML += `
             <div class="item_check_size size${value} hidden">
                 <strong>Size _ ${value}</strong>
@@ -163,7 +208,7 @@ const item_box = detail_info.querySelector('.item_box'),
     item_box_price = item_box.querySelector('.price');
 
 function show_box_price(total) {
-    item_box_price.innerHTML = `<strong>${String(total * info[0].buy_price).replace(
+    item_box_price.innerHTML = `<strong>${String(total * info[infokey].buy_price).replace(
         /(\d)(?=(?:\d{3})+(?!\d))/g,
         '$1,',
     )} 원 |</strong>`;
