@@ -71,12 +71,9 @@ function switchMenLady(
     }
 }
 
-
-
 //============================
 //====== 동작문 영역  ======
 //============================
-
 
 //item_list 화살표 슬라이더
 /*
@@ -288,24 +285,26 @@ slider.addEventListener('click', (e) => {
     let targetE = e.target.closest('.slideBtn');
     if (!targetE) return;
 
-    if (targetE.className.includes('next')) {
-        clickSlide(nowSlide++, 1);
+    if (delay()) {
+        if (targetE.className.includes('next')) {
+            clickSlide(nowSlide++, 1);
 
-        num++;
-        // if (num == maxImg) {
-        //     num = 0;
-        // }
+            num++;
+            if (num == maxImg) {
+                num = 0;
+            }
 
-        let abc = `translateX(${num * 100}%)`;
-        pager.style.transform = abc;
-    }
+            let abc = `translateX(${num * 100}%)`;
+            pager.style.transform = abc;
+        }
 
-    if (targetE.className.includes('prev')) {
-        clickSlide(nowSlide--, -1);
+        if (targetE.className.includes('prev')) {
+            clickSlide(nowSlide--, -1);
 
-        num--;
-        let abc = `translateX(${num * 100}%)`;
-        pager.style.transform = abc;
+            num--;
+            let abc = `translateX(${num * 100}%)`;
+            pager.style.transform = abc;
+        }
     }
 });
 
@@ -327,27 +326,25 @@ slider.addEventListener('mouseout', (e) => {
 });
 
 function clickSlide(a, b) {
-    if (delay()) {
-        a;
+    a;
 
-        if (nowSlide == maxImg) {
-            nowSlide = 0;
-        } else if (nowSlide == -1) {
-            nowSlide = maxImg - 1;
-        }
-
-        slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
-        slide[nowSlide].style.left = `${b * 100}%`;
-
-        // =============================================
-
-        setTimeout(() => {
-            slide[beforeSlide].style.transition = '1s';
-            slide[nowSlide].style.transition = '1s';
-            slide[beforeSlide].style.left = `${b * -100}%`;
-            slide[nowSlide].style.left = 0;
-
-            beforeSlide = nowSlide;
-        }, 10);
+    if (nowSlide == maxImg) {
+        nowSlide = 0;
+    } else if (nowSlide == -1) {
+        nowSlide = maxImg - 1;
     }
+
+    slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
+    slide[nowSlide].style.left = `${b * 100}%`;
+
+    // =============================================
+
+    setTimeout(() => {
+        slide[beforeSlide].style.transition = '1s';
+        slide[nowSlide].style.transition = '1s';
+        slide[beforeSlide].style.left = `${b * -100}%`;
+        slide[nowSlide].style.left = 0;
+
+        beforeSlide = nowSlide;
+    }, 10);
 }
