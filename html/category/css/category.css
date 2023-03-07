@@ -10,6 +10,7 @@
 .side_menu {
     position: fixed;
     width: 170px;
+    user-select: none;
 }
 
 .side_menu > li {

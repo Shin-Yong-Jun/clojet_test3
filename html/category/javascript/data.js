@@ -50,7 +50,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: 'orange',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_2/detail0.png'],
         thum_imgAr: ['../category/image/product_2/0.jpg', '../category/image/product_2/1.jpg'],
     },
     {
@@ -62,7 +62,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: ' burlywood',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_3/detail0.png'],
         thum_imgAr: ['../category/image/product_3/0.jpg', '../category/image/product_3/1.jpg'],
     },
     {
@@ -74,7 +74,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: 'black',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_4/detail0.png'],
         thum_imgAr: ['../category/image/product_4/0.jpg', '../category/image/product_4/1.jpg'],
     },
     {
@@ -86,7 +86,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: 'red',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_5/detail0.png'],
         thum_imgAr: ['../category/image/product_5/0.jpg', '../category/image/product_5/1.jpg'],
     },
     {
@@ -98,7 +98,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: 'green',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_6/detail0.png'],
         thum_imgAr: ['../category/image/product_6/0.jpg', '../category/image/product_6/1.jpg'],
     },
     {
@@ -110,7 +110,7 @@ const info = [
         size: ['80', '85', '90', '95'],
         color: 'gray',
         sex: 'woman',
-        info_imgAr: [''],
+        info_imgAr: ['../category/image/product_7/detail0.png'],
         thum_imgAr: ['../category/image/product_7/0.jpg', '../category/image/product_7/1.jpg'],
     },
 ];
