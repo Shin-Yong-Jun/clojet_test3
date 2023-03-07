@@ -1,15 +1,15 @@
 import info from './data.js';
 ('use strict');
 /****************************************************************************/
+// 키값보존
+let infokey = sessionStorage.getItem('page_key');
+
 // detail_img_box 구역
 // 썸네일 이미지 리스트 생성
 const main = document.querySelector('main'),
     detail_thum = main.querySelector('.detail_thum'),
     thum_main_img = detail_thum.querySelector('.thum img'),
     thum_list = detail_thum.querySelector('.thum_list');
-
-// 키값보존
-let infokey = sessionStorage.getItem('page_key');
 
 function show_thum() {
     info[infokey].thum_imgAr.forEach((value, index) => {

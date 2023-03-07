@@ -105,8 +105,6 @@ list_sort.addEventListener('click', (e) => {
     });
     colorAr = [];
 
-    console.log(colorAr);
-
     //상품리스트 소팅
     let targetE = e.target.closest('label');
 
