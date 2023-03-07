@@ -290,8 +290,11 @@ slider.addEventListener('click', (e) => {
             clickSlide(nowSlide++, 1);
 
             num++;
+
             if (num == maxImg) {
                 num = 0;
+            } else if (num == -1) {
+                num = maxImg - 1;
             }
 
             let abc = `translateX(${num * 100}%)`;
@@ -302,6 +305,12 @@ slider.addEventListener('click', (e) => {
             clickSlide(nowSlide--, -1);
 
             num--;
+            if (num == maxImg) {
+                num = 0;
+            } else if (num == -1) {
+                num = maxImg - 1;
+            }
+
             let abc = `translateX(${num * 100}%)`;
             pager.style.transform = abc;
         }
@@ -312,6 +321,17 @@ let stopSlide;
 function autoSlide() {
     stopSlide = setInterval(() => {
         clickSlide(nowSlide++, 1);
+
+        num++;
+
+        if (num == maxImg) {
+            num = 0;
+        } else if (num == -1) {
+            num = maxImg - 1;
+        }
+
+        let abc = `translateX(${num * 100}%)`;
+        pager.style.transform = abc;
     }, 2000);
 }
 
