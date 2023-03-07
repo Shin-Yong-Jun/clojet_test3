@@ -54,7 +54,7 @@ const info = [
         thum_imgAr: ['../category/image/product_2/0.jpg', '../category/image/product_2/1.jpg'],
     },
     {
-        title: '[버버리(BURBERRY)]롱 켄징턴 헤리티지 트렌치코트',
+        title: '[버버리]BURBERRY 버버리 8045288 롱 켄징턴 헤리티지 트렌치코트',
         subtitle: '버버리(BURBERRY)',
         price: 3390000,
         buy_price: 3390000,
@@ -66,7 +66,7 @@ const info = [
         thum_imgAr: ['../category/image/product_3/0.jpg', '../category/image/product_3/1.jpg'],
     },
     {
-        title: '몽클레어 (MONCLER) (선물포장)전사이즈 23SS/FW 몽클레어 란스 여성 경량패딩 블랙 LANS I10931A',
+        title: '몽클레어 (MONCLER) (선물포장)전사이즈 23SS/FW 몽클레어 란스 여성 경량패딩 블랙 ',
         subtitle: '몽클레어 (MONCLER) ',
         price: 1760000,
         buy_price: 1347456,
@@ -102,7 +102,7 @@ const info = [
         thum_imgAr: ['../category/image/product_6/0.jpg', '../category/image/product_6/1.jpg'],
     },
     {
-        title: '노비스 22FW 여성 메리데스 패딩 스틸그레이 MERIDETH STEEL GREY 5718513555575909 26711170',
+        title: '노비스 22FW 여성 메리데스 패딩 스틸그레이 MERIDETH STEEL GREY ',
         subtitle: '노비스 22FW',
         price: 1614600,
         buy_price: 1235815,
