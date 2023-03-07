@@ -270,6 +270,7 @@ slider.addEventListener('click', (e) => {
         if (targetE.className.includes('next')) {
             clickSlide(nowSlide++, 1);
 
+<<<<<<< HEAD
             num++;
             if (num == maxImg) {
                 num = 0;
@@ -283,6 +284,34 @@ slider.addEventListener('click', (e) => {
             clickSlide(nowSlide--, -1);
 
             num--;
+=======
+    if (delay()) {
+        if (targetE.className.includes('next')) {
+            clickSlide(nowSlide++, 1);
+
+            num++;
+
+            if (num == maxImg) {
+                num = 0;
+            } else if (num == -1) {
+                num = maxImg - 1;
+            }
+
+            let abc = `translateX(${num * 100}%)`;
+            pager.style.transform = abc;
+        }
+
+        if (targetE.className.includes('prev')) {
+            clickSlide(nowSlide--, -1);
+
+            num--;
+            if (num == maxImg) {
+                num = 0;
+            } else if (num == -1) {
+                num = maxImg - 1;
+            }
+
+>>>>>>> origin/main
             let abc = `translateX(${num * 100}%)`;
             pager.style.transform = abc;
         }
@@ -293,6 +322,17 @@ let stopSlide;
 function autoSlide() {
     stopSlide = setInterval(() => {
         clickSlide(nowSlide++, 1);
+
+        num++;
+
+        if (num == maxImg) {
+            num = 0;
+        } else if (num == -1) {
+            num = maxImg - 1;
+        }
+
+        let abc = `translateX(${num * 100}%)`;
+        pager.style.transform = abc;
     }, 2000);
 }
 autoSlide();
@@ -303,3 +343,30 @@ slider.addEventListener('mouseover', (e) => {
 slider.addEventListener('mouseout', (e) => {
     autoSlide();
 });
+<<<<<<< HEAD
+=======
+
+function clickSlide(a, b) {
+    a;
+
+    if (nowSlide == maxImg) {
+        nowSlide = 0;
+    } else if (nowSlide == -1) {
+        nowSlide = maxImg - 1;
+    }
+
+    slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
+    slide[nowSlide].style.left = `${b * 100}%`;
+
+    // =============================================
+
+    setTimeout(() => {
+        slide[beforeSlide].style.transition = '1s';
+        slide[nowSlide].style.transition = '1s';
+        slide[beforeSlide].style.left = `${b * -100}%`;
+        slide[nowSlide].style.left = 0;
+
+        beforeSlide = nowSlide;
+    }, 10);
+}
+>>>>>>> origin/main

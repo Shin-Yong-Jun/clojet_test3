@@ -769,7 +769,7 @@ footer .footer_logo {
 
 .pager {
     position: absolute;
-    background-color: #000;
+    background-color: white;
     left: 50%;
     transform: translate(-50%, 0);
     bottom: 10px;
@@ -781,6 +781,6 @@ footer .footer_logo {
     position: relative;
     height: 100%;
     width: calc(100% / 3);
-    background-color: red;
+    background-color: black;
     transition: 1s;
 }
