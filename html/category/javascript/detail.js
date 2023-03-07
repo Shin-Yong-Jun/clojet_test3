@@ -122,30 +122,6 @@ function show_size() {
 }
 show_size();
 
-// 사이즈클릭시 오픈
-const item_check_size = item_check.querySelectorAll('.item_check_size');
-const size_list_a = size_list.querySelectorAll('a');
-let before_size_list_a = 0;
-
-size_list.addEventListener('click', (e) => {
-    e.preventDefault();
-    let targetE = e.target.closest('a');
-    const count = item_check_size[targetE.dataset.size].querySelector('.count');
-    if (targetE.classList.contains('check')) return;
-
-    let now_size_list_a = targetE.getAttribute('data-size');
-    size_list_a[now_size_list_a].classList.add('check');
-    before_size_list_a = now_size_list_a;
-
-    item_check_size[targetE.dataset.size].classList.remove('hidden');
-    ++total;
-    show_box_price(total);
-
-    let value = count.textContent;
-    count.textContent = ++value;
-    count.dataset.total = value;
-});
-
 // 구매체크칸 생성
 const item_check = detail_info.querySelector('.item_check');
 
@@ -202,6 +178,29 @@ counters.forEach((counter, index) => {
         item_check_size[index].classList.add('hidden');
         size_list_a[index].classList.remove('check');
     });
+});
+
+const item_check_size = item_check.querySelectorAll('.item_check_size');
+const size_list_a = size_list.querySelectorAll('a');
+let before_size_list_a = 0;
+
+size_list.addEventListener('click', (e) => {
+    e.preventDefault();
+    let targetE = e.target.closest('a');
+    const count = item_check_size[targetE.dataset.size].querySelector('.count');
+    if (targetE.classList.contains('check')) return;
+
+    let now_size_list_a = targetE.getAttribute('data-size');
+    size_list_a[now_size_list_a].classList.add('check');
+    before_size_list_a = now_size_list_a;
+
+    item_check_size[targetE.dataset.size].classList.remove('hidden');
+    ++total;
+    show_box_price(total);
+
+    let value = count.textContent;
+    count.textContent = ++value;
+    count.dataset.total = value;
 });
 
 // 총 금액 생성

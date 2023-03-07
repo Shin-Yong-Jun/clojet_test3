@@ -33,7 +33,15 @@ function switchLadyUl() {
 }
 
 //men_lady 컨텐츠 영역 교체 함수
-function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
+function switchMenLady(
+    target,
+    main_num,
+    section_men,
+    list_men,
+    section_lady,
+    list_lady,
+    btnKind,
+) {
     if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
@@ -98,7 +106,15 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
-function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
+function switchMenLady(
+    target,
+    main_num,
+    section_men,
+    list_men,
+    section_lady,
+    list_lady,
+    btnKind,
+) {
     if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
@@ -159,7 +175,15 @@ main_products2.addEventListener('click', function (e) {
 main_products3.addEventListener('click', function (e) {
     e.preventDefault();
     let targetLi = e.target.closest('a');
-    switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady, new_btn);
+    switchMenLady(
+        targetLi,
+        main_products3_li,
+        new_div_men,
+        new_list_men,
+        new_div_lady,
+        new_list_lady,
+        new_btn,
+    );
 });
 
 //각 섹션 버튼 좌우 이동 함수
@@ -200,19 +224,36 @@ new_btn[0].style.visibility = 'hidden';
 
 item_container1.addEventListener('click', (e) => {
     let targetBtn_sales = e.target.closest('a');
-    if (targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
+    if (
+        targetBtn_sales.className === 'btn_foward' ||
+        targetBtn_sales.className === 'btn_back'
+    )
+        e.preventDefault();
     btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 });
 
 item_container2.addEventListener('click', (e) => {
     let targetBtn_weather = e.target.closest('a');
-    if (targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
-    btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
+    if (
+        targetBtn_weather.className === 'btn_foward' ||
+        targetBtn_weather.className === 'btn_back'
+    )
+        e.preventDefault();
+    btnMove(
+        targetBtn_weather,
+        weather_btn,
+        weather_list_men,
+        weather_list_lady,
+    );
 });
 
 item_container3.addEventListener('click', (e) => {
     let targetBtn_new = e.target.closest('a');
-    if (targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
+    if (
+        targetBtn_new.className === 'btn_foward' ||
+        targetBtn_new.className === 'btn_back'
+    )
+        e.preventDefault();
     btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 });
 
@@ -227,64 +268,23 @@ const pager = slider.querySelector('.pager li');
 
 let before_date = -new Date();
 
+function delay() {
+    if (new Date() - before_date > 1000 + 100) {
+        before_date = new Date();
+        return true;
+    }
+}
+
 slide[0].style.left = 0;
 let nowSlide = 0;
 let beforeSlide = 0;
 let num = 0;
 let maxImg = 3;
 
-function delay() {
-    if (new Date() - before_date > 800 + 100) {
-        before_date = new Date();
-        return true;
-    }
-}
-function clickSlide(a, b) {
-    a;
-
-    if (nowSlide == maxImg) {
-        nowSlide = 0;
-    } else if (nowSlide == -1) {
-        nowSlide = maxImg - 1;
-    }
-
-    slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
-    slide[nowSlide].style.left = `${b * 100}%`;
-
-    // =============================================
-
-    setTimeout(() => {
-        slide[beforeSlide].style.transition = '1s';
-        slide[nowSlide].style.transition = '1s';
-        slide[beforeSlide].style.left = `${b * -100}%`;
-        slide[nowSlide].style.left = 0;
-
-        beforeSlide = nowSlide;
-    }, 100);
-}
-
 slider.addEventListener('click', (e) => {
     let targetE = e.target.closest('.slideBtn');
     if (!targetE) return;
-    if (delay()) {
-        if (targetE.className.includes('next')) {
-            clickSlide(nowSlide++, 1);
 
-<<<<<<< HEAD
-            num++;
-            if (num == maxImg) {
-                num = 0;
-            }
-
-            let abc = `translateX(${num * 100}%)`;
-            pager.style.transform = abc;
-        }
-
-        if (targetE.className.includes('prev')) {
-            clickSlide(nowSlide--, -1);
-
-            num--;
-=======
     if (delay()) {
         if (targetE.className.includes('next')) {
             clickSlide(nowSlide++, 1);
@@ -311,7 +311,6 @@ slider.addEventListener('click', (e) => {
                 num = maxImg - 1;
             }
 
->>>>>>> origin/main
             let abc = `translateX(${num * 100}%)`;
             pager.style.transform = abc;
         }
@@ -335,16 +334,16 @@ function autoSlide() {
         pager.style.transform = abc;
     }, 2000);
 }
+
 autoSlide();
 
 slider.addEventListener('mouseover', (e) => {
     clearInterval(stopSlide);
 });
+
 slider.addEventListener('mouseout', (e) => {
     autoSlide();
 });
-<<<<<<< HEAD
-=======
 
 function clickSlide(a, b) {
     a;
@@ -369,4 +368,3 @@ function clickSlide(a, b) {
         beforeSlide = nowSlide;
     }, 10);
 }
->>>>>>> origin/main
