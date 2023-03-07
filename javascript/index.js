@@ -109,43 +109,43 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
-    function switchMenLady(
-        target,
-        main_num,
-        section_men,
-        list_men,
-        section_lady,
-        list_lady,
-        btnKind,
-    ) {
-        if (target.className === 'Men') {
-            target.style.color = 'black';
-            main_num[1].style.color = '#d6d6d6';
-    
-            section_men.style.display = 'block';
-            section_men.style.left = '0%';
-            list_men.style.left = '100%';
-            section_lady.style.display = 'none';
-    
-            //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
-            btnKind[0].style.visibility = 'hidden';
-            btnKind[1].style.visibility = 'visible';
-            switchMenUl();
-        } else {
-            target.style.color = 'black';
-            main_num[0].style.color = '#d6d6d6';
-    
-            section_lady.style.display = 'block';
-            section_lady.style.left = '0%';
-            list_lady.style.left = '100%';
-            section_men.style.display = 'none';
-    
-            //레이디 등장할때 첫화면 버튼 visibility 세팅
-            btnKind[0].style.visibility = 'hidden';
-            btnKind[1].style.visibility = 'visible';
-            switchLadyUl();
-        }
+function switchMenLady(
+    target,
+    main_num,
+    section_men,
+    list_men,
+    section_lady,
+    list_lady,
+    btnKind,
+) {
+    if (target.className === 'Men') {
+        target.style.color = 'black';
+        main_num[1].style.color = '#d6d6d6';
+
+        section_men.style.display = 'block';
+        section_men.style.left = '0%';
+        list_men.style.left = '100%';
+        section_lady.style.display = 'none';
+
+        //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
+        btnKind[0].style.visibility = 'hidden';
+        btnKind[1].style.visibility = 'visible';
+        switchMenUl();
+    } else {
+        target.style.color = 'black';
+        main_num[0].style.color = '#d6d6d6';
+
+        section_lady.style.display = 'block';
+        section_lady.style.left = '0%';
+        list_lady.style.left = '100%';
+        section_men.style.display = 'none';
+
+        //레이디 등장할때 첫화면 버튼 visibility 세팅
+        btnKind[0].style.visibility = 'hidden';
+        btnKind[1].style.visibility = 'visible';
+        switchLadyUl();
     }
+}
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -262,75 +262,72 @@ item_container3.addEventListener('click', (e) => {
 
 //메인 슬라이드
 
-let currSlide = 1;
-showSlide(currSlide);
+const slider = document.querySelector('.slider'),
+    slides = slider.querySelector('.slides'),
+    slide = slides.querySelectorAll('.slide');
 
-function btnClick(num) {
-    showSlide((currSlide += num));
+const [prevBtn, nextBtn] = slider.querySelectorAll('.slideBtn');
+const pager = slider.querySelector('.pager');
+
+let before_date = -new Date();
+
+function delay() {
+    if (new Date() - before_date > 800 + 100) {
+        before_date = new Date();
+        return true;
+    }
 }
 
-function showSlide(num) {
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.slider ul li');
-    if (num > slides.length) {
-        currSlide = 1;
+slide[0].style.left = 0;
+let nowSlide = 0;
+let beforeSlide = 0;
+
+slider.addEventListener('click', (e) => {
+    let targetE = e.target.closest('.slideBtn');
+    if (!targetE) return;
+
+    if (targetE.className.includes('prev')) {
+        clickSlide(nowSlide++, 1);
     }
-    if (num < 1) {
-        currSlide = slides.length;
+    if (targetE.className.includes('next')) {
+        clickSlide(nowSlide--, -1);
     }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    }
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('active');
-    }
-    slides[currSlide - 1].style.display = 'block';
-    dots[currSlide - 1].classList.add('active');
+});
+
+let stopSlide;
+
+// slider.addEventListener('mouseover', (e) => {
+//     stopSlide = setInterval(() => {
+//         nowSlide++;
+
+//         nowSlide %= 3;
+
+//         slide[beforeSlide].style.left = '-100%';
+//         slide[nowSlide].style.left = 0;
+
+//         beforeSlide = nowSlide;
+//     }, 1000);
+// });
+
+slider.addEventListener('mouseout', (e) => {
+    clearInterval(stopSlide);
+});
+
+function clickSlide(a, b) {
+    a;
+    nowSlide = Math.abs((nowSlide %= 3));
+
+    slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
+    slide[nowSlide].style.left = `${b * 100}%`;
+
+    // =============================================
+
+    setTimeout(() => {
+        slide[beforeSlide].style.transition = '1s';
+        slide[nowSlide].style.transition = '1s';
+        slide[beforeSlide].style.left = `${b * -100}%`;
+        slide[nowSlide].style.left = 0;
+
+        beforeSlide = nowSlide;
+    }, 100);
 }
-
-const dots = document.querySelectorAll('.slider ul li');
-const preBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-preBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    for (let i = 0; i < dots.length; i++) {
-        if (dots[i].dataset.index == currSlide) {
-            dots[i].classList.add('active');
-        } else if (currSlide === 0) {
-            dots[i].classList.remove('active');
-            dots[2].classList.add('active');
-        } else {
-            dots[i].classList.remove('active');
-        }
-    }
-});
-
-nextBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    for (let i = 0; i < dots.length; i++) {
-        if (dots[i].dataset.index == currSlide) {
-            dots[i].classList.add('active');
-        } else if (currSlide === 3) {
-            dots[i].classList.remove('active');
-            dots[2].classList.add('active');
-        } else {
-            dots[i].classList.remove('active');
-        }
-    }
-});
-
-let interval = setInterval(() => {
-    btnClick(1);
-}, 2000);
-
-const slider = document.querySelector('.slider');
-slider.addEventListener('mouseover', () => {
-    clearInterval(interval);
-});
-
-slider.addEventListener('mouseout', () => {
-    interval = setInterval(() => {
-        btnClick(1);
-    }, 2000);
-});
