@@ -28,14 +28,17 @@ const info = [
         size: ['90', '95', '100', '105'],
         color: 'white',
         sex: 'woman',
-        info_imgAr: ['../category/image/product_1/detail0.jpg'],
+        info_imgAr: [
+            '../category/image/product_1/detail0.png',
+            '../category/image/product_1/detail1.png',
+            '../category/image/product_1/detail2.png',
+        ],
         thum_imgAr: [
             '../category/image/product_1/0.jpg',
             '../category/image/product_1/1.jpg',
             '../category/image/product_1/2.jpg',
             '../category/image/product_1/3.jpg',
             '../category/image/product_1/4.jpg',
-            '../category/image/product_1/5.jpg',
         ],
     },
     {

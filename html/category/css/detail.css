@@ -17,6 +17,10 @@ main {
     padding-right: 5%;
 }
 
+.detail_img img {
+    width: 100%;
+}
+
 /* ******************************************** */
 /* 썸네일 */
 
@@ -61,19 +65,21 @@ main {
 }
 
 /* ******************************************** */
-
+/* 이름 */
 .detail_info {
     display: inline-block;
     position: fixed;
     width: 450px;
     padding: 0 25px;
     height: 1000px;
+    text-align: right;
+    word-break: keep-all;
     overflow: auto;
-    /* z-index: 999; */
 }
 
 .detail_info .title {
     font-size: 1.4em;
+    font-weight: bold;
 }
 
 .detail_info .item {
@@ -86,6 +92,10 @@ main {
 
 .detail_info .price:not(del) {
     font-size: 1.9em;
+}
+
+.detail_info .price_box .buy_price {
+    font-size: 2.5em;
 }
 
 /* ************************************ */
@@ -128,7 +138,7 @@ main {
     flex-wrap: wrap;
     text-align: right;
 }
-    
+
 .item_box div:nth-child(1) {
     word-break: keep-all;
     width: 100%;
