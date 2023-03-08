@@ -24,25 +24,16 @@ window.addEventListener('scroll', () => {
 //============================
 
 //성별 판별을 위한 스위치
-let gender = 0;
+let sexuality = 0;
 
 function switchMenUl() {
-    gender = 0;
+    sexuality = 0;
 }
 function switchLadyUl() {
-    gender = 1;
+    sexuality = 1;
 }
 
 //men_lady 컨텐츠 영역 교체 함수
-function switchMenLady(
-    target,
-    main_num,
-    section_men,
-    list_men,
-    section_lady,
-    list_lady,
-    btnKind,
-) {
 function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
@@ -108,8 +99,6 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
-<<<<<<< HEAD
-=======
 function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
@@ -139,7 +128,6 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
         switchLadyUl();
     }
 }
->>>>>>> 656c2f6bd3de6d95dc7ac9058c533dba52576ac0
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -172,34 +160,25 @@ main_products2.addEventListener('click', function (e) {
 main_products3.addEventListener('click', function (e) {
     e.preventDefault();
     let targetLi = e.target.closest('a');
-    switchMenLady(
-        targetLi,
-        main_products3_li,
-        new_div_men,
-        new_list_men,
-        new_div_lady,
-        new_list_lady,
-        new_btn,
-    );
     switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady, new_btn);
 });
 
 //각 섹션 버튼 좌우 이동 함수
 
 function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady) {
-    if (gender === 0 && targetBtn.className === 'btn_foward') {
+    if (sexuality === 0 && targetBtn.className === 'btn_foward') {
         targetUl_men.style.left = '4%';
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
-    } else if (gender === 0 && targetBtn.className === 'btn_back') {
+    } else if (sexuality === 0 && targetBtn.className === 'btn_back') {
         targetUl_men.style.left = '100%';
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
-    } else if (gender === 1 && targetBtn.className === 'btn_foward') {
+    } else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
         targetUl_lady.style.left = '4%';
-    } else if (gender === 1 && targetBtn.className === 'btn_back') {
+    } else if (sexuality === 1 && targetBtn.className === 'btn_back') {
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
         targetUl_lady.style.left = '100%';
@@ -222,39 +201,19 @@ new_btn[0].style.visibility = 'hidden';
 
 item_container1.addEventListener('click', (e) => {
     let targetBtn_sales = e.target.closest('a');
-    if (
-        targetBtn_sales.className === 'btn_foward' ||
-        targetBtn_sales.className === 'btn_back'
-    )
-        e.preventDefault();
     if (targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 });
 
 item_container2.addEventListener('click', (e) => {
     let targetBtn_weather = e.target.closest('a');
-    if (
-        targetBtn_weather.className === 'btn_foward' ||
-        targetBtn_weather.className === 'btn_back'
-    )
-        e.preventDefault();
-    btnMove(
-        targetBtn_weather,
-        weather_btn,
-        weather_list_men,
-        weather_list_lady,
-    );
     if (targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 });
 
 item_container3.addEventListener('click', (e) => {
     let targetBtn_new = e.target.closest('a');
-    if (
-        targetBtn_new.className === 'btn_foward' ||
-        targetBtn_new.className === 'btn_back'
-    )
-        e.preventDefault();
+    if (targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 });
 
@@ -301,8 +260,6 @@ slider.addEventListener('click', (e) => {
                 num = maxImg - 1;
             }
 
-            let abc = `translateX(${num * 100}%)`;
-            pager.style.transform = abc;
             let movePager = `translateX(${num * 100}%)`;
             pager.style.transform = movePager;
         }
@@ -317,8 +274,6 @@ slider.addEventListener('click', (e) => {
                 num = maxImg - 1;
             }
 
-            let abc = `translateX(${num * 100}%)`;
-            pager.style.transform = abc;
             let movePager = `translateX(${num * 100}%)`;
             pager.style.transform = movePager;
         }
@@ -341,8 +296,6 @@ function autoSlide() {
             num = maxImg - 1;
         }
 
-        let abc = `translateX(${num * 100}%)`;
-        pager.style.transform = abc;
         let movePager = `translateX(${num * 100}%)`;
         pager.style.transform = movePager;
     }, 2000);
@@ -358,8 +311,6 @@ slider.addEventListener('mouseout', (e) => {
     autoSlide();
 });
 
-function clickSlide(a, b) {
-    a;
 // ======================================================================
 function clickSlide(slideIc, direct) {
     slideIc;
@@ -371,16 +322,12 @@ function clickSlide(slideIc, direct) {
     }
 
     slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
-    slide[nowSlide].style.left = `${b * 100}%`;
-
-    // =============================================
     slide[nowSlide].style.left = `${direct * 100}%`;
 
     // ===================================================================
     setTimeout(() => {
         slide[beforeSlide].style.transition = '1s';
         slide[nowSlide].style.transition = '1s';
-        slide[beforeSlide].style.left = `${b * -100}%`;
         slide[beforeSlide].style.left = `${direct * -100}%`;
         slide[nowSlide].style.left = 0;
 
