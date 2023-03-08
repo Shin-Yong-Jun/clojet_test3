@@ -61,7 +61,7 @@ let expand2 = false;
 
 account_checkbox[0].addEventListener('click', (e) => {
   let targetA = e.target.closest('a');
-  if (targetA.className === "infolink") {
+  if (targetA && targetA.className === "infolink") {
     e.preventDefault();
     expand0 = expandOrNot(account_agreement_view[0], expand0);
   }
@@ -70,7 +70,7 @@ account_checkbox[0].addEventListener('click', (e) => {
 
 account_checkbox[1].addEventListener('click', (e) => {
   let targetA = e.target.closest('a');
-  if (targetA.className === "infolink") {
+  if (targetA && targetA.className === "infolink") {
     e.preventDefault();
     expand1 = expandOrNot(account_agreement_view[1], expand1);
   }
@@ -78,7 +78,7 @@ account_checkbox[1].addEventListener('click', (e) => {
 
 account_checkbox[2].addEventListener('click', (e) => {
   let targetA = e.target.closest('a');
-  if (targetA.className === "infolink") {
+  if (targetA && targetA.className === "infolink") {
     e.preventDefault();
     expand2 = expandOrNot(account_agreement_view[2], expand2);
   }
