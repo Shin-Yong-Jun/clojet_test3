@@ -127,7 +127,7 @@
                     <div class="findId_input_phoneNum">
                         <input type="text" id="findIdName" name="findIdName" minlength="2" maxlength="5" value="" placeholder="이름" required>
                         <input type="text" id="findIdPhoneNum" name="findIdPhoneNum" maxlength="13" value="" placeholder="휴대폰 번호 (-) 제외" required
-                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     </div>
                         <button type="submit" class="btn_findId">아이디 찾기</button>
                 </form>
