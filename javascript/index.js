@@ -281,6 +281,9 @@ let beforeSlide = 0;
 let num = 0;
 let maxImg = 3;
 
+// ======================================================================
+//버튼 클릭 시 슬라이드
+
 slider.addEventListener('click', (e) => {
     let targetE = e.target.closest('.slideBtn');
     if (!targetE) return;
@@ -297,8 +300,8 @@ slider.addEventListener('click', (e) => {
                 num = maxImg - 1;
             }
 
-            let abc = `translateX(${num * 100}%)`;
-            pager.style.transform = abc;
+            let movePager = `translateX(${num * 100}%)`;
+            pager.style.transform = movePager;
         }
 
         if (targetE.className.includes('prev')) {
@@ -311,11 +314,14 @@ slider.addEventListener('click', (e) => {
                 num = maxImg - 1;
             }
 
-            let abc = `translateX(${num * 100}%)`;
-            pager.style.transform = abc;
+            let movePager = `translateX(${num * 100}%)`;
+            pager.style.transform = movePager;
         }
     }
 });
+
+// ====================================================================
+//자동 슬라이드
 
 let stopSlide;
 function autoSlide() {
@@ -330,8 +336,8 @@ function autoSlide() {
             num = maxImg - 1;
         }
 
-        let abc = `translateX(${num * 100}%)`;
-        pager.style.transform = abc;
+        let movePager = `translateX(${num * 100}%)`;
+        pager.style.transform = movePager;
     }, 2000);
 }
 
@@ -345,8 +351,9 @@ slider.addEventListener('mouseout', (e) => {
     autoSlide();
 });
 
-function clickSlide(a, b) {
-    a;
+// ======================================================================
+function clickSlide(slideIc, direct) {
+    slideIc;
 
     if (nowSlide == maxImg) {
         nowSlide = 0;
@@ -355,14 +362,13 @@ function clickSlide(a, b) {
     }
 
     slide[nowSlide].style.transition = 'none'; //delay전에 이미 이동
-    slide[nowSlide].style.left = `${b * 100}%`;
+    slide[nowSlide].style.left = `${direct * 100}%`;
 
-    // =============================================
-
+    // ===================================================================
     setTimeout(() => {
         slide[beforeSlide].style.transition = '1s';
         slide[nowSlide].style.transition = '1s';
-        slide[beforeSlide].style.left = `${b * -100}%`;
+        slide[beforeSlide].style.left = `${direct * -100}%`;
         slide[nowSlide].style.left = 0;
 
         beforeSlide = nowSlide;
