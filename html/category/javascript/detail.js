@@ -187,6 +187,7 @@ let before_size_list_a = 0;
 size_list.addEventListener('click', (e) => {
     e.preventDefault();
     let targetE = e.target.closest('a');
+    if (!targetE) return;
     const count = item_check_size[targetE.dataset.size].querySelector('.count');
     if (targetE.classList.contains('check')) return;
 
