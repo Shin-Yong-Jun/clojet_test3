@@ -23,13 +23,13 @@ window.addEventListener('scroll', () => {
 //============================
 
 //성별 판별을 위한 스위치
-let sexuality = 0;
+let gender = 0;
 
 function switchMenUl() {
-    sexuality = 0;
+    gender = 0;
 }
 function switchLadyUl() {
-    sexuality = 1;
+    gender = 1;
 }
 
 //men_lady 컨텐츠 영역 교체 함수
@@ -106,43 +106,6 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
-function switchMenLady(
-    target,
-    main_num,
-    section_men,
-    list_men,
-    section_lady,
-    list_lady,
-    btnKind,
-) {
-    if (target.className === 'Men') {
-        target.style.color = 'black';
-        main_num[1].style.color = '#d6d6d6';
-
-        section_men.style.display = 'block';
-        section_men.style.left = '0%';
-        list_men.style.left = '100%';
-        section_lady.style.display = 'none';
-
-        //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
-        btnKind[0].style.visibility = 'hidden';
-        btnKind[1].style.visibility = 'visible';
-        switchMenUl();
-    } else {
-        target.style.color = 'black';
-        main_num[0].style.color = '#d6d6d6';
-
-        section_lady.style.display = 'block';
-        section_lady.style.left = '0%';
-        list_lady.style.left = '100%';
-        section_men.style.display = 'none';
-
-        //레이디 등장할때 첫화면 버튼 visibility 세팅
-        btnKind[0].style.visibility = 'hidden';
-        btnKind[1].style.visibility = 'visible';
-        switchLadyUl();
-    }
-}
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -189,19 +152,19 @@ main_products3.addEventListener('click', function (e) {
 //각 섹션 버튼 좌우 이동 함수
 
 function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady) {
-    if (sexuality === 0 && targetBtn.className === 'btn_foward') {
+    if (gender === 0 && targetBtn.className === 'btn_foward') {
         targetUl_men.style.left = '4%';
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
-    } else if (sexuality === 0 && targetBtn.className === 'btn_back') {
+    } else if (gender === 0 && targetBtn.className === 'btn_back') {
         targetUl_men.style.left = '100%';
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
-    } else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
+    } else if (gender === 1 && targetBtn.className === 'btn_foward') {
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
         targetUl_lady.style.left = '4%';
-    } else if (sexuality === 1 && targetBtn.className === 'btn_back') {
+    } else if (gender === 1 && targetBtn.className === 'btn_back') {
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
         targetUl_lady.style.left = '100%';
