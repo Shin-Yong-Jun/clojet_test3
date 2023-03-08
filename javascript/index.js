@@ -1,4 +1,5 @@
 'use strict';
+sessionStorage.setItem('page_key', 0);
 
 //배지 배너 가위표 삭제버튼
 
@@ -33,15 +34,7 @@ function switchLadyUl() {
 }
 
 //men_lady 컨텐츠 영역 교체 함수
-function switchMenLady(
-    target,
-    main_num,
-    section_men,
-    list_men,
-    section_lady,
-    list_lady,
-    btnKind,
-) {
+function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
@@ -106,15 +99,7 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
-function switchMenLady(
-    target,
-    main_num,
-    section_men,
-    list_men,
-    section_lady,
-    list_lady,
-    btnKind,
-) {
+function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
@@ -175,15 +160,7 @@ main_products2.addEventListener('click', function (e) {
 main_products3.addEventListener('click', function (e) {
     e.preventDefault();
     let targetLi = e.target.closest('a');
-    switchMenLady(
-        targetLi,
-        main_products3_li,
-        new_div_men,
-        new_list_men,
-        new_div_lady,
-        new_list_lady,
-        new_btn,
-    );
+    switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady, new_btn);
 });
 
 //각 섹션 버튼 좌우 이동 함수
@@ -224,36 +201,19 @@ new_btn[0].style.visibility = 'hidden';
 
 item_container1.addEventListener('click', (e) => {
     let targetBtn_sales = e.target.closest('a');
-    if (
-        targetBtn_sales.className === 'btn_foward' ||
-        targetBtn_sales.className === 'btn_back'
-    )
-        e.preventDefault();
+    if (targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 });
 
 item_container2.addEventListener('click', (e) => {
     let targetBtn_weather = e.target.closest('a');
-    if (
-        targetBtn_weather.className === 'btn_foward' ||
-        targetBtn_weather.className === 'btn_back'
-    )
-        e.preventDefault();
-    btnMove(
-        targetBtn_weather,
-        weather_btn,
-        weather_list_men,
-        weather_list_lady,
-    );
+    if (targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
+    btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 });
 
 item_container3.addEventListener('click', (e) => {
     let targetBtn_new = e.target.closest('a');
-    if (
-        targetBtn_new.className === 'btn_foward' ||
-        targetBtn_new.className === 'btn_back'
-    )
-        e.preventDefault();
+    if (targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 });
 
