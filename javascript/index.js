@@ -1,4 +1,5 @@
 'use strict';
+sessionStorage.setItem('page_key', 0);
 
 //배지 배너 가위표 삭제버튼
 
@@ -42,6 +43,7 @@ function switchMenLady(
     list_lady,
     btnKind,
 ) {
+function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
@@ -106,6 +108,38 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
+<<<<<<< HEAD
+=======
+function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
+    if (target.className === 'Men') {
+        target.style.color = 'black';
+        main_num[1].style.color = '#d6d6d6';
+
+        section_men.style.display = 'block';
+        section_men.style.left = '0%';
+        list_men.style.left = '100%';
+        section_lady.style.display = 'none';
+
+        //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
+        btnKind[0].style.visibility = 'hidden';
+        btnKind[1].style.visibility = 'visible';
+        switchMenUl();
+    } else {
+        target.style.color = 'black';
+        main_num[0].style.color = '#d6d6d6';
+
+        section_lady.style.display = 'block';
+        section_lady.style.left = '0%';
+        list_lady.style.left = '100%';
+        section_men.style.display = 'none';
+
+        //레이디 등장할때 첫화면 버튼 visibility 세팅
+        btnKind[0].style.visibility = 'hidden';
+        btnKind[1].style.visibility = 'visible';
+        switchLadyUl();
+    }
+}
+>>>>>>> 656c2f6bd3de6d95dc7ac9058c533dba52576ac0
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -147,6 +181,7 @@ main_products3.addEventListener('click', function (e) {
         new_list_lady,
         new_btn,
     );
+    switchMenLady(targetLi, main_products3_li, new_div_men, new_list_men, new_div_lady, new_list_lady, new_btn);
 });
 
 //각 섹션 버튼 좌우 이동 함수
@@ -192,6 +227,7 @@ item_container1.addEventListener('click', (e) => {
         targetBtn_sales.className === 'btn_back'
     )
         e.preventDefault();
+    if (targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
     btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 });
 
@@ -208,6 +244,8 @@ item_container2.addEventListener('click', (e) => {
         weather_list_men,
         weather_list_lady,
     );
+    if (targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
+    btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 });
 
 item_container3.addEventListener('click', (e) => {
@@ -244,6 +282,9 @@ let beforeSlide = 0;
 let num = 0;
 let maxImg = 3;
 
+// ======================================================================
+//버튼 클릭 시 슬라이드
+
 slider.addEventListener('click', (e) => {
     let targetE = e.target.closest('.slideBtn');
     if (!targetE) return;
@@ -262,6 +303,8 @@ slider.addEventListener('click', (e) => {
 
             let abc = `translateX(${num * 100}%)`;
             pager.style.transform = abc;
+            let movePager = `translateX(${num * 100}%)`;
+            pager.style.transform = movePager;
         }
 
         if (targetE.className.includes('prev')) {
@@ -276,9 +319,14 @@ slider.addEventListener('click', (e) => {
 
             let abc = `translateX(${num * 100}%)`;
             pager.style.transform = abc;
+            let movePager = `translateX(${num * 100}%)`;
+            pager.style.transform = movePager;
         }
     }
 });
+
+// ====================================================================
+//자동 슬라이드
 
 let stopSlide;
 function autoSlide() {
@@ -295,6 +343,8 @@ function autoSlide() {
 
         let abc = `translateX(${num * 100}%)`;
         pager.style.transform = abc;
+        let movePager = `translateX(${num * 100}%)`;
+        pager.style.transform = movePager;
     }, 2000);
 }
 
@@ -310,6 +360,9 @@ slider.addEventListener('mouseout', (e) => {
 
 function clickSlide(a, b) {
     a;
+// ======================================================================
+function clickSlide(slideIc, direct) {
+    slideIc;
 
     if (nowSlide == maxImg) {
         nowSlide = 0;
@@ -321,11 +374,14 @@ function clickSlide(a, b) {
     slide[nowSlide].style.left = `${b * 100}%`;
 
     // =============================================
+    slide[nowSlide].style.left = `${direct * 100}%`;
 
+    // ===================================================================
     setTimeout(() => {
         slide[beforeSlide].style.transition = '1s';
         slide[nowSlide].style.transition = '1s';
         slide[beforeSlide].style.left = `${b * -100}%`;
+        slide[beforeSlide].style.left = `${direct * -100}%`;
         slide[nowSlide].style.left = 0;
 
         beforeSlide = nowSlide;

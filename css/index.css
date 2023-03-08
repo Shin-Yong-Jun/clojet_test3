@@ -753,6 +753,7 @@ footer .footer_logo {
     top: 0;
     width: 25%;
     height: 100%;
+    cursor: pointer;
 }
 .slideBtn:hover {
     background-color: rgba(255, 255, 255, 0.393);
@@ -773,7 +774,7 @@ footer .footer_logo {
     left: 50%;
     transform: translate(-50%, 0);
     bottom: 10px;
-    height: 5px;
+    height: 3.5px;
     width: 30%;
 }
 
@@ -783,5 +784,4 @@ footer .footer_logo {
     width: calc(100% / 3);
     background-color: black;
     transition: 1s;
-    transform: 
 }
