@@ -33,36 +33,6 @@ function switchLadyUl() {
     sexuality = 1;
 }
 
-//men_lady 컨텐츠 영역 교체 함수
-function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
-    if (target.className === 'Men') {
-        target.style.color = 'black';
-        main_num[1].style.color = '#d6d6d6';
-
-        section_men.style.display = 'block';
-        section_men.style.left = '0%';
-        list_men.style.left = '100%';
-        section_lady.style.display = 'none';
-
-        //레이디 갔다가 맨 등장할때 화면 버튼 visibility 세팅
-        btnKind[0].style.visibility = 'hidden';
-        btnKind[1].style.visibility = 'visible';
-        switchMenUl();
-    } else {
-        target.style.color = 'black';
-        main_num[0].style.color = '#d6d6d6';
-
-        section_lady.style.display = 'block';
-        section_lady.style.left = '0%';
-        list_lady.style.left = '100%';
-        section_men.style.display = 'none';
-
-        //레이디 등장할때 첫화면 버튼 visibility 세팅
-        btnKind[0].style.visibility = 'hidden';
-        btnKind[1].style.visibility = 'visible';
-        switchLadyUl();
-    }
-}
 
 //============================
 //====== 동작문 영역  ======
@@ -99,6 +69,11 @@ const main_products1 = document.getElementById('main_products1'),
     new_div_lady = document.querySelector('.new_lady'),
     new_list_lady = document.querySelector('.new_lady > ul');
 
+
+    const Men = document.getElementsByClassName('Men');
+    const Lady = document.getElementsByClassName('Lady');
+
+
 function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
     if (target.className === 'Men') {
         target.style.color = 'black';
@@ -113,7 +88,7 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
         btnKind[0].style.visibility = 'hidden';
         btnKind[1].style.visibility = 'visible';
         switchMenUl();
-    } else {
+    } else if (target.className ==='Lady') {
         target.style.color = 'black';
         main_num[0].style.color = '#d6d6d6';
 
@@ -126,6 +101,9 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
         btnKind[0].style.visibility = 'hidden';
         btnKind[1].style.visibility = 'visible';
         switchLadyUl();
+    }
+    else {
+        return
     }
 }
 
