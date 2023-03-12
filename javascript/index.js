@@ -24,13 +24,13 @@ window.addEventListener('scroll', () => {
 //============================
 
 //성별 판별을 위한 스위치
-let sexuality = 0;
+let gender = 0;
 
 function switchMenUl() {
-    sexuality = 0;
+    gender = 0;
 }
 function switchLadyUl() {
-    sexuality = 1;
+    gender = 1;
 }
 
 
@@ -47,11 +47,11 @@ function switchLadyUl() {
 //men lady 교체를 위한 대상잡는 변수 목록
 
 //1. 각 슬라이더 영역의 div박스와 ul의 li a 태그
-const main_products1 = document.getElementById('main_products1'),
+const main_products1 = document.querySelector('.main_products1'),
     main_products1_li = main_products1.querySelectorAll('li a'),
-    main_products2 = document.getElementById('main_products2'),
+    main_products2 = document.querySelector('.main_products2'),
     main_products2_li = main_products2.querySelectorAll('li a'),
-    main_products3 = document.getElementById('main_products3'),
+    main_products3 = document.querySelector('.main_products3'),
     main_products3_li = main_products3.querySelectorAll('li a'),
     //2. 1번째 세일 섹션의 슬라이더 div박스와 남녀 아이템 목록의 ul
     sales_div_men = document.querySelector('.sales_men'),
@@ -75,7 +75,13 @@ const main_products1 = document.getElementById('main_products1'),
 
 
 function switchMenLady(target, main_num, section_men, list_men, section_lady, list_lady, btnKind) {
-    if (target.className === 'Men') {
+
+    //null이거나 undefined일때 리턴 시켜서 에러 방지
+    if (!target || target.className === undefined) {
+        return;
+    }
+
+    else if (target.className === 'Men') {
         target.style.color = 'black';
         main_num[1].style.color = '#d6d6d6';
 
@@ -102,10 +108,9 @@ function switchMenLady(target, main_num, section_men, list_men, section_lady, li
         btnKind[1].style.visibility = 'visible';
         switchLadyUl();
     }
-    else {
-        return
-    }
 }
+
+
 
 main_products1.addEventListener('click', function (e) {
     e.preventDefault();
@@ -144,19 +149,19 @@ main_products3.addEventListener('click', function (e) {
 //각 섹션 버튼 좌우 이동 함수
 
 function btnMove(targetBtn, btnKind, targetUl_men, targetUl_lady) {
-    if (sexuality === 0 && targetBtn.className === 'btn_foward') {
+    if (gender === 0 && targetBtn.className === 'btn_foward') {
         targetUl_men.style.left = '4%';
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
-    } else if (sexuality === 0 && targetBtn.className === 'btn_back') {
+    } else if (gender === 0 && targetBtn.className === 'btn_back') {
         targetUl_men.style.left = '100%';
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
-    } else if (sexuality === 1 && targetBtn.className === 'btn_foward') {
+    } else if (gender === 1 && targetBtn.className === 'btn_foward') {
         btnKind[1].style.visibility = 'hidden';
         btnKind[0].style.visibility = 'visible';
         targetUl_lady.style.left = '4%';
-    } else if (sexuality === 1 && targetBtn.className === 'btn_back') {
+    } else if (gender === 1 && targetBtn.className === 'btn_back') {
         btnKind[1].style.visibility = 'visible';
         btnKind[0].style.visibility = 'hidden';
         targetUl_lady.style.left = '100%';
@@ -179,19 +184,34 @@ new_btn[0].style.visibility = 'hidden';
 
 item_container1.addEventListener('click', (e) => {
     let targetBtn_sales = e.target.closest('a');
-    if (targetBtn_sales.className === 'btn_foward' || targetBtn_sales.className === 'btn_back') e.preventDefault();
+
+        //null이거나 undefined일때 리턴 시켜서 에러 방지
+    if (!targetBtn_sales || (targetBtn_sales.className !== 'btn_foward' && targetBtn_sales.className !== 'btn_back')) {
+        return;
+    }
+    e.preventDefault();
     btnMove(targetBtn_sales, sales_btn, sales_list_men, sales_list_lady);
 });
 
 item_container2.addEventListener('click', (e) => {
     let targetBtn_weather = e.target.closest('a');
-    if (targetBtn_weather.className === 'btn_foward' || targetBtn_weather.className === 'btn_back') e.preventDefault();
+
+        //null이거나 undefined일때 리턴 시켜서 에러 방지
+    if (!targetBtn_weather || (targetBtn_weather.className !== 'btn_foward' && targetBtn_weather.className !== 'btn_back')) {
+        return;
+    }
+    e.preventDefault();
     btnMove(targetBtn_weather, weather_btn, weather_list_men, weather_list_lady);
 });
 
 item_container3.addEventListener('click', (e) => {
     let targetBtn_new = e.target.closest('a');
-    if (targetBtn_new.className === 'btn_foward' || targetBtn_new.className === 'btn_back') e.preventDefault();
+
+        //null이거나 undefined일때 리턴 시켜서 에러 방지
+    if (!targetBtn_new || (targetBtn_new.className !== 'btn_foward' && targetBtn_new.className !== 'btn_back')) {
+        return;
+    }
+    e.preventDefault();
     btnMove(targetBtn_new, new_btn, new_list_men, new_list_lady);
 });
 
