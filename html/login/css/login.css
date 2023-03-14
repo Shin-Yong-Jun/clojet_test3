@@ -339,3 +339,166 @@ position: relative;
   cursor: pointer;
 }
 
+/* 모달창 로그인 페이지!!! */
+/* .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #515151b0;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal hr {
+  width: 100%;
+  margin: 10px 0;
+  border: 0.5px solid rgb(216, 216, 216);
+}
+
+.modal_title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.select_title {
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.modal_select_amount {
+  font-size: 0.8rem;
+  height: 40px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.modal_item {
+  display: flex;
+}
+
+.modal_item_image {
+  text-align: left;
+}
+
+.modal_item .modal_img {
+  width: 50px;
+}
+
+.modal_item_detail {
+  font-size: 8px;
+  text-align: left;
+}
+
+.modal_item_detail_title {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.modal_item_detail_price {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.modal_content {
+  padding: 30px;
+  width: 800px;
+  height: 900px;
+  overflow: auto;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  position: relative;
+}
+
+.count_box {
+  font-size: 10px;
+  border: 1px solid black;
+  float: left;
+}
+
+.count {
+  text-align: center;
+  padding: 0 5px;
+  font-size: 0.7rem;
+}
+
+.btn_box {
+  display: inline-block;
+  border: solid 1px black;
+  background-color: #dddddd;
+}
+.minus {
+  padding: 4px 8px;
+  border-right: 2px solid black;
+}
+
+.plus {
+  padding: 4px 6px;
+  border-left: 2px solid black;
+}
+
+.count_box_result {
+  display: block;
+  float: right;
+}
+
+.count_box_currency {
+  display: block;
+  float: right;
+}
+
+.modal_final_modify {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: right;
+  margin-bottom: 10px;
+}
+
+.final_modify_title {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.empty {
+  height: 30%;
+}
+
+.modal_exit {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: black;
+  background-color: transparent;
+  border: none;
+
+  font-weight: bold;
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+.modal_chk {
+  bottom: 20px;
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+} */

@@ -396,9 +396,9 @@ main {
 }
 
 /* =========== 특가 products  ========== */
-#main_products1,
-#main_products2,
-#main_products3 {
+.main_products1,
+.main_products2,
+.main_products3 {
     text-align: center;
 }
 
@@ -407,22 +407,22 @@ main h4 {
     margin-bottom: 10px;
 }
 
-#main_products1 li,
-#main_products2 li,
-#main_products3 li {
+.main_products1 li,
+.main_products2 li,
+.main_products3 li {
     display: inline-block;
     margin: 0 20px;
     font-weight: 700;
 }
-#main_products1 li a,
-#main_products2 li a,
-#main_products3 li a {
+.main_products1 li a,
+.main_products2 li a,
+.main_products3 li a {
     color: #d6d6d6;
 }
 
-#main_products1 li .Men,
-#main_products2 li .Men,
-#main_products3 li .Men {
+.main_products1 li .Men,
+.main_products2 li .Men,
+.main_products3 li .Men {
     color: black;
 }
 
