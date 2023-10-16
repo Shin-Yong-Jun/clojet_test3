@@ -43,21 +43,6 @@ let expand0 = false;
 let expand1 = false;
 let expand2 = false;
 
-// infolink[0].addEventListener('click', function () {
-//   if (this.className === "infolink") {
-//     e.preventDefault();
-//     expand0 = expandOrNot(account_agreement_view[0], expand0);
-//   }
-// })
-// infolink[1].addEventListener('click', () => {
-//   e.preventDefault();
-//   expand0 = expandOrNot(account_agreement_view[1], expand0);
-// })
-// infolink[2].addEventListener('click', () => {
-//   e.preventDefault();
-//   expand0 = expandOrNot(account_agreement_view[2], expand0);
-// })
-
 
 account_checkbox[0].addEventListener('click', (e) => {
   let targetA = e.target.closest('a');
