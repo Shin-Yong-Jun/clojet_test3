@@ -296,7 +296,7 @@ function autoSlide() {
 
         let movePager = `translateX(${num * 100}%)`;
         pager.style.transform = movePager;
-    }, 2000);
+    }, 4000);
 }
 
 autoSlide();
